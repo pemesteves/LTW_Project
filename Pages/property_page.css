@@ -1,0 +1,26 @@
+#images {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "main_image second_image"
+                         "main_image third_image";
+}
+
+#images img:first-child {
+    width: 50em;
+    height: 30em;
+    grid-area: main_image;
+}
+
+#images img:first-child + img {
+    width: 30em;
+    height: 15em;
+    grid-area: second_image;
+}
+
+#images img:first-child + img + img{
+    width: 30em;
+    height: 15em;
+    grid-area: third_image;
+}
+
