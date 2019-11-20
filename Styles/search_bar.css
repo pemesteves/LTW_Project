@@ -1,0 +1,17 @@
+#search_bar div { 
+    border: solid;
+    border-color: gray;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#search_bar form {
+    display: grid; 
+    grid-template-columns: 3fr 3fr 3fr 1fr;
+}
+
+#search_bar form input {
+    padding: 0;
+    border: 0.1px solid gray;
+}
+

@@ -1,0 +1,31 @@
+#recommended {
+    width: 80%;
+}
+
+#recommended ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+}
+
+#recommended ul li {
+    list-style-type: none;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+}
+
+#recommended ul li:first-child {
+    border-left: 1px solid gray;
+}
+
+#recommended ul li{
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+} 
+
+#recommended ul li article img {
+    height: 7.5em;
+    margin: 0 auto;
+}
