@@ -8,7 +8,7 @@ CREATE TABLE User(
 );
 
 CREATE TABLE Property(
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     owner_username TEXT REFERENCES User(username) ON DELETE ON UPDATE CASCADE,
     title TEXT NOT NULL,
     price_per_day REAL NOT NULL,
