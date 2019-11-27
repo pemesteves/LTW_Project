@@ -4,15 +4,19 @@
     function getRecommended(){
         global $db;
 		$stmt = $db->prepare('
-			SELECT news.*, users.*, COUNT(comments.id) AS comments
-			FROM news JOIN
-	     		users USING (username) LEFT JOIN
-	     		comments ON comments.news_id = news.id
-			GROUP BY news.id, users.     
-			ORDER BY published DESC
+			SELECT Property.title as title, Property.description as description, 
+				   PropertyImage.image_name as image, (
+				SELECT avg(price_per_day)
+				FROM Property
+			) as avgPrice
+			FROM Property     
+			JOIN PropertyImage 
+			ON Property.id = PropertyImage.property_id 
+			GROUP BY id
+			ORDER BY abs(price_per_day - avgPrice) DESC LIMIT 3
 	 	');
 		$stmt->execute();
-		$articles = $stmt->fetchAll();
-		return $articles;
+		$recommended = $stmt->fetchAll();
+		return $recommended;
     }
 ?>

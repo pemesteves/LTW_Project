@@ -93,6 +93,6 @@ INSERT INTO Property
 INSERT INTO PropertyImage
     (property_id, image_name)
     VALUES
-    (2,
+    (3,
     'p_house2.jpeg');    
 
