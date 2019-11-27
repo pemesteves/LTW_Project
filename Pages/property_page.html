@@ -4,7 +4,7 @@
         <title>Property</title>
         <meta charset="utf-8">
         <link rel="icon" href="../images/icon.png">
-        <link href="property_page.css" rel="stylesheet">
+        <link href="../Styles/property_page.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -25,10 +25,12 @@
         </nav> 
         <section id="main">
             <h2>Property Name</h2>
-            <article id="images">
+            <article id="slideshow">
                 <img src="../images/p_house1.jpg" alt="House 1" >
                 <img src="../images/p_house2.jpg" alt="House 2" >
                 <img src="../images/p_house3.jpg" alt="House 3" >
+                <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
             </article>
             <article id="description">
                 <h3>Description</h3>
