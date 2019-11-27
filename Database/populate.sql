@@ -127,9 +127,9 @@ INSERT INTO PROPERTIES
     VALUES
 
     ('nuno_iron_man',
-    'Himalayan Bungalow'),
+    'Himalayan Bungalow',
     150,
     'Kathmandu, Nepal',
-    'A warm and comfortable bungalow, ideal for adventurous mountain-climbers.'
+    'A warm and comfortable bungalow, ideal for adventurous mountain-climbers.',
     8);
 
