@@ -15,6 +15,7 @@ CREATE TABLE Property(
     location TEXT NOT NULL,
     description TEXT NOT NULL,
     sleeps INTEGER NOT NULL,
+    image BLOB NOT NULL,
 
     CONSTRAINT minimum_sleeps CHECK (sleeps > 0)
 );
