@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">
     <link rel="stylesheet" type="text/css" href="../Styles/search_page.css">
     <link rel="stylesheet" type="text/css" href="../Styles/search_page_layout.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/search_bar.css">
     <meta name="keywords" content="unicode emoji characters, utf-8">
 </head>
 <body>
@@ -24,14 +25,41 @@
           <li><a href="nothing.html">Contacts</a></li>
         </ul>
     </nav> 
+
+    <!--
     <section id="search_bar">
-        <form>
-            <input type="text" name="search_bar" placeholder="Search Bar" required>
-            <input type="date" name="start_date" value="2019-11-13" min="2019-11-13"> <!-- Change start date to today with JS -->
-            <input type="date" name="end_date" value="2019-11-13" min="2019-11-14"> <!-- Check if end date is after start date -->
-            <input type="submit" value="&#x1F50D;">
+        <form id="search">
+            <div class="search_fields">
+                <div class="search_fields_inner">
+                    <div class="search_field_destination">
+                        <input type="text" name="search_bar" placeholder="Search Bar" required>
+                    </div>
+                    <div class="search_field_dates">
+                        <div class="search_field_date">
+                            <input class="date" type="date" name="start_date" value="2019-11-13" min="2019-11-13">
+                        </div>
+                        <div class="search_field_date">
+                            <input class="date" type="date" name="end_date" value="2019-11-13" min="2019-11-14">
+                        </div>
+                    </div>
+                </div>
+                <div class="search_button">
+                    <input type="submit" value="&#x1F50D;">
+                </div>
+            </div>
         </form>
     </section>
+    -->
+
+    <form id="search_bar">
+        <h1>Find the perfect place</h1> 
+        <div class="search_box">
+            <input class="location" name="location" type="text" placeholder="Where to?"/>
+            <input class="date" name="start_date" type="date" value="2019-11-13" min="2019-11-13">
+            <input class="date" name="start_date" type="date" value="2019-11-14" min="2019-11-14">
+            <button class="search_button" type="button">Search</button>
+        </div>
+    </form>
 
     <section id="properties">
         <!-- Cycle for house articles comes here-->
