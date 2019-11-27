@@ -1,29 +1,38 @@
-/* Main color */
-body {
-    background-color: rgb(203, 219, 235);   
-    margin: 0;
-    
-    display: grid;
-    grid-template-rows: [start] auto [nav] auto [news] 1fr [footer] auto [end];  
+
+/* Header Style */
+body > header {
+    background-color: #92aedd;
+    color: white;
+  
+    padding: 1em;
 }
 
-
-/* Header Layout */
-body > header {
-    display: grid;
-    grid-template-columns: 6fr 1fr;
+body > header h1 {
+    margin: 0;
 }
   
-body > header h1 {
-    grid-column: 1;
+body > header a {
+    color: white;
+    text-decoration: none;  
 }
 
-body > header #signup {
-    grid-column: 2;
-    align-self: center;
+body > header a:first-child {
+    border-right: 2px solid white;
+    padding-right: 0.3em;
 }
 
-.icon {
-    width: 100px;
-    height: 100px;
+/* Fonts */
+
+header h1 {
+    font-size: 5em;
+    font-family: "sans serif";
+}
+
+header #signup {
+    font-size: 1.5em;
+    font-family: "sans serif";
+}
+
+#menu {
+    font-family: "Helvetica";
 }
