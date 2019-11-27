@@ -40,9 +40,9 @@
                 ?>
                 <li>
                     <article>
-                        <h3><?php $recommendedArticle.title ?></h3>
-                        <img src="../Images/<?php $recommendedArticle.image ?>" alt="<?php$recommendedArticle.image?>"/>
-                        <p><?php $recommendedArticle.description ?></p>                                                
+                        <h3><?=$recommendedArticle['title'] ?></h3>
+                        <img src="../Images/<?=$recommendedArticle['image'] ?>" alt="<?=$recommendedArticle['image'] ?>"/>
+                        <p><?=$recommendedArticle['description'] ?></p>                                                
                     </article>
                 </li>
             <?php } ?>

@@ -1,3 +1,3 @@
 <?php
-    $db = new PDO('sqlite:data.db');
+    $db = new PDO('sqlite:../Database/data.db');
 ?>
