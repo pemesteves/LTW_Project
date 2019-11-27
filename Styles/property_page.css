@@ -5,9 +5,9 @@
     grid-template-rows: auto auto auto auto auto;
     grid-template-areas: "slides price"
                          "slides dates"
-                         "name amldm"
-                         "comodities ndsq"
-                         "description ekjba";
+                         "name ..."
+                         "comodities ..."
+                         "description ...";
 }
 
 #property h2 {
