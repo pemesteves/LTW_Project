@@ -1,40 +1,12 @@
-/* Main Layout */
-
-body {
-    background-color: rgb(203, 219, 235);     
-    margin: 0;
-    
-    display: grid;
-    grid-template-rows: [start] auto [nav] auto [news] 1fr [footer] auto [end];
-}
-
-
-/* Header Layout */
-
-body > header {
-    display: grid;
-    grid-template-columns: 6fr 1fr;
-}
-  
-body > header h1 {
-    grid-column: 1;
-}
-
-body > header #signup {
-    grid-column: 2;
-    align-self: center;
-}
-
-
 /* Menu layout */
 
 #menu ul {
     display: flex;
     flex-direction: row;
-  }
+}
   
   #menu li {
     display: block;
     flex: 1;
-  }
+}
   
