@@ -1,31 +1,51 @@
-#slideshow {
+/*MAIN*/
+#property {
     display: grid;
     grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    grid-template-areas: "main_image second_image"
-                         "main_image third_image";
-}
-/*
-#slideshow img:first-child {
-    width: 50em;
-    height: 30em;
-    grid-area: main_image;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas: "slides price"
+                         "slides dates"
+                         "name amldm"
+                         "comodities ndsq"
+                         "description ekjba";
 }
 
-#slideshow img:first-child + img {
-    width: 30em;
-    height: 15em;
-    grid-area: second_image;
+#property h2 {
+  padding-left: 2em;
+  grid-area: name;
 }
 
-#slideshow img:first-child + img + img{
-    width: 30em;
-    height: 15em;
-    grid-area: third_image;
+#slideshow {
+  grid-area: slides;
 }
-*/
 
+#price {
+  grid-area: price;
+}
+
+#dates {
+  grid-area: dates;
+}
+
+#description {
+  color: white;
+  background-color: #92aedd;
+  padding-left: 3em;
+  grid-area: description;
+}
+
+#comodities {
+  padding-left: 3em;
+  grid-area: comodities;
+}
+
+
+/*SLIDESHOW*/
 * {box-sizing:border-box}
+
+#slideshow img {
+  width: 100%;
+}
 
 /* Slideshow container */
 .slideshow-container {
@@ -87,6 +107,10 @@
 }
 
 /* The dots */
+.dots {
+  text-align: center;
+}
+
 .dot {
   cursor: pointer;
   height: 15px;
