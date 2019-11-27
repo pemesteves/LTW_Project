@@ -1,10 +1,16 @@
 /* Main Page Image */
+#search_bar {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
 #search_bar img {
     width: 100%;
+    grid-column: 1;
 }
 
 #search_bar div {
-    display: block;
+    grid-column: 1;
 }
 
 /* Recommended Houses */
