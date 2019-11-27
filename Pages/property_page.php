@@ -1,5 +1,5 @@
 <?php 
-    include_once "../Database/connection.db";
+    include_once "../Database/connection.php";
 ?>
 <!DOCTYPE html>
 <html language="en">

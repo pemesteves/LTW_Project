@@ -32,8 +32,8 @@
             <h2>Rent houses from everywhere</h2>
             <img src="../Images/main_page.jpg" alt="Main Page Image"/>
             <div>
-                <form>
-                    <input type="text" name="search_bar" placeholder="Search Bar" required>
+                <form action="search_page.php" method="post"> 
+                    <input type="text" name="location" placeholder="Location" required>
                     <input type="date" name="start_date" value="2019-11-13" min="2019-11-13"> <!--CHANGE START DATE TO TODAY WITH JAVASCRIPT-->
                     <input type="date" name="end_date" value="2019-11-14" min="2019-11-14"> <!--END DATE MUST BE BIGGER THAN START DATE-->
                     <input type="submit" value="&#x1F50D;">
