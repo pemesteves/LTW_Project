@@ -1,3 +1,7 @@
+<?php 
+    include_once "../Database/connection.php"; 
+    include_once "../PHP_Scripts/recommended.php"; 
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -39,24 +43,17 @@
         <section id="recommended">
             <h2>Recommended</h2>
             <ul>
+            <?php $recommended = getRecommended(); 
+            foreach($recommended as $recommendedArticle){
+                ?>
                 <li>
                     <article>
-                        <img src="../Images/house_1.jpg" alt="House">
-                        <p>House Description</p>
+                        <h3><?=$recommendedArticle['title'] ?></h3>
+                        <img src="../Images/<?=$recommendedArticle['image'] ?>" alt="<?=$recommendedArticle['image'] ?>"/>
+                        <p><?=$recommendedArticle['description'] ?></p>                                                
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <img src="../Images/house_2.jpg" alt="House">
-                        <p>House Description</p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <img src="../Images/house_3.jpg" alt="House">
-                        <p>House Description</p>
-                    </article>
-                </li>
+            <?php } ?>
             </ul>
         </section>
     </body>
