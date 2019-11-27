@@ -1,4 +1,15 @@
+/* Main Page Image */
+#search_bar img {
+    width: 100%;
+}
+
+#search_bar div {
+    display: block;
+}
+
+/* Recommended Houses */
 #recommended {
+    display: block;
     width: 80%;
 }
 
