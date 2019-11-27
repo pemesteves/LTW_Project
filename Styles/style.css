@@ -1,4 +1,3 @@
-
 /* Header Style */
 body > header {
     background-color: #92aedd;
@@ -55,7 +54,6 @@ header #signup {
     background-color: #2e3c49;
     padding: 0.1em;
     text-align: center;
-    margin-bottom: 1em;
 }
 
 #menu a {
