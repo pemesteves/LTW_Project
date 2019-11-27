@@ -36,3 +36,33 @@ header #signup {
 #menu {
     font-family: "Helvetica";
 }
+
+/* Menu layout */
+
+#menu ul {
+    display: flex;
+    flex-direction: row;
+}
+  
+  #menu li {
+    display: block;
+    flex: 1;
+}
+
+/* Menu */
+
+#menu { 
+    background-color: #2e3c49;
+    padding: 0.1em;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+}
+
+#menu li {
+    list-style-type: none;
+}

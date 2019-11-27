@@ -1,7 +1,11 @@
+<?php 
+    include_once "../Database/connection.php"; 
+    include_once "../PHP_Scripts/recommended.php"; 
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>RENTIFY</title>
+        <title>Rentify</title>
         <meta name="keywords" content="unicode emoji characters, utf-8">
         <link rel="icon" href="../Images/icon.png">
         <link href="../Styles/main_page.css" rel="stylesheet">
@@ -11,13 +15,21 @@
     </head>
     <body> 
         <header>
-            <h1> Rentify </h1>
+            <h1> RENTIFY </h1>
             <div id="signup">
                 <a href="register.html">Register</a>
                 <a href="login.html">Login</a>
             </div>
         </header>
+        <nav id="menu">  
+            <ul>
+              <li><a href="nothing.html">About</a></li>
+              <li><a href="nothing.html">Language</a></li>
+              <li><a href="nothing.html">Contacts</a></li>
+            </ul>
+        </nav> 
         <section id="search_bar">
+            <h2>Rent houses from everywhere</h2>
             <img src="../Images/main_page.jpg" alt="Main Page Image"/>
             <div>
                 <form>
@@ -31,24 +43,17 @@
         <section id="recommended">
             <h2>Recommended</h2>
             <ul>
+            <?php $recommended = getRecommended(); 
+            foreach($recommended as $recommendedArticle){
+                ?>
                 <li>
                     <article>
-                        <img src="../Images/house_1.jpg" alt="House">
-                        <p>House Description</p>
+                        <h3><?=$recommendedArticle['title'] ?></h3>
+                        <img src="../Images/<?=$recommendedArticle['image'] ?>" alt="<?=$recommendedArticle['image'] ?>"/>
+                        <p><?=$recommendedArticle['description'] ?></p>                                                
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <img src="../Images/house_2.jpg" alt="House">
-                        <p>House Description</p>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <img src="../Images/house_3.jpg" alt="House">
-                        <p>House Description</p>
-                    </article>
-                </li>
+            <?php } ?>
             </ul>
         </section>
     </body>

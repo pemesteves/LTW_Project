@@ -1,16 +1,34 @@
 /* Main Page Image */
 #search_bar {
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto;
+}
+
+#search_bar h2 {
+    position: absolute;
+    color: white;
+    text-shadow: rgba(236, 146, 12, 0.904) 0em 0em 1em;
+    font-size: 3em;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
 
 #search_bar img {
     width: 100%;
-    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
 
 #search_bar div {
-    grid-column: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
 }
 
 /* Recommended Houses */

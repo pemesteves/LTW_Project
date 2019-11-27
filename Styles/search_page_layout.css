@@ -1,12 +1,1 @@
-/* Menu layout */
 
-#menu ul {
-    display: flex;
-    flex-direction: row;
-}
-  
-  #menu li {
-    display: block;
-    flex: 1;
-}
-  
