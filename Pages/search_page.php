@@ -10,7 +10,7 @@
 <html lang="en-US">
 <head>
     <title> Search Page</title>
-    <link rel="icon" href="../images/icon.png">
+    <link rel="icon" href="../Images/icon.png">
     <link rel="stylesheet" type="text/css" href="../Styles/layout.css">
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">
     <link rel="stylesheet" type="text/css" href="../Styles/search_page.css">
@@ -34,15 +34,17 @@
         </ul>
     </nav> 
 
-    <form id="search_bar" action="search_page.php" method="post">
-        <h1>Find the perfect place</h1> 
-        <div class="search_box">
-            <input class="location" name="location" type="text" placeholder="Where to?"/>
-            <input class="date" name="start_date" type="date" value="2019-11-13" min="2019-11-13">
-            <input class="date" name="end_date" type="date" value="2019-11-14" min="2019-11-14">
-            <button class="search_button" type="button">Search</button>
-        </div>
-    </form>
+    <section id="search_bar">
+        <h1>Find the perfect place</h1>
+        <form id="search_form" action="search_page.php" method="post"> 
+            <div class="search_box">
+                <input class="location" name="location" type="text" placeholder="Where to?"/>
+                <input class="date" name="start_date" type="date" value="2019-11-13" min="2019-11-13">
+                <input class="date" name="end_date" type="date" value="2019-11-14" min="2019-11-14">
+                <button class="search_button" type="submit">Search</button>
+            </div>
+        </form>
+    </section>
 
     <section id="properties">
         <?php 

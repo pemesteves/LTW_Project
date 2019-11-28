@@ -17,11 +17,6 @@
 }
 */
 
-
-
-
-
-
 /*
 #search_bar {
     width: 20em;
@@ -107,12 +102,12 @@ input.date {
 }
 */
 
-#search-bar h1 {
-    text-align: center;
+#search_bar h1 {
     color: #fff;
     margin-bottom: 1em;
     font-size: 45px;
     letter-spacing: 2px;
+    z-index: 2;
 }
 
 .search_box .location, .search_box .date {
@@ -133,7 +128,7 @@ input.date {
     height: 50px;
     width: 100px;
     background: #39409e;
-    border: none;
+    padding: 1em;
     color: #ffffff;
 }
 

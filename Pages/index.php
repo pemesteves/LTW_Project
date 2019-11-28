@@ -29,16 +29,16 @@
             </ul>
         </nav> 
         <section id="search_bar">
-            <h2>Rent houses from everywhere</h2>
+            <h1>Find the perfect place</h1>
             <img src="../Images/main_page.jpg" alt="Main Page Image"/>
-            <div>
-                <form action="search_page.php" method="post"> 
-                    <input type="text" name="location" placeholder="Location" required>
-                    <input type="date" name="start_date" value="2019-11-13" min="2019-11-13"> <!--CHANGE START DATE TO TODAY WITH JAVASCRIPT-->
-                    <input type="date" name="end_date" value="2019-11-14" min="2019-11-14"> <!--END DATE MUST BE BIGGER THAN START DATE-->
-                    <input type="submit" value="&#x1F50D;">
-                </form>
-            </div>
+            <form id="search_form" action="search_page.php" method="post"> 
+                <div class="search_box">
+                    <input class="location" name="location" type="text" placeholder="Where to?"/>
+                    <input class="date" name="start_date" type="date" value="2019-11-13" min="2019-11-13">
+                    <input class="date" name="end_date" type="date" value="2019-11-14" min="2019-11-14">
+                    <button class="search_button" type="submit">Search</button>
+                </div>
+            </form>
         </section>
         <section id="recommended">
             <h2>Recommended</h2>
