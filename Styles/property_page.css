@@ -41,7 +41,7 @@
 
 
 /*SLIDESHOW*/
-* {box-sizing:border-box}
+/* * {box-sizing:border-box} */
 
 #slideshow img {
   width: 100%;
