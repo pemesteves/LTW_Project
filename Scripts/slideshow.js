@@ -33,10 +33,9 @@ let prev = document.getElementsByClassName("prev")[0]
 prev.addEventListener("click", function(){plusSlides(-1)})
 let next = document.getElementsByClassName("next")[0]
 next.addEventListener("click", function(){plusSlides(1)})
-//Current number of the slide
-let current_slide1 = document.getElementsByClassName("dot")[0]
-current_slide1.addEventListener("click", function(){currentSlide(1)})
-let current_slide2 = document.getElementsByClassName("dot")[1]
-current_slide2.addEventListener("click", function(){currentSlide(2)})
-let current_slide3 = document.getElementsByClassName("dot")[2]
-current_slide3.addEventListener("click", function(){currentSlide(3)})
+//Get current slide
+let dots = document.getElementsByClassName("dot");
+for (let i = 0; i < dots.length; i++) {
+  let current_slide = dots[i];
+  current_slide.addEventListener("click", function(){currentSlide(i+1)});
+}
