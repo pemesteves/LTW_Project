@@ -30,7 +30,9 @@
         </nav> 
         <section id="search_bar">
             <h1>Find the perfect place</h1>
-            <img src="../Images/main_page.jpg" alt="Main Page Image"/>
+            <div class="height_crop">
+                <img src="../Images/main_page.jpg" alt="Main Page Image"/>
+            </div>
             <form id="search_form" action="search_page.php" method="post"> 
                 <div class="search_box">
                     <input class="location" name="location" type="text" placeholder="Where to?"/>
