@@ -13,7 +13,7 @@
 <!DOCTYPE html>
 <html language="en">
     <head>
-        <title>Property</title>
+        <title>Rentify</title>
         <link rel="icon" href="../Images/icon.png">
         <link href="../Styles/style.css" rel="stylesheet">
         <link href="../Styles/property_page.css" rel="stylesheet">
@@ -25,8 +25,8 @@
         <header>
             <h1> RENTIFY </h1>
             <div id="signup">
-                <a href="register.html">Register</a>
-                <a href="login.html">Login</a>
+                <a href="register.php">Register</a>
+                <a href="login.php">Login</a>
             </div>
         </header>
         <nav id="menu">  

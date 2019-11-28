@@ -17,8 +17,8 @@
         <header>
             <h1> RENTIFY </h1>
             <div id="signup">
-                <a href="register.html">Register</a>
-                <a href="login.html">Login</a>
+                <a href="register.php">Register</a>
+                <a href="login.php">Login</a>
             </div>
         </header>
         <nav id="menu">  

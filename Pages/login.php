@@ -1,11 +1,3 @@
-<?php
-    include_once "../Database/connection.php";
-    include_once "../PHP_Scripts/search.php";
-
-    $location = $_POST['location'];
-    $start_date = $_POST['start_date'];
-    $end_date = $_POST['end_date']; 
-?>
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -13,18 +5,12 @@
     <link rel="icon" href="../Images/icon.png">
     <link rel="stylesheet" type="text/css" href="../Styles/layout.css">
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">
-    <link rel="stylesheet" type="text/css" href="../Styles/search_page.css">
-    <link rel="stylesheet" type="text/css" href="../Styles/search_page_layout.css">
     <link rel="stylesheet" type="text/css" href="../Styles/search_bar.css">
     <meta name="keywords" content="unicode emoji characters, utf-8">
 </head>
 <body>
     <header>
         <h1> RENTIFY </h1>
-        <div id="signup">
-            <a href="register.php">Register</a>
-            <a href="login.php">Login</a>
-        </div>
     </header>
     <nav id="menu">  
         <ul>
@@ -35,7 +21,6 @@
     </nav> 
 
     <section id="search_bar">
-        <h1>Find the perfect place</h1>
         <form id="search_form" action="search_page.php" method="post"> 
             <div class="search_box">
                 <input class="location" name="location" type="text" placeholder="Where to?"/>
@@ -46,23 +31,20 @@
         </form>
     </section>
 
-    <section id="properties">
-        <?php 
-        $articles = getSearch($location);
-        foreach($articles as $propertyArticle){
-        ?>
-        <a href="property_page.php?property=<?=$propertyArticle['id']?>">
-            <article id="property">
-                <img src="../Images/<?=$propertyArticle['image'] ?>" alt="<?=$propertyArticle['image']?>"/>
-                <h3><?=$propertyArticle['title']?></h3>
-                <p id="short_description"><?=$propertyArticle['description']?></p>
-            
-                <p class="price"><?=$propertyArticle['price_per_day']?>$</p>
-
-                <p id="sleeps"><?=$propertyArticle['sleeps']?></p>
-            </article>
-        </a>
-        <?php } ?>
+    <section id="login">
+        <h2>Login</h2>
+        <form id="login_form">
+            <div class="login_box">
+                <label for="username">Username:</label>
+                <input name="username" type="text" placeholder="Username"/>
+                
+                <label for="password">Password:</label>
+                <input name="password" type="password" placeholder="Password"/>
+                
+                <input type="Submit" value="Login">
+            </div>
+        </form>
     </section>
+
 </body>
 </html>      
