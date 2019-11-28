@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title> Search Page</title>
+    <link rel="icon" href="../images/icon.png">
+    <link rel="stylesheet" type="text/css" href="../Styles/layout.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/search_page.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/search_page_layout.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/search_bar.css">
+    <meta name="keywords" content="unicode emoji characters, utf-8">
+</head>
+<body>
+    <header>
+        <h1> RENTIFY </h1>
+        <div id="signup">
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+        </div>
+    </header>
+    <nav id="menu">  
+        <ul>
+          <li><a href="nothing.html">About</a></li>
+          <li><a href="nothing.html">Language</a></li>
+          <li><a href="nothing.html">Contacts</a></li>
+        </ul>
+    </nav> 
+
+    <!--
+    <section id="search_bar">
+        <form id="search">
+            <div class="search_fields">
+                <div class="search_fields_inner">
+                    <div class="search_field_destination">
+                        <input type="text" name="search_bar" placeholder="Search Bar" required>
+                    </div>
+                    <div class="search_field_dates">
+                        <div class="search_field_date">
+                            <input class="date" type="date" name="start_date" value="2019-11-13" min="2019-11-13">
+                        </div>
+                        <div class="search_field_date">
+                            <input class="date" type="date" name="end_date" value="2019-11-13" min="2019-11-14">
+                        </div>
+                    </div>
+                </div>
+                <div class="search_button">
+                    <input type="submit" value="&#x1F50D;">
+                </div>
+            </div>
+        </form>
+    </section>
+    -->
+
+    <form id="search_bar">
+        <h1>Find the perfect place</h1> 
+        <div class="search_box">
+            <input class="location" name="location" type="text" placeholder="Where to?"/>
+            <input class="date" name="start_date" type="date" value="2019-11-13" min="2019-11-13">
+            <input class="date" name="start_date" type="date" value="2019-11-14" min="2019-11-14">
+            <button class="search_button" type="button">Search</button>
+        </div>
+    </form>
+
+    <section id="properties">
+        <!-- Cycle for house articles comes here-->
+        <article id="property">
+            <header>
+
+            </header>
+            <img src="../Images/modern_house.jpg" alt="">
+            <p id="porperty_type">
+                Modern House in Amarante
+            </p>
+            <p id="short_description">
+                I'm blue da ba dee da ba daa
+            </p>
+            <section id="commodities">
+                <p>
+                    Wifi - Kitchen - Pool
+                </p>
+            </section>
+            <p id="price">
+                69$
+            </p>
+        </article>
+    </section>
+</body>
+</html>

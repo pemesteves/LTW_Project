@@ -28,9 +28,9 @@
     </header>
     <nav id="menu">  
         <ul>
-          <li><a href="nothing.html">About</a></li>
-          <li><a href="nothing.html">Language</a></li>
-          <li><a href="nothing.html">Contacts</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Language</a></li>
+          <li><a href="#">Contacts</a></li>
         </ul>
     </nav> 
 
@@ -49,7 +49,7 @@
         $articles = getSearch($location);
         foreach($articles as $propertyArticle){
         ?>
-        <a href="property_page.html">
+        <a href="property_page.php?property=<?=$propertyArticle['id']?>">
             <article id="property">
                 <img src="../Images/<?=$propertyArticle['image'] ?>" alt="<?=$propertyArticle['image']?>"/>
                 <h3><?=$propertyArticle['title']?></h3>
