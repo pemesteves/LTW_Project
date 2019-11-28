@@ -6,10 +6,9 @@
     $property_id = $_GET['property'];
     $property_info = getPropertyInfo($property_id);
     $property_images = getPropertyImages($property_id);
-    /*
-        TODO: CORRIGIR QUERY
-        $property_commodities = getCommodities($property_id); 
-    */
+    //TODO: CORRIGIR QUERY
+    $property_commodities = [];// = getCommodities($property_id); 
+
 ?>
 <!DOCTYPE html>
 <html language="en">
@@ -41,11 +40,9 @@
             <section id="property">
                 <article id="slideshow" >
                     <div class="slideshow-container">
-                    <?php foreach($property_images as $image){
-                            console.log($image);    
-                    ?>
+                    <?php foreach($property_images as $image){?>
                         <div class="mySlides">
-                            <img src="../Images/<?=$image?>" alt="<?=$image?>">
+                            <img src="../Images/<?=$image['image']?>" alt="<?=$image['image']?>">
                         </div>
                     <?php } ?>                       
                         <a class="prev" >&#10094;</a>
@@ -58,10 +55,10 @@
                     <?php } ?>
                     </div>
                 </article>
-                <h2><?=$property_info['title']?></h2>
+                <h2><?=$property_info[0]['title']?></h2>
                 <article id="description">
                     <h3>Description</h3>
-                    <p><?=$property_info['description']?></p>
+                    <p><?=$property_info[0]['description']?></p>
                 </article>
                 <article id="comodities">
                     <h3>Commodities</h3>
@@ -73,7 +70,7 @@
                 </article>
                 <article id="price">
                     <h3>Price</h3>
-                    <p><?=<$property_info['price']?>$</p>
+                    <p><?=$property_info[0]['price_per_day']?>$</p>
                 </article>
                 <article id="dates">
                     <form>
