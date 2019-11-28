@@ -48,10 +48,57 @@ INSERT INTO User
 
 
 /*******************/
+/**   COMMODITY   **/
+/*******************/
+
+INSERT INTO Commodity  /* ID 1 */
+    (description)
+    VALUES
+    ('Wi-Fi');
+
+INSERT INTO Commodity  /* ID 2 */
+    (description)
+    VALUES
+    ('Washer & Dryer');
+
+INSERT INTO Commodity  /* ID 3 */
+    (description)
+    VALUES
+    ('TV');
+
+INSERT INTO Commodity  /* ID 4 */
+    (description)
+    VALUES
+    ('Parking');
+
+INSERT INTO Commodity  /* ID 5 */
+    (description)
+    VALUES
+    ('Heater');
+    
+INSERT INTO Commodity  /* ID 6 */
+    (description)
+    VALUES
+    ('Swimming Pool');
+
+INSERT INTO Commodity  /* ID 7 */
+    (description)
+    VALUES
+    ('Barbecue');
+
+INSERT INTO Commodity  /* ID 8 */
+    (description)
+    VALUES
+    ('Fireplace');    
+
+
+
+/*******************/
 /**   PROPERTIES  **/
 /*******************/
 
-INSERT INTO Property
+/* ID 1 */
+INSERT INTO Property    
     (owner_username, title, price_per_day, location, description, sleeps)
     VALUES
     ('miguel_pinto_69',
@@ -65,8 +112,18 @@ INSERT INTO PropertyImage
     VALUES
     (1,
     'p_house1.jpg');
+INSERT INTO PropertyCommodity   /* Wi-Fi */
+    (property_id, commodity_id)
+    VALUES
+    (1, 1);
+INSERT INTO PropertyCommodity   /* Washer & Dryer */
+    (property_id, commodity_id)
+    VALUES
+    (1, 2);
 
-INSERT INTO Property
+
+/* ID 2 */
+INSERT INTO Property    
     (owner_username, title, price_per_day, location, description, sleeps)
     VALUES
     ('pedrito_pirolito',
@@ -80,8 +137,21 @@ INSERT INTO PropertyImage
     VALUES
     (2,
     'p_house4.jpeg');
+INSERT INTO PropertyCommodity   /* TV */
+    (property_id, commodity_id)
+    VALUES
+    (2, 3);
+INSERT INTO PropertyCommodity   /* Parking */
+    (property_id, commodity_id)
+    VALUES
+    (2, 4);
+INSERT INTO PropertyCommodity   /* Heater */
+    (property_id, commodity_id)
+    VALUES
+    (2, 5);         
 
-INSERT INTO Property
+/* ID 3 */
+INSERT INTO Property    
     (owner_username, title, price_per_day, location, description, sleeps)
     VALUES
     ('nuno_iron_man',
@@ -94,5 +164,17 @@ INSERT INTO PropertyImage
     (property_id, image_name)
     VALUES
     (3,
-    'p_house2.jpeg');    
+    'p_house2.jpeg');
+INSERT INTO PropertyCommodity   /* Swimming Pool */
+    (property_id, commodity_id)
+    VALUES
+    (3, 6);
+INSERT INTO PropertyCommodity   /* Barbecue */
+    (property_id, commodity_id)
+    VALUES
+    (3, 7);
+INSERT INTO PropertyCommodity   /* Fireplace */
+    (property_id, commodity_id)
+    VALUES
+    (3, 8);         
 

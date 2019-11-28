@@ -38,12 +38,12 @@ CREATE TABLE Reservation(
 );
 
 CREATE TABLE Commodity(
-    id INTEGER PRIMARY KEY, 
+    id INTEGER PRIMARY KEY AUTOINCREMENT, 
     description TEXT NOT NULL
 );
 
 CREATE TABLE PropertyCommodity(
-    property_id INTEGER REFERENCES Reservation(id),
+    property_id INTEGER REFERENCES Property(id),
     commodity_id INTEGER REFERENCES Commodity(id),
     PRIMARY KEY(property_id, commodity_id)
 );
