@@ -23,9 +23,9 @@
         </header>
         <nav id="menu">  
             <ul>
-              <li><a href="nothing.html">About</a></li>
-              <li><a href="nothing.html">Language</a></li>
-              <li><a href="nothing.html">Contacts</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Language</a></li>
+              <li><a href="#">Contacts</a></li>
             </ul>
         </nav> 
         <section id="search_bar">
