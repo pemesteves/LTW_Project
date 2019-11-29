@@ -138,6 +138,6 @@ input.date {
 }
 
 .search_box {
-    background: #e4e0e0;
-    padding: 30px 50px;
+    background-color: rgba(5, 6, 43, 0.5);  
+    padding: 20px 30px;
 }
