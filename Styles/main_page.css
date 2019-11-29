@@ -37,34 +37,107 @@
 
 /* Recommended Houses */
 #recommended {
-    display: block;
-    width: 80%;
+    width: auto;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+#recommended h2 {
+    padding: 1em;
+    color: #12197a;
 }
 
 #recommended ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 0;
+    padding: 0%;
 }
 
 #recommended ul li {
     list-style-type: none;
-    flex-grow: 1;
-    margin: 0;
-    padding: 0;
 }
 
-#recommended ul li:first-child {
-    border-left: 1px solid gray;
+#recommended article h3 {
+    color: #39409e;
 }
 
-#recommended ul li{
-    border-right: 1px solid gray;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
-} 
+#recommended .height_crop {
+    max-height: 12em;
+    overflow: hidden;
+}
 
 #recommended ul li article img {
-    height: 7.5em;
-    margin: 0 auto;
+    width: 100%;
+    max-height: 14em;
+    filter: gray; /* IE5+ */
+    -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+#recommended ul li article img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+/* Add new houses */
+#rent_new_houses {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr auto 1fr;
+}
+
+#rent_new_houses h2 {
+    padding-left: 0.5em;
+    color: white;
+    text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+    font-size: 2em;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    z-index: 1;
+}
+
+#rent_new_houses .height_crop {
+    max-height: 600px; 
+    overflow: hidden; 
+    grid-row-start: 1;
+    grid-row-end: 5;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#rent_new_houses img {
+    width: 100%;
+    filter: blur(5px);
+    z-index: 0;
+    transition: all .8s ease-in-out;
+}
+
+#rent_new_houses img:hover {
+    filter: none
+}
+
+#rent_new_houses .rentify_box {
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: center;
+    z-index: 1;
+}
+
+#rent_new_houses .rentify_button {
+    height: 50px;
+    width: 100px;
+    background: #39409e;
+    padding: 1em;
+    color: #ffffff;
+}
+
+#rent_new_houses .rentify_button:hover {
+    background: #12197a;
+    cursor: pointer;
+
 }
