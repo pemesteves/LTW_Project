@@ -50,13 +50,24 @@
                 ?>
                 <li>
                     <article>
+                        <div class="height_crop">
+                            <img src="../Images/<?=$recommendedArticle['image'] ?>" alt="<?=$recommendedArticle['image'] ?>"/>
+                        </div>
                         <h3><?=$recommendedArticle['title'] ?></h3>
-                        <img src="../Images/<?=$recommendedArticle['image'] ?>" alt="<?=$recommendedArticle['image'] ?>"/>
                         <p><?=$recommendedArticle['description'] ?></p>                                                
                     </article>
                 </li>
             <?php } ?>
             </ul>
+        </section>
+        <section id="rent_new_houses">
+            <h2>Rentify your property here</h2>
+            <div class="height_crop">
+                <img src="../Images/main_paradise.jpg" alt="Main Page Rntify Image"/>
+            </div>
+            <div class="rentify_box">
+                <button class="rentify_button" type="submit">Rentify</button>
+            </div>
         </section>
     </body>
 </html>
