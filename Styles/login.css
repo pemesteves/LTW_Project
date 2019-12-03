@@ -24,7 +24,7 @@ body {
 
 /*Search bar*/
 #search_bar {
-    filter: opacity(0.2);
+    filter: opacity(0.5);
     transition: all .8s ease-in-out;
     padding-top: 1em;
     text-align: center;
