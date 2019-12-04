@@ -22,17 +22,6 @@
     </nav> 
     
     <section id="main_account">
-        <section id="search_bar">
-            <form id="search_form" action="search_page.php" method="post"> 
-                <div class="search_box">
-                    <input class="location" name="location" type="text" placeholder="Where to?"/>
-                    <input class="date" name="start_date" type="date" value="2019-11-13" min="2019-11-13">
-                    <input class="date" name="end_date" type="date" value="2019-11-14" min="2019-11-14">
-                    <button class="search_button" type="submit">Search</button>
-                </div>
-            </form>
-        </section>
-
         <section id="account">
             <h2>Login</h2>
             <form id="account_form">

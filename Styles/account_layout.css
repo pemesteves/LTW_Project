@@ -2,13 +2,14 @@
 body {
     background-image: url("../Images/login_mountain.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /*Main*/
 #main_account {
     display: grid;
     grid-template-rows: auto 0.1fr 0.5fr 0.1fr;
-    grid-template-columns: 1fr auto auto 1fr;
+    grid-template-columns: 0.8fr 1.2fr 1.2fr 0.8fr;
 }
 
 /*Menu*/
@@ -18,23 +19,6 @@ body {
 }
 
 #menu:hover {
-    filter: none;
-}
-
-/*Search bar*/
-#search_bar {
-    filter: opacity(0.5);
-    transition: all .8s ease-in-out;
-    padding-top: 1em;
-    text-align: center;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 4;
-    z-index: 1;
-}
-
-#search_bar:hover {
     filter: none;
 }
 
@@ -48,7 +32,7 @@ body {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 3;
-    grid-column-end: 3;
+    grid-column-end: 4;
     border-radius: 1em;
 }
 
