@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
     <title>Rentify</title>
     <link rel="icon" href="../Images/icon.png">
@@ -11,12 +11,11 @@
 </head>
 <body>
     <header>
-        <h1> RENTIFY </h1>
+        <h1><a href="index.php"> RENTIFY </a></h1>
     </header>
     <nav id="menu">  
         <ul>
           <li><a href="#">About</a></li>
-          <li><a href="#">Language</a></li>
           <li><a href="#">Contacts</a></li>
         </ul>
     </nav> 
