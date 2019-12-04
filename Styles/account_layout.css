@@ -1,12 +1,11 @@
 /*Background*/
 body {
     background-image: url("../Images/login_mountain.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /*Main*/
-#main_login {
+#main_account {
     display: grid;
     grid-template-rows: auto 0.1fr 0.5fr 0.1fr;
     grid-template-columns: 1fr auto auto 1fr;
@@ -39,8 +38,8 @@ body {
     filter: none;
 }
 
-/*Login*/
-#login {
+/*Account login/register*/
+#account {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -53,20 +52,24 @@ body {
     border-radius: 1em;
 }
 
-#login h2 {
+#account .account_box {
+    text-align: right;
+}
+
+#account h2 {
     color: #39409e;
     text-align: left;
 }
 
-#login .username {
+#account .username {
     padding:0.5em;
 }
 
-#login .password {
+#account .password {
     padding:0.5em;
 }
 
-#login .login_button {
+#account .account_button {
     background: #39409e;
     padding-left: 1em;
     padding-right: 1em;
@@ -76,7 +79,7 @@ body {
     width: 80px;
 }
 
-#login .login_button:hover {
+#account .account_button:hover {
     background: #12197a;
     cursor: pointer;
 }

@@ -63,14 +63,12 @@
 }
 
 #recommended .height_crop {
-    max-height: 11em;
+    max-height: 14em;
     overflow: hidden;
 }
 
 #recommended ul li article img {
     width: 100%;
-    max-height: 14em;
-
     filter: gray; /* IE5+ */
     -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
