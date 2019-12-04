@@ -74,6 +74,7 @@
     filter: gray; /* IE5+ */
     -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
 #recommended ul li article img:hover {
