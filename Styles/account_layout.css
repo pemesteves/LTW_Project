@@ -1,7 +1,7 @@
 /*Background*/
 body {
     background-image: url("../Images/login_mountain.jpg");
-    background-size: 100%;
+    background-size: cover;
 }
 
 /*Main*/
