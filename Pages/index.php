@@ -45,9 +45,11 @@
         <section id="recommended">
             <h2>Recommended</h2>
             <ul>
-            <?php $recommended = getRecommended(); 
-            foreach($recommended as $recommendedArticle){
-                ?>
+            <?php 
+            try{
+                $recommended = getRecommended(); 
+                foreach($recommended as $recommendedArticle){
+            ?>
                 <li>
                     <article>
                         <div class="height_crop">
@@ -57,7 +59,12 @@
                         <p><?=$recommendedArticle['description'] ?></p>                                                
                     </article>
                 </li>
-            <?php } ?>
+            <?php } 
+            }catch(Exception $e){
+            ?>
+                <p>Can't find recommended houses!</p>
+            <?php }
+            ?>
             </ul>
         </section>
         <section id="rent_new_houses">

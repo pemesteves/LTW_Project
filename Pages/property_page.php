@@ -1,15 +1,3 @@
-<?php 
-    include_once "../Database/connection.php";
-    include_once "../PHP_Scripts/search.php";
-    include_once "../PHP_Scripts/property.php";
-
-    $property_id = $_GET['property'];
-    $property_info = getPropertyInfo($property_id);
-    $property_images = getPropertyImages($property_id);
-    //TODO: CORRIGIR QUERY
-    $property_commodities = [];// = getCommodities($property_id); 
-
-?>
 <!DOCTYPE html>
 <html language="en">
     <head>
@@ -37,6 +25,19 @@
             </ul>
         </nav> 
         <section id="main">
+        <?php 
+            include_once "../Database/connection.php";
+            include_once "../PHP_Scripts/search.php";
+            include_once "../PHP_Scripts/property.php";
+
+            $property_id = $_GET['property'];
+            try{
+                $property_info = getPropertyInfo($property_id);
+                $property_images = getPropertyImages($property_id);
+                //TODO: CORRIGIR QUERY
+                $property_commodities = getCommodities($property_id); 
+            
+            ?>
             <section id="property">
                 <article id="slideshow" >
                     <div class="slideshow-container">
@@ -80,6 +81,13 @@
                     </form>
                 </article>
             </section>
+            <?php 
+            }catch(Exception $e){ 
+            ?>
+                <p>Can't find property information!</p>
+            <?php    
+            }
+            ?>
         </section>
     </body>
 </html>
