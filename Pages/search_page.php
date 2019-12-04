@@ -49,6 +49,15 @@
     <section id="properties">
         <?php 
         $articles = getSearch($location);
+        if(count($articles) == 0){
+        ?>    
+        <article id="not_found">
+            <img src="../Images/search.png" alt="Not found"/>
+            <p>No results were found for the specified search.</p> 
+        </article>
+        <?php
+        }
+        else{
         foreach($articles as $propertyArticle){
         ?>
         <a href="property_page.php?property=<?=$propertyArticle['id']?>">
@@ -62,7 +71,9 @@
                 <p id="sleeps"><?=$propertyArticle['sleeps']?></p>
             </article>
         </a>
-        <?php } ?>
+        <?php } 
+        }
+        ?>
     </section>
 </body>
 </html>      
