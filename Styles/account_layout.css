@@ -40,6 +40,10 @@ body {
     text-align: right;
 }
 
+#account .account_box div{
+    padding-right: 0%;
+}
+
 #account h2 {
     color: #39409e;
     text-align: left;
@@ -58,7 +62,7 @@ body {
     padding-left: 1em;
     padding-right: 1em;
     color: #ffffff;
-    margin-top: 2em;
+    margin-top: 1em;
     height: 25px;
     width: 80px;
 }
@@ -66,4 +70,14 @@ body {
 #account .account_button:hover {
     background: #12197a;
     cursor: pointer;
+}
+
+#account input {
+    width: 50%;
+    border: 2px solid #92aedd;
+    border-radius: 4px;
+}
+
+#account .account_button {
+    border: none;
 }

@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../Styles/style.css">
     <link rel="stylesheet" type="text/css" href="../Styles/search_bar.css">
     <link rel="stylesheet" type="text/css" href="../Styles/account_layout.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/login.css">
     <meta name="keywords" content="unicode emoji characters, utf-8">
 </head>
 <body>
@@ -34,6 +35,9 @@
                         <input name="password" type="password" placeholder="Password"/>
                     </div>
                     <input class="account_button" type="Submit" value="Login">
+                    <div class="sign_up">
+                        <p>Don't have an account? Sign up <a href="register.php">here</a></p> 
+                    </div>
                 </div>
             </form>
         </section>

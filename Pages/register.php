@@ -24,7 +24,7 @@
     <section id="main_account">
         <section id="account">
             <h2>Register</h2>
-            <form id="register_form">
+            <form id="account_form">
                 <div class="account_box">
                     <div class="username">
                         <label for="username">Username:</label>
