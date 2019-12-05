@@ -32,10 +32,10 @@
     function getCommodities($id){
         global $db;
         $stmt = $db->prepare('
-            SELECT Commodity.description as commodity
+            SELECT commodity
             FROM Property
             NATURAL JOIN (
-                SELECT Commodity.description, PropertyCommodity.property_id as id
+                SELECT Commodity.description as commodity, PropertyCommodity.property_id as id
                 FROM PropertyCommodity
                 JOIN Commodity
                 ON PropertyCommodity.commodity_id = Commodity.id
