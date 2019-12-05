@@ -33,7 +33,6 @@
             try{
                 $property_info = getPropertyInfo($property_id);
                 $property_images = getPropertyImages($property_id);
-                //TODO: CORRIGIR QUERY
                 $property_commodities = getCommodities($property_id); 
             
             ?>
@@ -63,12 +62,12 @@
                 <article id="comodities">
                     <h3>Commodities</h3>
                     <ul>
-                    <?php for($i = 0; $i < count($property_commodities); $i++){ 
-                            foreach($property_commodities[$i] as $commodity) {
+                    <?php  
+                        foreach($property_commodities as $commodity) {
                     ?>
-                                <li><p><?=$commodity?></p></li>
-                    <?php   } 
-                          } 
+                        <li><p><?=$commodity['commodity']?></p></li>
+                    <?php
+                        }
                     ?>
                     </ul>
                 </article>
