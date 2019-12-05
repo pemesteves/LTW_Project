@@ -1,17 +1,17 @@
 <?php 
-    include_once "../Database/connection.php"; 
-    include_once "../PHP_Scripts/recommended.php"; 
+    include_once "../database/connection.php"; 
+    include_once "../database/property.php"; 
 ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Rentify</title>
         <meta name="keywords" content="unicode emoji characters, utf-8">
-        <link rel="icon" href="../Images/icon.png">
-        <link href="../Styles/main_page.css" rel="stylesheet">
-        <link href="../Styles/search_bar.css" rel="stylesheet">
-        <link href="../Styles/layout.css" rel="stylesheet">
-        <link href="../Styles/style.css" rel="stylesheet">
+        <link rel="icon" href="../images/icon.png">
+        <link href="../css/main_page.css" rel="stylesheet">
+        <link href="../css/search_bar.css" rel="stylesheet">
+        <link href="../css/layout.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
     </head>
     <body> 
         <header>
@@ -30,7 +30,7 @@
         <section id="search_bar">
             <h1>Find the perfect place</h1>
             <div class="height_crop">
-                <img src="../Images/main_page.jpg" alt="Main Page Image"/>
+                <img src="../images/main_page.jpg" alt="Main Page Image"/>
             </div>
             <form id="search_form" action="search_page.php" method="post"> 
                 <div class="search_box">
@@ -52,7 +52,7 @@
                 <li>
                     <article>
                         <div class="height_crop">
-                            <img src="../Images/<?=$recommendedArticle['image'] ?>" alt="<?=$recommendedArticle['image'] ?>"/>
+                            <img src="../images/<?=$recommendedArticle['image'] ?>" alt="<?=$recommendedArticle['image'] ?>"/>
                         </div>
                         <h3><?=$recommendedArticle['title'] ?></h3>
                         <p><?=$recommendedArticle['description'] ?></p>                                                
@@ -69,7 +69,7 @@
         <section id="rent_new_houses">
             <h2>Rentify your property here</h2>
             <div class="height_crop">
-                <img src="../Images/main_paradise.jpg" alt="Main Page Rntify Image"/>
+                <img src="../images/main_paradise.jpg" alt="Main Page Rntify Image"/>
             </div>
             <div class="rentify_box">
                 <button class="rentify_button" type="submit">Rentify</button>

@@ -2,11 +2,11 @@
 <html lang="en">
     <head>
         <title>Rentify</title>
-        <link rel="icon" href="../Images/icon.png">
-        <link href="../Styles/style.css" rel="stylesheet">
-        <link href="../Styles/property_page.css" rel="stylesheet">
-        <link href="../Styles/layout.css" rel="stylesheet">
-        <script src="../Scripts/slideshow.js" async></script>
+        <link rel="icon" href="../images/icon.png">
+        <link href="../css/style.css" rel="stylesheet">
+        <link href="../css/property_page.css" rel="stylesheet">
+        <link href="../css/layout.css" rel="stylesheet">
+        <script src="../scripts/slideshow.js" async></script>
         <meta charset="utf-8">
     </head>
     <body>
@@ -25,9 +25,9 @@
         </nav> 
         <section id="main">
         <?php 
-            include_once "../Database/connection.php";
-            include_once "../PHP_Scripts/search.php";
-            include_once "../PHP_Scripts/property.php";
+            include_once "../database/connection.php";
+            //include_once "../database/search.php";
+            include_once "../database/property.php";
 
             $property_id = $_GET['property'];
             try{
@@ -42,7 +42,7 @@
                     <div class="slideshow-container">
                     <?php foreach($property_images as $image){?>
                         <div class="mySlides">
-                            <img src="../Images/<?=$image['image']?>" alt="<?=$image['image']?>">
+                            <img src="../images/<?=$image['image']?>" alt="<?=$image['image']?>">
                         </div>
                     <?php } ?>                       
                         <a class="prev" >&#10094;</a>
@@ -63,9 +63,13 @@
                 <article id="comodities">
                     <h3>Commodities</h3>
                     <ul>
-                    <?php foreach($property_commodities as $commodity){ ?>
-                        <li><p><?=$commodity?></p></li>
-                    <?php } ?>
+                    <?php for($i = 0; $i < count($property_commodities); $i++){ 
+                            foreach($property_commodities[$i] as $commodity) {
+                    ?>
+                                <li><p><?=$commodity?></p></li>
+                    <?php   } 
+                          } 
+                    ?>
                     </ul>
                 </article>
                 <article id="price">
