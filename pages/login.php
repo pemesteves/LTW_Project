@@ -24,7 +24,7 @@
     <section id="main_account">
         <section id="account">
             <h2>Login</h2>
-            <form id="account_form">
+            <form id="account_form" action="../actions/action_login.php" method="post">
                 <div class="account_box">
                     <div class="username">
                         <label for="username">Username:</label>
