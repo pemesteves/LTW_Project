@@ -1,6 +1,7 @@
 <?php
     include_once "../database/connection.php";
     include_once "../database/property.php";
+    include_once "../templates/tpl_common.php";
 
     $location = $_POST['location'];
     $start_date = $_POST['start_date'];
@@ -19,12 +20,12 @@
     <meta name="keywords" content="unicode emoji characters, utf-8">
 </head>
 <body>
-    <?php include ('templates/header.html') ?>
-    <?php include ('templates/menu.html') ?>
+    <?php draw_body_header(); ?>
+    <?php draw_body_menu(); ?>
 
     <section id="search_bar">
         <h1>Find the perfect place</h1>
-        <?php include ('templates/search_bar.html') ?>
+        <?php draw_search_bar(); ?>
     </section>
 
     <section id="properties">

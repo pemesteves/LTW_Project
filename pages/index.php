@@ -1,6 +1,7 @@
 <?php 
     include_once "../database/connection.php"; 
     include_once "../database/property.php"; 
+    include_once "../templates/tpl_common.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,15 +15,17 @@
         <link href="../css/style.css" rel="stylesheet">
     </head>
     <body> 
-        <?php include ('templates/header.html') ?>
-        <?php include ('templates/menu.html') ?>
-        
+        <?php
+            draw_body_header();
+            draw_body_menu();
+        ?>
+
         <section id="search_bar">
             <h1>Find the perfect place</h1>
             <div class="height_crop">
                 <img src="../images/main_page.jpg" alt="Main Page Image"/>
             </div>
-            <?php include ('templates/search_bar.html') ?>
+            <?php draw_search_bar(); ?>
         </section>
         
         <section id="recommended">

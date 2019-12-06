@@ -1,3 +1,9 @@
+<?php 
+    include_once "../templates/tpl_common.php";
+    include_once "../database/connection.php";
+    //include_once "../database/search.php";
+    include_once "../database/property.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -10,14 +16,11 @@
         <meta charset="utf-8">
     </head>
     <body>
-        <?php include ('templates/header.html') ?>
-        <?php include ('templates/menu.html') ?>
+        <?php draw_body_header(); ?>
+        <?php draw_body_header(); ?>
         
         <section id="main">
         <?php 
-            include_once "../database/connection.php";
-            //include_once "../database/search.php";
-            include_once "../database/property.php";
 
             $property_id = $_GET['property'];
             try{

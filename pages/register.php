@@ -1,3 +1,6 @@
+<?php
+    include_once "../templates/tpl_common.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +18,7 @@
         <h1><a href="index.php"> RENTIFY </a></h1>
     </header>
     
-    <?php include ('templates/menu.html') ?>
+    <?php draw_body_menu(); ?>
 
     <section id="main_account">
         <section id="account">
