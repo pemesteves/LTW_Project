@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="../css/layout.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/search_page.css">
-    <link rel="stylesheet" type="text/css" href="../css/search_page_layout.css">
     <link rel="stylesheet" type="text/css" href="../css/search_bar.css">
     <meta name="keywords" content="unicode emoji characters, utf-8">
 </head>

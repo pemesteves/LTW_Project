@@ -119,7 +119,7 @@
     filter: none
 }
 
-#rent_new_houses .rentify_box {
+#rent_new_houses #rentify_form  {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 2;
