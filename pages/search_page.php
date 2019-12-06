@@ -1,6 +1,6 @@
 <?php
-    include_once "../Database/connection.php";
-    include_once "../PHP_Scripts/search.php";
+    include_once "../database/connection.php";
+    include_once "../database/property.php";
 
     $location = $_POST['location'];
     $start_date = $_POST['start_date'];
@@ -10,12 +10,12 @@
 <html lang="en">
 <head>
     <title>Rentify</title>
-    <link rel="icon" href="../Images/icon.png">
-    <link rel="stylesheet" type="text/css" href="../Styles/layout.css">
-    <link rel="stylesheet" type="text/css" href="../Styles/style.css">
-    <link rel="stylesheet" type="text/css" href="../Styles/search_page.css">
-    <link rel="stylesheet" type="text/css" href="../Styles/search_page_layout.css">
-    <link rel="stylesheet" type="text/css" href="../Styles/search_bar.css">
+    <link rel="icon" href="../images/icon.png">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/search_page.css">
+    <link rel="stylesheet" type="text/css" href="../css/search_page_layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/search_bar.css">
     <meta name="keywords" content="unicode emoji characters, utf-8">
 </head>
 <body>
@@ -29,11 +29,11 @@
 
     <section id="properties">
         <?php 
-        $articles = getSearch($location);
+        $articles = getPropertyByLocation($location);
         if(count($articles) == 0){
         ?>    
         <article id="not_found">
-            <img src="../Images/search.png" alt="Not found"/>
+            <img src="../images/search.png" alt="Not found"/>
             <p>No results were found for the specified search.</p> 
         </article>
         <?php
@@ -43,7 +43,7 @@
         ?>
         <a href="property_page.php?property=<?=$propertyArticle['id']?>">
             <article id="property">
-                <img src="../Images/<?=$propertyArticle['image'] ?>" alt="<?=$propertyArticle['image']?>"/>
+                <img src="../images/<?=$propertyArticle['image'] ?>" alt="<?=$propertyArticle['image']?>"/>
                 <h3><?=$propertyArticle['title']?></h3>
                 <p id="short_description"><?=$propertyArticle['description']?></p>
             

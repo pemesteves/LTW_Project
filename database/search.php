@@ -1,5 +1,5 @@
 <?php
-    include_once "../Database/connection.php";
+    include_once "../database/connection.php";
 
     function getSearch($location){
         global $db;

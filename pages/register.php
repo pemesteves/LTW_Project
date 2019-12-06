@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <title>Rentify</title>
-    <link rel="icon" href="../Images/icon.png">
-    <link rel="stylesheet" type="text/css" href="../Styles/layout.css">
-    <link rel="stylesheet" type="text/css" href="../Styles/style.css">
-    <link rel="stylesheet" type="text/css" href="../Styles/search_bar.css">
-    <link rel="stylesheet" type="text/css" href="../Styles/account_layout.css">
-    <link rel="stylesheet" type="text/css" href="../Styles/register.css">
+    <link rel="icon" href="../images/icon.png">
+    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/search_bar.css">
+    <link rel="stylesheet" type="text/css" href="../css/account_layout.css">
+    <link rel="stylesheet" type="text/css" href="../css/register.css">
     <meta name="keywords" content="unicode emoji characters, utf-8">
 </head>
 <body>
