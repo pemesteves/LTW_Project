@@ -1,17 +1,11 @@
 <?php
     include_once "../templates/tpl_common.php";
+
+    document_main_part();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Rentify</title>
-    <link rel="icon" href="../images/icon.png">
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/search_bar.css">
     <link rel="stylesheet" type="text/css" href="../css/account_layout.css">
     <link rel="stylesheet" type="text/css" href="../css/login.css">
-    <meta name="keywords" content="unicode emoji characters, utf-8">
 </head>
 <body>
     <header>
@@ -34,7 +28,7 @@
                         <input name="password" type="password" placeholder="Password"/>
                     </div>
                     <input class="account_button" type="Submit" value="Login">
-                    <div class="sign_up">
+                    <div class="link_to">
                         <p>Don't have an account? Sign up <a href="register.php">here</a></p> 
                     </div>
                 </div>

@@ -6,17 +6,11 @@
     $location = $_POST['location'];
     $start_date = $_POST['start_date'];
     $end_date = $_POST['end_date']; 
+
+    document_main_part();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Rentify</title>
-    <link rel="icon" href="../images/icon.png">
-    <link rel="stylesheet" type="text/css" href="../css/layout.css">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/search_page.css">
     <link rel="stylesheet" type="text/css" href="../css/search_bar.css">
-    <meta name="keywords" content="unicode emoji characters, utf-8">
 </head>
 <body>
     <?php draw_body_header(); ?>

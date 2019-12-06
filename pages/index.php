@@ -2,18 +2,12 @@
     include_once "../database/connection.php"; 
     include_once "../database/property.php"; 
     include_once "../templates/tpl_common.php";
+
+    document_main_part();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Rentify</title>
-        <meta name="keywords" content="unicode emoji characters, utf-8">
-        <link rel="icon" href="../images/icon.png">
         <link href="../css/main_page.css" rel="stylesheet">
         <link href="../css/search_bar.css" rel="stylesheet">
-        <link href="../css/layout.css" rel="stylesheet">
-        <link href="../css/style.css" rel="stylesheet">
-    </head>
+     </head>
     <body> 
         <?php
             draw_body_header();

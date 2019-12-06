@@ -3,20 +3,13 @@
     include_once "../database/connection.php";
     //include_once "../database/search.php";
     include_once "../database/property.php";
+    
+    document_main_part();
 ?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Rentify</title>
-        <link rel="icon" href="../images/icon.png">
-        <link href="../css/style.css" rel="stylesheet">
         <link href="../css/property_page.css" rel="stylesheet">
-        <link href="../css/layout.css" rel="stylesheet">
         <script src="../scripts/slideshow.js" async></script>
-        <meta charset="utf-8">
     </head>
     <body>
-        <?php draw_body_header(); ?>
         <?php draw_body_header(); ?>
         
         <section id="main">

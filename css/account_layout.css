@@ -81,3 +81,12 @@ body {
 #account .account_button {
     border: none;
 }
+
+
+#account .account_box .link_to {
+    text-align: left;
+}
+
+#account .account_box .link_to a{
+    color: black;
+}

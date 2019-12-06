@@ -34,4 +34,17 @@ function draw_search_bar(){
     </form>
 <?php
 }
+
+function document_main_part(){
+?>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Rentify</title>
+        <meta name="keywords" content="unicode emoji characters, utf-8">
+        <link rel="icon" href="../images/icon.png">
+        <link href="../css/layout.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+<?php    
+}
 ?>
