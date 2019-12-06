@@ -14,12 +14,8 @@
     <header>
         <h1><a href="index.php"> RENTIFY </a></h1>
     </header>
-    <nav id="menu">  
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contacts</a></li>
-        </ul>
-    </nav> 
+
+    <?php include ('templates/menu.html') ?>
     
     <section id="main_account">
         <section id="account">
