@@ -1,5 +1,6 @@
 <?php
     include_once "../templates/tpl_common.php";
+    include_once "../templates/tpl_account.php";
 
     document_main_part();
 ?>
@@ -19,18 +20,11 @@
             <h2>Login</h2>
             <form id="account_form" action="../actions/action_login.php" method="post">
                 <div class="account_box">
-                    <div class="username">
-                        <label for="username">Username:</label>
-                        <input name="username" type="text" placeholder="Username"/>
-                    </div>
-                    <div class="password">
-                        <label for="password">Password:</label>
-                        <input name="password" type="password" placeholder="Password"/>
-                    </div>
-                    <input class="account_button" type="Submit" value="Login">
-                    <div class="link_to">
-                        <p>Don't have an account? Sign up <a href="register.php">here</a></p> 
-                    </div>
+                    <?php
+                    draw_input_box('username', 'text', 'Username', true);
+                    draw_input_box('password', 'password', 'Password', true);
+                    draw_account_submit('Login', 'register', 'Don\'t have an account? Sign up');
+                    ?>
                 </div>
             </form>
         </section>
