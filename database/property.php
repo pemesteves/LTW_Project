@@ -55,18 +55,27 @@
 
     function getPropertyByLocation($location){
         global $db;
-        $pattern = '%'.$location.'%';
 		$stmt = $db->prepare('
 			SELECT Property.*, PropertyImage.image_name as image
 			FROM Property
 			JOIN PropertyImage 
-			ON Property.id = PropertyImage.property_id 
-            WHERE location like ?');
-		$stmt->execute(array($pattern));
-        
+            ON Property.id = PropertyImage.property_id'
+        );
+        $stmt->execute();
         $articles = $stmt->fetchAll();
 
-		return $articles;
+
+        $pattern = '/\b'.$location.'\b/';
+        $matches = [];
+        $index = 0;
+        foreach($articles as $article) {
+            if (preg_match($pattern, $article['location'])) {
+                $matches[$index] = $article;
+                $index++;
+            }
+        }
+
+		return $matches;
     }    
 
     function getRecommended(){
