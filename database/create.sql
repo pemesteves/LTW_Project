@@ -4,7 +4,8 @@ CREATE TABLE User(
     birthdate DATE NOT NULL,
     phone INTEGER NOT NULL,
     email TEXT NOT NULL,
-    password_hash INTEGER NOT NULL
+    password_hash INTEGER NOT NULL,
+    image_name TEXT NOT NULL
 );
 
 CREATE TABLE Property(

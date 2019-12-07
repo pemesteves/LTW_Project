@@ -3,47 +3,51 @@
 /*******************/
 
 INSERT INTO User
-    (username, full_name, birthdate, phone, email, password_hash)
+    (username, full_name, birthdate, phone, email, password_hash, image_name)
     VALUES
     ('miguel_pinto_69',
     'Miguel Delgado Pinto',
     '1999-10-06',
     917146432,
     'pt.miguel99@hotmail.com',
-    12345  /* TEMPORARY */
+    12345  /* TEMPORARY */,
+    'user_placeholder.jpg'
     );
 
 INSERT INTO User
-    (username, full_name, birthdate, phone, email, password_hash)
+    (username, full_name, birthdate, phone, email, password_hash, image_name)
     VALUES
     ('pedrito_pirolito',
     'Pedro Miguel Rodrigues Ferraz Esteves',
     '1999-10-10',
     912345678,
     'pemesteves@hotmail.com',
-    12345  /* TEMPORARY */
+    12345  /* TEMPORARY */,
+    'user_placeholder.jpg'
     );
 
 INSERT INTO User
-    (username, full_name, birthdate, phone, email, password_hash)
+    (username, full_name, birthdate, phone, email, password_hash, image_name)
     VALUES
     ('nuno_iron_man',
     'Nuno Miguel Teixeira Cardoso',
     '1999-03-01',
     925409230,
     'nmtc01@gmail.com',
-    12345  /* TEMPORARY */
+    12345  /* TEMPORARY */,
+    'user_placeholder.jpg'
     );
 
 INSERT INTO User
-    (username, full_name, birthdate, phone, email, password_hash)
+    (username, full_name, birthdate, phone, email, password_hash, image_name)
     VALUES
     ('jacinto_leite_no_rego',
     'Jacinto Leite Capelo Rego',
     '1969-06-09',
     916969696,
     'jacintoleitinho@gmail.com',
-    12345  /* TEMPORARY */
+    12345  /* TEMPORARY */,
+    'user_placeholder.jpg'
     );
 
 
