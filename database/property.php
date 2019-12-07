@@ -55,15 +55,17 @@
 
     function getPropertyByLocation($location){
         global $db;
+        $pattern = '%'.$location.'%';
 		$stmt = $db->prepare('
 			SELECT Property.*, PropertyImage.image_name as image
 			FROM Property
 			JOIN PropertyImage 
 			ON Property.id = PropertyImage.property_id 
-			WHERE location = ?');
-		$stmt->execute(array($location));
+            WHERE location like ?');
+		$stmt->execute(array($pattern));
         
         $articles = $stmt->fetchAll();
+
 		return $articles;
     }    
 

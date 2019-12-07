@@ -15,7 +15,6 @@ body {
 /*Menu*/
 #menu {
     filter: opacity(0.5);
-    transition: all .8s ease-in-out;
 }
 
 #menu:hover {
