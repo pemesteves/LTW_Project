@@ -1,5 +1,29 @@
 /*Main*/
+#search_bar {
+    display: grid;
+    background: #2e3c49;
+    text-align: center;
+    border-bottom: solid #92aedd;
+    border-left: solid #92aedd;
+    border-right: solid #92aedd;
+}
 
+#search_bar h1 {
+    font-size: 30px;
+    background: #2e3c49;
+    padding: 1em;
+    margin: 0%;
+    grid-column: 1;
+}
+
+#search_bar #search_form {
+    grid-column: 2;
+}
+
+/*Change this*/
+#properties img {
+    width:100%
+}
 
 /*Not found*/
 #not_found {

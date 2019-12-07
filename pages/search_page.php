@@ -22,6 +22,7 @@
     </section>
 
     <section id="properties">
+        <h2>Properties</h2>
         <?php 
         $articles = getPropertyByLocation($location);
         if(count($articles) == 0){
