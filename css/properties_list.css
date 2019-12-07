@@ -1,0 +1,37 @@
+/*Property*/
+#properties #property{
+    display: grid;
+    border: solid crimson;
+}
+
+/*Images*/
+#properties #property img {
+    width: 20em;
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+/*Title*/
+#properties #property h3 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+/*Description*/
+#properties #property #description {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+/*Sleeps*/
+#properties #property #sleeps {
+    grid-column: 2;
+    grid-row: 3;
+}
+
+/*Price*/
+#properties #property #price {
+    grid-column: 2;
+    grid-row: 4;
+}

@@ -18,6 +18,7 @@
     document_main_part();
 ?>
         <link href="../css/user_page.css" rel="stylesheet">
+        <link href="../css/properties_list.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -37,7 +38,7 @@
             <p>Phone Number: <?=$user_info['phone']?></p>
             <p>Birthdate: <?=$user_info['birthdate']?></p>
         </section>
-        <section id="user_properties">
+        <section id="properties">
             <h3>Properties</h3>
         <?php
         if(count($property_ids) == 0){
@@ -50,12 +51,15 @@
                 $property_info = getPropertyInfo($id['id']);
                 $property_images = getPropertyImages($id['id']);
             ?>
-            <div id="user_property">
-                <h4><?=$property_info['title']?></h4>
-                <p><?=$property_info['description']?></p>
-                <p><?=$property_info['price_per_day']?>/<?=$property_info['sleeps']?>/<?=$property_info['location']?></p>
-                <img src="../images/<?=$property_images[0]['image']?>"/>
-            </div>
+            <a href="property_page.php?property=<?=$id['id']?>">
+                <article id="property">
+                    <img src="../images/<?=$property_images[0]['image']?>"/>
+                    <h4><?=$property_info['title']?></h4>
+                    <p id="description"><?=$property_info['description']?></p>
+                    <p id="price"><?=$property_info['price_per_day']?>/<?=$property_info['sleeps']?>/<?=$property_info['location']?></p>
+                    <p id="sleeps"><?=$property_info['sleeps']?></p>
+                </article>
+            </a>
             <?php
             }
         }

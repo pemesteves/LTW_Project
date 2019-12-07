@@ -11,6 +11,7 @@
 ?>
     <link rel="stylesheet" type="text/css" href="../css/search_page.css">
     <link rel="stylesheet" type="text/css" href="../css/search_bar.css">
+    <link rel="stylesheet" type="text/css" href="../css/properties_list.css">
 </head>
 <body>
     <?php draw_body_header(); ?>
@@ -40,9 +41,9 @@
             <article id="property">
                 <img src="../images/<?=$propertyArticle['image'] ?>" alt="<?=$propertyArticle['image']?>"/>
                 <h3><?=$propertyArticle['title']?></h3>
-                <p id="short_description"><?=$propertyArticle['description']?></p>
+                <p id="description"><?=$propertyArticle['description']?></p>
             
-                <p class="price"><?=$propertyArticle['price_per_day']?>$</p>
+                <p id="price"><?=$propertyArticle['price_per_day']?>$</p>
 
                 <p id="sleeps"><?=$propertyArticle['sleeps']?></p>
             </article>
