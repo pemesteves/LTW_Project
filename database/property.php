@@ -65,7 +65,7 @@
         $articles = $stmt->fetchAll();
 
 
-        $pattern = '/\b'.$location.'\b/';
+        $pattern = '/\b'.$location.'\b/i';
         $matches = [];
         $index = 0;
         foreach($articles as $article) {
