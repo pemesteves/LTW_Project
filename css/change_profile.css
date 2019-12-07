@@ -1,0 +1,26 @@
+/** CHANGE PROFILE PAGE STYLE **/
+/** This page is equal to the user page but there are inputs to change the user profile **/
+
+input {
+    background-color: inherit;
+    font: inherit;
+    border: 1px solid grey;
+}
+
+.account_button {
+    background: #39409e;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #ffffff;
+    margin-top: 1em;
+    height: 25px;
+}
+
+.account_button:hover {
+    background: #12197a;
+    cursor: pointer;
+}
+
+.account_button {
+    border: none;
+}
