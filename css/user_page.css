@@ -1,0 +1,7 @@
+/** USER PAGE STYLE **/
+
+/*In the user page there's only a link in the header so we don't need a border*/
+#signup #change_profile {
+    border-right: 0;
+    padding-right: 0;
+}

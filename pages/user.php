@@ -17,9 +17,15 @@
 
     document_main_part();
 ?>
+        <link href="../css/user_page.css" rel="stylesheet">
     </head>
     <body>
-        <?php draw_website_name(); ?>
+        <header>
+            <h1><a href="index.php"> RENTIFY </a></h1>
+            <div id="signup">
+                <a id="change_profile" href="change_profile.php">Change Profile</a>
+            </div>
+        </header>
         <?php
             draw_body_menu();
         ?>
@@ -34,26 +40,38 @@
         <section id="user_properties">
             <h3>Properties</h3>
         <?php
-        foreach ($property_ids as $id) {
-            $property_info = getPropertyInfo($id['id']);
-            $property_images = getPropertyImages($id['id']);
+        if(count($property_ids) == 0){
         ?>
+            <p>You didn't register any property yet.</p>
+        <?php
+        }
+        else{
+            foreach ($property_ids as $id) {
+                $property_info = getPropertyInfo($id['id']);
+                $property_images = getPropertyImages($id['id']);
+            ?>
             <div id="user_property">
                 <h4><?=$property_info['title']?></h4>
                 <p><?=$property_info['description']?></p>
                 <p><?=$property_info['price_per_day']?>/<?=$property_info['sleeps']?>/<?=$property_info['location']?></p>
                 <img src="../images/<?=$property_images[0]['image']?>"/>
             </div>
-        <?php
+            <?php
+            }
         }
         ?>
         </section>
         <section id="user_reservations">
             <h3>Reservations</h3>
         <?php
-        foreach ($reservations as $reservation) {
-            $property_info = getPropertyInfo($reservation['id_property']);
+        if(count($reservations) == 0){
         ?>
+            <p>You didn't make any reservation yet.</p>
+        <?php
+        }else{
+            foreach ($reservations as $reservation) {
+                $property_info = getPropertyInfo($reservation['id_property']);
+            ?>
             <div id="user_reservation">
                 <h4>Property: <?=$property_info['title']?></h4>
                 <p>Start: <?=$property_info['date_start']?></p>
@@ -85,7 +103,8 @@
                 ?>
                 </p>
             </div>
-        <?php
+            <?php
+            }
         }
         ?>
         </section>
