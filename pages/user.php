@@ -53,8 +53,10 @@
             ?>
             <a href="property_page.php?property=<?=$id['id']?>">
                 <article id="property">
-                    <img src="../images/<?=$property_images[0]['image']?>"/>
-                    <h4><?=$property_info['title']?></h4>
+                    <div id="image">
+                        <img src="../images/<?=$property_images[0]['image']?>"/>
+                    </div>
+                    <h4 id="property_name"><?=$property_info['title']?></h4>
                     <p id="description"><?=$property_info['description']?></p>
                     <p id="price"><?=$property_info['price_per_day']?>/<?=$property_info['sleeps']?>/<?=$property_info['location']?></p>
                     <p id="sleeps"><?=$property_info['sleeps']?></p>

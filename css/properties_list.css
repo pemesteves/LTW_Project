@@ -1,37 +1,65 @@
 /*Property*/
 #properties #property{
     display: grid;
-    border: solid crimson;
+    border: solid #2e3c49;
+    margin: 0em 1em 0em 1em;
+    grid-template-columns: 20em auto;
+    background: linear-gradient(140deg, #92aedd 30%, #2e3c49 90%);
+}
+
+#properties #property:hover{
+    background: #92aedd;
+}
+
+#properties a {
+    text-decoration: none;
 }
 
 /*Images*/
-#properties #property img {
+#properties #property #image {
+    background: #92aedd;
     width: 20em;
+    border-right: solid #2e3c49;
     grid-column: 1;
     grid-row-start: 1;
     grid-row-end: 5;
+    display:flex;
+    align-items: center;
+}
+
+#properties #property #image img {
+    width: 20em;
+    margin: auto;
 }
 
 /*Title*/
-#properties #property h3 {
+#properties #property #property_name {
     grid-column: 2;
     grid-row: 1;
+    padding-left: 1em;
+    color: #2e3c49;
 }
 
 /*Description*/
 #properties #property #description {
     grid-column: 2;
     grid-row: 2;
+    padding-left: 1em;
+    color: white;
 }
 
 /*Sleeps*/
 #properties #property #sleeps {
     grid-column: 2;
     grid-row: 3;
+    padding-left: 1em;
+    color: white;
 }
 
 /*Price*/
 #properties #property #price {
     grid-column: 2;
     grid-row: 4;
+    padding-left: 1em;
+    color: white;
 }

@@ -39,8 +39,10 @@
         ?>
         <a href="property_page.php?property=<?=$propertyArticle['id']?>">
             <article id="property">
-                <img src="../images/<?=$propertyArticle['image'] ?>" alt="<?=$propertyArticle['image']?>"/>
-                <h3><?=$propertyArticle['title']?></h3>
+                <div id="image">
+                    <img src="../images/<?=$propertyArticle['image'] ?>" alt="<?=$propertyArticle['image']?>"/>
+                </div>
+                <h3 id="property_name"><?=$propertyArticle['title']?></h3>
                 <p id="description"><?=$propertyArticle['description']?></p>
             
                 <p id="price"><?=$propertyArticle['price_per_day']?>$</p>
