@@ -9,11 +9,10 @@
     <link rel="stylesheet" type="text/css" href="../css/login.css">
 </head>
 <body>
-    <header>
-        <h1><a href="index.php"> RENTIFY </a></h1>
-    </header>
-
-    <?php draw_body_menu(); ?>
+    <?php 
+    draw_website_name();
+    draw_body_menu(); 
+    ?>
     
     <section id="main_account">
         <section id="account">

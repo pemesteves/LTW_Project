@@ -11,6 +11,14 @@ function draw_body_header(){
 <?php
 }
 
+function draw_website_name(){
+?>
+    <header>
+        <h1><a href="index.php"> RENTIFY </a></h1>
+    </header>
+<?php
+}
+
 function draw_body_menu(){
 ?>
     <nav id="menu">  
