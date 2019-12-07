@@ -40,10 +40,10 @@
                     <?php } ?>
                     </div>
                 </article>
-                <h2><?=$property_info[0]['title']?></h2>
+                <h2><?=$property_info['title']?></h2>
                 <article id="description">
                     <h3>Description</h3>
-                    <p><?=$property_info[0]['description']?></p>
+                    <p><?=$property_info['description']?></p>
                 </article>
                 <article id="comodities">
                     <h3>Commodities</h3>
@@ -59,7 +59,7 @@
                 </article>
                 <article id="price">
                     <h3>Price</h3>
-                    <p><?=$property_info[0]['price_per_day']?>$</p>
+                    <p><?=$property_info['price_per_day']?>$</p>
                 </article>
                 <article id="dates">
                     <form>

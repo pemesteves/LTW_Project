@@ -8,12 +8,11 @@
     <link rel="stylesheet" type="text/css" href="../css/account_layout.css">
     <link rel="stylesheet" type="text/css" href="../css/register.css">
 </head>
-<body>
-    <header>
-        <h1><a href="index.php"> RENTIFY </a></h1>
-    </header>
-    
-    <?php draw_body_menu(); ?>
+<body>    
+    <?php 
+    draw_website_name();
+    draw_body_menu(); 
+    ?>
 
     <section id="main_account">
         <section id="account">

@@ -12,7 +12,7 @@
         ');
 		$stmt->execute(array($id));
         
-        $propertyInfo = $stmt->fetchAll();
+        $propertyInfo = $stmt->fetch();
 		return $propertyInfo;
     }
 
@@ -87,4 +87,15 @@
 		$recommended = $stmt->fetchAll();
 		return $recommended;
     }    
+
+    function getUserProperties($username){
+        global $db;
+        $stmt = $db->prepare('
+            SELECT Property.id as id
+            FROM Property
+            WHERE owner_username = ?
+        ');
+        $stmt->execute(array($username));
+        return $stmt->fetchAll();
+    }
 ?>
