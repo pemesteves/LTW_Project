@@ -24,7 +24,7 @@
             draw_body_menu();
         ?>
         <section id="user_info">
-            <img src="../images/<?=$user_info['image_name']?>'"/>
+            <img src="../images/<?=$user_info['image_name']?>"/>
             <h2><?=$user_info['full_name']?></h2>
             <h3>(<?=$user_info['username']?>)</h3>
             <p>Email: <?=$user_info['email']?></p>

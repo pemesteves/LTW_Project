@@ -19,7 +19,7 @@
     global $db;
 
     $stmt = $db->prepare('SELECT * FROM User WHERE username = ? AND password_hash = ?');
-    $stmt->execute(array($username, sha1($password)));
+    $stmt->execute(array($username, $password));
 
     return $stmt->fetch();
   }
