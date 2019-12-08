@@ -1,6 +1,6 @@
 <?php
-    include_once('includes/init.php');
-    include_once('database/user.php');
+    include_once('../includes/init.php');
+    include_once('../database/user.php');
 
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -19,7 +19,7 @@
     // Validate more
 
     try {
-        registerUser($username, $password);
+        registerUser($username, $email, $first_name, $last_name, $phone, $birthdate, $password);
         $_SESSION['username'] = $username;
         $_SESSION['success_messages'][] = "Registered successfuly and logged in";
         header('Location: ../pages/user_page.php'); // CHANGE
