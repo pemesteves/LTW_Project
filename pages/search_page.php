@@ -23,7 +23,7 @@
     </section>
 
     <section id="properties">
-        <h2>Properties</h2>
+        <h2 id="properties_h">Properties</h2>
         <?php 
         $articles = getPropertyByLocation($location);
         if(count($articles) == 0){
@@ -44,10 +44,11 @@
                 </div>
                 <h3 id="property_name"><?=$propertyArticle['title']?></h3>
                 <p id="description"><?=$propertyArticle['description']?></p>
-            
-                <p id="price"><?=$propertyArticle['price_per_day']?>$</p>
-
+                <div id="price_box">
+                    <p id="price"><?=$propertyArticle['price_per_day']?></p>
+                </div>
                 <p id="sleeps"><?=$propertyArticle['sleeps']?></p>
+                <p id="location"><?=$propertyArticle['location']?></p>
             </article>
         </a>
         <?php } 
