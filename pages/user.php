@@ -4,12 +4,10 @@
     include_once "../database/user.php";
     include_once "../database/reservations.php";
     include_once "../templates/tpl_common.php";
+    include_once "../includes/init.php";
     
-    /**
-     * TODO CHANGE THE USERNAME AND PASSWORD 
-     */
-    $username = 'miguel_pinto_69';
-    $password_hash = 12345;
+    $username = $_SESSION['username'];
+    $password_hash = getUserPassword($username)['password'];
 
     $user_info = getUserInfo($username, $password_hash);
     $property_ids = getUserProperties($username); 

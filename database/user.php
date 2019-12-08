@@ -36,4 +36,16 @@
                           (?, ?, ?, ?, ?, ?, \'user_placeholder.jpg\')');
     $stmt->execute(array($username, $email, $full_name, $phone, $birthdate, sha1($password)));
   }  
+
+  function getUserPassword($username){
+    global $db;
+
+    $stmt = $db->prepare('
+        SELECT password_hash as password
+        FROM User
+        WHERE username = ?
+    ');
+    $stmt->execute(array($username));
+    return $stmt->fetch();
+  }
 ?>

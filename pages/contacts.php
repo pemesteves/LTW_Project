@@ -15,6 +15,9 @@
         ?>
         <section id="search_bar">
             <h1>Find the perfect place</h1>
+            <div class="height_crop">
+                <img src="../images/main_page.jpg" alt="Main Page Image"/>
+            </div>
             <?php draw_search_bar(); ?>
         </section>
         <h2>Contact Us</h2>

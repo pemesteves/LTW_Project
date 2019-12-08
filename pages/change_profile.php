@@ -3,12 +3,10 @@
     include_once "../database/user.php";
     include_once "../templates/tpl_common.php";
     include_once "../templates/tpl_account.php";
+    include_once "../includes/init.php";
     
-    /**
-     * TODO CHANGE THE USERNAME AND PASSWORD 
-     */
-    $username = 'miguel_pinto_69';
-    $password_hash = 12345;
+    $username = $_SESSION['username'];
+    $password_hash = getUserPassword($username)['password'];
 
     $user_info = getUserInfo($username, $password_hash);
 
@@ -22,12 +20,16 @@
             draw_website_name();
             draw_body_menu();
         ?>
+        
+        <form id="upload_image_form" action="../actions/action_upload_image.php" method="post" enctype="multipart/form-data"> </form>
         <form id="update_profile_form" action="../actions/action_update_profile.php" method="post">
             <section id="user_info">
                 <div id="fit_crop">
                     <img src="../images/<?=$user_info['image_name']?>"/>
-                    <p>Preferred size: 160px x 160px</p>
                 </div>
+                <p>Preferred size: 160px x 160px</p>
+                <input type="file" name="fileToUpload" value="../images/<?=$user_info['image_name']?>" id="fileToUpload" form="upload_image_form"/>
+                <input type="submit" value="Upload Image" form="upload_image_form"/> 
                 <h2><input id="full_name" type="text" name="full_name" value=<?=$user_info['full_name']?> placeholder=<?=$user_info['full_name']?>/></h2>
                 <h3>(<?=$user_info['username']?>)</h3>
                 <p id="email">Email: <input type="email" name="email" value="<?=$user_info['email']?>" placeholder="<?=$user_info['email']?>"/></p>

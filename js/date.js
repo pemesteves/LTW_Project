@@ -28,7 +28,6 @@ if(search_bar_dates.length == 2){
 
     const tomorrow = new Date(now);
     tomorrow.setDate(tomorrow.getDate()+1);
-    console.log(tomorrow);
 
     day = tomorrow.getDate();
     year = tomorrow.getFullYear();
