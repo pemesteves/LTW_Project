@@ -5,13 +5,25 @@ include_once "../includes/init.php";
 function draw_body_header(){
 ?>
     <header>
+        <script src="../js/dropdown.js" async></script>
         <h1><a href="index.php"> RENTIFY </a></h1>
 
         <?php
         if(isset($_SESSION['username'])) {
-        ?>      
+        ?> 
+        <!--     
             <div id="user_badge">
-                <a href="user.php"><?php echo $_SESSION['username'] ?> </a>
+                <a href="user.php"> </a>
+            </div>
+        -->
+            <div class="dropdown">
+                <button  class="dropdown_button" id="user_badge" onclick="dropdown()"> <?php echo $_SESSION['username'] ?>
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown_content" id="user_badge_dropdown">
+                    <a href="user.php">Profile</a>
+                    <a href="#">Log out</a>
+                </div>
             </div>
         <?php
         }
