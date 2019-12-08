@@ -21,7 +21,7 @@
             <?php draw_search_bar(); ?>
         </section>
         <h2>Contact Us</h2>
-        <form id="contact_form" action="../actions/action_submit_form.php" method="post">
+        <form id="contact_form" action="../actions/action_contact.php" method="post">
         <?php
             draw_input_box('email', 'email', 'Email', true);
             draw_input_box('first_name', 'text', 'First Name', true);
