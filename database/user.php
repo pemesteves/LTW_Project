@@ -48,4 +48,19 @@
     $stmt->execute(array($username));
     return $stmt->fetch();
   }
+
+  function updateUserInformation($full_name, $email, $phone, $birthdate, $username){
+    global $db;
+
+    $stmt = $db->prepare('
+      UPDATE User
+      SET full_name = ?,
+          email = ?,
+          phone = ?,
+          birthdate = ?
+      WHERE username = ?
+    ');
+
+    $stmt->execute(array($full_name, $email, $phone, $birthdate, $username));
+  }
 ?>

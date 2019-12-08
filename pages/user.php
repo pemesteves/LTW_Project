@@ -1,10 +1,9 @@
 <?php
-    include_once "../database/connection.php"; 
+    include_once "../includes/init.php";
     include_once "../database/property.php"; 
     include_once "../database/user.php";
     include_once "../database/reservations.php";
     include_once "../templates/tpl_common.php";
-    include_once "../includes/init.php";
     
     $username = $_SESSION['username'];
     $password_hash = getUserPassword($username)['password'];

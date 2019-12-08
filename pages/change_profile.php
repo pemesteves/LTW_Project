@@ -1,9 +1,8 @@
 <?php
-    include_once "../database/connection.php"; 
+    include_once "../includes/init.php";
     include_once "../database/user.php";
     include_once "../templates/tpl_common.php";
     include_once "../templates/tpl_account.php";
-    include_once "../includes/init.php";
     
     $username = $_SESSION['username'];
     $password_hash = getUserPassword($username)['password'];
@@ -30,7 +29,7 @@
                 <p>Preferred size: 160px x 160px</p>
                 <input type="file" name="fileToUpload" value="../images/<?=$user_info['image_name']?>" id="fileToUpload" form="upload_image_form"/>
                 <input type="submit" value="Upload Image" form="upload_image_form"/> 
-                <h2><input id="full_name" type="text" name="full_name" value=<?=$user_info['full_name']?> placeholder=<?=$user_info['full_name']?>/></h2>
+                <h2><input id="full_name" type="text" name="full_name" value="<?=$user_info['full_name']?>" placeholder="<?=$user_info['full_name']?>"/></h2>
                 <h3>(<?=$user_info['username']?>)</h3>
                 <p id="email">Email: <input type="email" name="email" value="<?=$user_info['email']?>" placeholder="<?=$user_info['email']?>"/></p>
                 <p id="phone">Phone Number: <input type="tel" name="phone" value="<?=$user_info['phone']?>" placeholder="<?=$user_info['phone']?>"/></p>
