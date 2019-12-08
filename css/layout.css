@@ -23,4 +23,9 @@ body > header #signup {
     align-self: center;
 }
 
+body > header #user_badge {
+    grid-column: 2;
+    align-self: center;
+}
+
 
