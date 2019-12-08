@@ -24,7 +24,7 @@ function draw_body_menu(){
     <nav id="menu">  
         <ul>
             <li><a href="../pages/about.php">About</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li><a href="../pages/contacts.php">Contacts</a></li>
         </ul>
     </nav>
 <?php
