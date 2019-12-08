@@ -1,12 +1,29 @@
 <?php 
+
+include_once "../includes/init.php";
+
 function draw_body_header(){
 ?>
     <header>
         <h1><a href="index.php"> RENTIFY </a></h1>
-        <div id="signup">
-            <a href="register.php">Register</a>
-            <a href="login.php">Login</a>
-        </div>
+
+        <?php
+        if(isset($_SESSION['username'])) {
+        ?>      
+            <div id="user_badge">
+                <a href="user.php"><?php echo $_SESSION['username'] ?> </a>
+            </div>
+        <?php
+        }
+        else {
+        ?>        
+            <div id="signup">
+                <a href="register.php">Register</a>
+                <a href="login.php">Login</a>
+            </div>
+        <?php
+        }
+        ?>
     </header>
 <?php
 }
