@@ -39,7 +39,7 @@
             <p>Birthdate: <?=$user_info['birthdate']?></p>
         </section>
         <section id="properties">
-            <h3>Properties</h3>
+            <h3 id="properties_h">Properties</h3>
         <?php
         if(count($property_ids) == 0){
         ?>
@@ -58,8 +58,11 @@
                     </div>
                     <h4 id="property_name"><?=$property_info['title']?></h4>
                     <p id="description"><?=$property_info['description']?></p>
-                    <p id="price"><?=$property_info['price_per_day']?>/<?=$property_info['sleeps']?>/<?=$property_info['location']?></p>
+                    <div id="price_box">
+                        <p id="price"><?=$property_info['price_per_day']?></p>
+                    </div>
                     <p id="sleeps"><?=$property_info['sleeps']?></p>
+                    <p id="location"><?=$property_info['location']?></p>
                 </article>
             </a>
             <?php
