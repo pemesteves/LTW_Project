@@ -53,6 +53,7 @@ function document_main_part(){
         <link rel="icon" href="../images/icon.png">
         <link href="../css/layout.css" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
+        <script src="../js/date.js" defer></script>
 <?php    
 }
 ?>
