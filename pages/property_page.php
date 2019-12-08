@@ -7,7 +7,7 @@
     document_main_part();
 ?>
         <link href="../css/property_page.css" rel="stylesheet">
-        <script src="../scripts/slideshow.js" async></script>
+        <script src="../js/slideshow.js" async></script>
     </head>
     <body>
         <?php draw_body_header(); ?>
