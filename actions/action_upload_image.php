@@ -21,8 +21,11 @@
     }
     
     $tmp_name = $_FILES["fileToUpload"]["tmp_name"];
-    $name = basename($_FILES["fileToUpload"]["name"]);
+    $name = $username . '_' . basename($_FILES["fileToUpload"]["name"]);
     move_uploaded_file($tmp_name, "$target_dir/$name");
 
-    header('Location: ../pages/change_profile.php')
+    $_SESSION['image_name'] = $name;
+
+    header('Location: ../pages/change_profile.php');
+    exit;
 ?>

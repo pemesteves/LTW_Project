@@ -8,6 +8,11 @@
     $password_hash = getUserPassword($username)['password'];
 
     $user_info = getUserInfo($username, $password_hash);
+    
+    if(isset($_SESSION['image_name']))
+        $image_name = $_SESSION['image_name'];
+    else
+        $image_name = $user_info['image_name'];
 
     document_main_part();
 ?>  
@@ -24,10 +29,11 @@
         <form id="update_profile_form" action="../actions/action_update_profile.php" method="post">
             <section id="user_info">
                 <div id="fit_crop">
-                    <img src="../images/<?=$user_info['image_name']?>"/>
+                    <img src="../images/<?=$image_name?>"/>
                 </div>
                 <p>Preferred size: 160px x 160px</p>
-                <input type="file" name="fileToUpload" value="../images/<?=$user_info['image_name']?>" id="fileToUpload" form="upload_image_form"/>
+                <input type="file" name="fileToUpload" value="../images/<?=$image_name?>" id="fileToUpload" form="upload_image_form"/>
+                <input type="hidden" name="image_name" value="<?=$image_name?>" />
                 <input type="submit" value="Upload Image" form="upload_image_form"/> 
                 <h2><input id="full_name" type="text" name="full_name" value="<?=$user_info['full_name']?>" placeholder="<?=$user_info['full_name']?>"/></h2>
                 <h3>(<?=$user_info['username']?>)</h3>

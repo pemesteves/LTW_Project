@@ -49,7 +49,7 @@
     return $stmt->fetch();
   }
 
-  function updateUserInformation($full_name, $email, $phone, $birthdate, $username){
+  function updateUserInformation($full_name, $email, $phone, $birthdate, $image_name, $username){
     global $db;
 
     $stmt = $db->prepare('
@@ -57,10 +57,11 @@
       SET full_name = ?,
           email = ?,
           phone = ?,
-          birthdate = ?
+          birthdate = ?,
+          image_name = ?
       WHERE username = ?
     ');
 
-    $stmt->execute(array($full_name, $email, $phone, $birthdate, $username));
+    $stmt->execute(array($full_name, $email, $phone, $birthdate, $image_name, $username));
   }
 ?>

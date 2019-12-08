@@ -8,8 +8,10 @@
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $birthdate = $_POST['birthdate'];
+    $image_name = $_POST['image_name'];
     
-    updateUserInformation($full_name, $email, $phone, $birthdate, $username);
+    updateUserInformation($full_name, $email, $phone, $birthdate, $image_name,$username);
 
     header('Location: ../pages/change_profile.php');
+    exit;
 ?>
