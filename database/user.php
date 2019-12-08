@@ -9,17 +9,6 @@
     return $user_info !== false;
   }
 
-  // check if user already exists
-  function registerUser($username, $email, $first_name, $last_name, $phone, $birthdate, $password) {
-    global $db;
-     
-    $stmt = $db->prepare('INSERT INTO User 
-                          (username, full_name, birthdate, phone, email, password_hash, image_name)
-                          VALUES
-                          (?, ?, ?, ?, ?, ?, ?)');
-    $stmt->execute(array($username, $email, $first_name, $last_name, $phone, $birthdate, password_hash($password, PASSWORD_DEFAULT, $options)));
-  }
-
   function getUserInfo($username, $password){
     global $db;
 
@@ -28,4 +17,23 @@
 
     return $stmt->fetch();
   }
+
+  function usernameAlreadyExists($username) {
+    global $db;
+  
+    $stmt = $db->prepare('SELECT username FROM User WHERE username = ?');
+    $stmt->execute(array($username));
+
+    return $stmt->fetch() !== false;  
+  }
+
+  function registerUser($username, $email, $full_name, $phone, $birthdate, $password) {
+    global $db;
+     
+    $stmt = $db->prepare('INSERT INTO User 
+                          (username, full_name, birthdate, phone, email, password_hash, image_name)
+                          VALUES
+                          (?, ?, ?, ?, ?, ?, \'user_placeholder.jpg\')');
+    $stmt->execute(array($username, $email, $full_name, $phone, $birthdate, sha1($password)));
+  }  
 ?>

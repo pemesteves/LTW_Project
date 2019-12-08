@@ -17,7 +17,7 @@
     <section id="main_account">
         <section id="account">
             <h2>Register</h2>
-            <form id="account_form">
+            <form id="account_form" action="../actions/action_register.php" method="post">
                 <div class="account_box">
                     <?php 
                     draw_input_box('username', 'text', 'Username', true);
