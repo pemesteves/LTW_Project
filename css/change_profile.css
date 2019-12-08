@@ -1,6 +1,7 @@
 /** CHANGE PROFILE PAGE STYLE **/
 /** This page is equal to the user page but there are inputs to change the user profile **/
 
+/*User data*/
 #user_info #fit_crop {
     display:grid;
     width:160px;
@@ -39,9 +40,11 @@
 input {
     background-color: inherit;
     font: inherit;
-    border: 1px solid grey;
+    border: 1px solid white;
+    border-radius: 0.3em;
 }
 
+/*Update profile button*/
 .account_button {
     background: #39409e;
     padding-left: 1em;
@@ -49,6 +52,8 @@ input {
     color: #ffffff;
     margin-top: 1em;
     height: 25px;
+    width: 150px;
+    z-index: 1;
 }
 
 .account_button:hover {
