@@ -1,12 +1,50 @@
 /** CHANGE PROFILE PAGE STYLE **/
 /** This page is equal to the user page but there are inputs to change the user profile **/
 
+/*User data*/
+#user_info #fit_crop {
+    display:grid;
+    width:160px;
+}
+
+#user_info #fit_crop p {
+    visibility:hidden;
+    grid-row: 2;
+    grid-column: 1;
+    z-index: 1;
+    cursor: pointer;
+    margin: 1em;
+    text-align: center;
+    color: #2e3c49;
+}
+
+#user_info #fit_crop:hover p{
+    visibility:visible;
+}
+
+#user_info #fit_crop img {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    grid-column: 1;
+}
+
+#user_info #fit_crop img:hover {
+    filter: blur(2px);
+    cursor: pointer;
+}
+
+#user_info #full_name {
+    color: #12197a;
+}
+
 input {
     background-color: inherit;
     font: inherit;
-    border: 1px solid grey;
+    border: 1px solid white;
+    border-radius: 0.3em;
 }
 
+/*Update profile button*/
 .account_button {
     background: #39409e;
     padding-left: 1em;
@@ -14,6 +52,8 @@ input {
     color: #ffffff;
     margin-top: 1em;
     height: 25px;
+    width: 150px;
+    z-index: 1;
 }
 
 .account_button:hover {

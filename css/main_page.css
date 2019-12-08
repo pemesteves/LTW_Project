@@ -79,6 +79,7 @@
 #recommended ul li article img:hover {
     filter: none;
     -webkit-filter: grayscale(0);
+    cursor: pointer;
 }
 
 /* Add new houses */

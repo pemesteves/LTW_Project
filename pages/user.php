@@ -19,6 +19,7 @@
 ?>
         <link href="../css/user_page.css" rel="stylesheet">
         <link href="../css/properties_list.css" rel="stylesheet">
+        <link href="../css/profile.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -31,12 +32,14 @@
             draw_body_menu();
         ?>
         <section id="user_info">
-            <img src="../images/<?=$user_info['image_name']?>"/>
+            <div id="fit_crop">
+                <img src="../images/<?=$user_info['image_name']?>"/>
+            </div>
             <h2><?=$user_info['full_name']?></h2>
             <h3>(<?=$user_info['username']?>)</h3>
-            <p>Email: <?=$user_info['email']?></p>
-            <p>Phone Number: <?=$user_info['phone']?></p>
-            <p>Birthdate: <?=$user_info['birthdate']?></p>
+            <p id="email">Email: <?=$user_info['email']?></p>
+            <p id="phone">Phone Number: <?=$user_info['phone']?></p>
+            <p id="birthdate">Birthdate: <?=$user_info['birthdate']?></p>
         </section>
         <section id="properties">
             <h3 id="properties_h">Properties</h3>

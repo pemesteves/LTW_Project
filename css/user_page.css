@@ -5,3 +5,18 @@
     border-right: 0;
     padding-right: 0;
 }
+
+/*User data*/
+#user_info h2 {
+    color: #12197a;
+}
+
+/*User reservations*/
+#user_reservations {
+    padding: 0em 3em 3em 3em;
+    color: #2e3c49
+}
+
+#user_reservations h3 {
+    color: #12197a;
+}
