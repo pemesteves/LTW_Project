@@ -2,6 +2,7 @@
 
   include_once "../database/connection.php";
 
+  // Get-functions
   function checkLogin($username, $password) {
     $user_info = getUserInfo($username, $password); 
     echo($username);
@@ -27,16 +28,6 @@
     return $stmt->fetch() !== false;  
   }
 
-  function registerUser($username, $email, $full_name, $phone, $birthdate, $password) {
-    global $db;
-     
-    $stmt = $db->prepare('INSERT INTO User 
-                          (username, full_name, birthdate, phone, email, password_hash, image_name)
-                          VALUES
-                          (?, ?, ?, ?, ?, ?, \'user_placeholder.jpg\')');
-    $stmt->execute(array($username, $email, $full_name, $phone, $birthdate, sha1($password)));
-  }  
-
   function getUserPassword($username){
     global $db;
 
@@ -48,6 +39,30 @@
     $stmt->execute(array($username));
     return $stmt->fetch();
   }
+
+  function getUserImagePath($username) {
+    global $db;
+
+    $stmt = $db->prepare('
+        SELECT image_name
+        FROM User
+        WHERE username = ?
+    ');
+    $stmt->execute(array($username));
+    return $stmt->fetch();
+  }
+
+
+  // Set-functions
+  function registerUser($username, $email, $full_name, $phone, $birthdate, $password) {
+    global $db;
+     
+    $stmt = $db->prepare('INSERT INTO User 
+                          (username, full_name, birthdate, phone, email, password_hash, image_name)
+                          VALUES
+                          (?, ?, ?, ?, ?, ?, \'user_placeholder.jpg\')');
+    $stmt->execute(array($username, $email, $full_name, $phone, $birthdate, sha1($password)));
+  }  
 
   function updateUserInformation($full_name, $email, $phone, $birthdate, $image_name, $username){
     global $db;

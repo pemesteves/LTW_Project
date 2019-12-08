@@ -1,6 +1,14 @@
 <?php 
 
 include_once "../includes/init.php";
+include_once "../database/user.php";
+
+function draw_user_image(){
+    $image_name = getUserImagePath($_SESSION['username']);
+    $image_path = "../images/".$image_name['image_name'];
+
+    echo "<img src=".$image_path." alt=\"User's photo\" id=\"user_photo\">";
+}
 
 function draw_body_header(){
 ?>
@@ -11,12 +19,9 @@ function draw_body_header(){
         <?php
         if(isset($_SESSION['username'])) {
         ?> 
-        <!--     
-            <div id="user_badge">
-                <a href="user.php"> </a>
-            </div>
-        -->
             <div class="dropdown">
+
+                <?php draw_user_image(); ?>
                 <button  class="dropdown_button" id="user_badge" onclick="dropdown()"> <?php echo $_SESSION['username'] ?>
                     <i class="fa fa-caret-down"></i>
                 </button>
