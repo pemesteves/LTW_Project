@@ -64,3 +64,9 @@ input {
 .account_button {
     border: none;
 }
+
+
+/**Hide upload image input**/
+#upload_image_form {
+    display: none;
+}

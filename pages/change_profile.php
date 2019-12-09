@@ -18,6 +18,7 @@
 ?>  
         <link href="../css/change_profile.css" rel="stylesheet">
         <link href="../css/profile.css" rel="stylesheet">
+        <script src="../js/upload_image.js" defer></script>
     </head>
     <body>
         <?php
@@ -25,16 +26,17 @@
             draw_body_menu();
         ?>
         
-        <form id="upload_image_form" action="../actions/action_upload_image.php" method="post" enctype="multipart/form-data"> </form>
+        <form id="upload_image_form" action="../actions/action_upload_image.php" method="post" enctype="multipart/form-data"> 
+            <input type="file" name="fileToUpload" value="../images/<?=$image_name?>" id="fileToUpload"/>
+            <input type="submit" value="Upload Image"/>      
+        </form>
         <form id="update_profile_form" action="../actions/action_update_profile.php" method="post">
             <section id="user_info">
                 <div id="fit_crop">
                     <img src="../images/<?=$image_name?>"/>
+                    <input type="hidden" name="image_name" value="<?=$image_name?>"/>
                 </div>
                 <p>Preferred size: 160px x 160px</p>
-                <input type="file" name="fileToUpload" value="../images/<?=$image_name?>" id="fileToUpload" form="upload_image_form"/>
-                <input type="hidden" name="image_name" value="<?=$image_name?>" />
-                <input type="submit" value="Upload Image" form="upload_image_form"/> 
                 <div id="headers">
                     <h2><input id="full_name" type="text" name="full_name" value="<?=$user_info['full_name']?>" placeholder="<?=$user_info['full_name']?>"/></h2>
                     <h3>(<?=$user_info['username']?>)</h3>
