@@ -32,8 +32,10 @@
             <div id="fit_crop">
                 <img src="../images/<?=$user_info['image_name']?>"/>
             </div>
-            <h2><?=$user_info['full_name']?></h2>
-            <h3>(<?=$user_info['username']?>)</h3>
+            <div id="headers">
+                <h2><?=$user_info['full_name']?></h2>
+                <h3>(<?=$user_info['username']?>)</h3>
+            </div>
             <p id="email">Email: <?=$user_info['email']?></p>
             <p id="phone">Phone Number: <?=$user_info['phone']?></p>
             <p id="birthdate">Birthdate: <?=$user_info['birthdate']?></p>

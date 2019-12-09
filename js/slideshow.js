@@ -29,10 +29,10 @@ function showSlides(n) {
 
 //Event listeners
 //Previous and next arrows
-let prev = document.getElementsByClassName("prev")[0]
-prev.addEventListener("click", function(){plusSlides(-1)})
-let next = document.getElementsByClassName("next")[0]
-next.addEventListener("click", function(){plusSlides(1)})
+let prev = document.getElementsByClassName("prev")[0];
+prev.addEventListener("click", function(){plusSlides(-1)});
+let next = document.getElementsByClassName("next")[0];
+next.addEventListener("click", function(){plusSlides(1)});
 //Get current slide
 let dots = document.getElementsByClassName("dot");
 for (let i = 0; i < dots.length; i++) {

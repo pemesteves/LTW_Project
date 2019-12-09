@@ -22,8 +22,7 @@ function draw_body_header(){
             <div class="dropdown">
 
                 <?php draw_user_image(); ?>
-                <button  class="dropdown_button" id="user_badge" onclick="dropdown()"> <?php echo $_SESSION['username'] ?>
-                    <i class="fa fa-caret-down"></i>
+                <button  class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?>
                 </button>
                 <div class="dropdown_content" id="user_badge_dropdown">
                     <a href="user.php">Profile</a>
