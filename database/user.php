@@ -4,9 +4,7 @@
 
   // Get-functions
   function checkLogin($username, $password) {
-    $user_info = getUserInfo($username, $password); 
-    echo($username);
-    echo($password);
+    $user_info = getUserInfo($username, sha1($password)); 
     return $user_info !== false;
   }
 
@@ -61,7 +59,7 @@
                           (username, full_name, birthdate, phone, email, password_hash, image_name)
                           VALUES
                           (?, ?, ?, ?, ?, ?, \'user_placeholder.jpg\')');
-    $stmt->execute(array($username, $email, $full_name, $phone, $birthdate, sha1($password)));
+    $stmt->execute(array($username, $full_name, $birthdate, $phone, $email, sha1($password)));
   }  
 
   function updateUserInformation($full_name, $email, $phone, $birthdate, $image_name, $username){
