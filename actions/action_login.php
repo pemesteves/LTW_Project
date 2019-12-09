@@ -10,5 +10,5 @@
     $_SESSION['error_messages'][] = "Login failed";
   }
   
-  header('Location: ' . $_SERVER['HTTP_REFERER']);  // CHECK THIS
+  header('Location: ../pages/index.php');  // CHECK THIS
 ?>

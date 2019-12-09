@@ -65,7 +65,7 @@
         registerUser($username, $email, $full_name, $phone, $birthdate, $password);
         $_SESSION['username'] = $username;
         $_SESSION['success_messages'][] = "Registered successfuly and logged in";
-        header('Location: ../pages/user_page.php'); // CHANGE
+        header('Location: ../pages/user.php'); // CHANGE
     } 
     catch (PDOException $e) {
         die($e->getMessage());
@@ -75,5 +75,5 @@
 
     clearMessages();
     error_log(implode($_SESSION['error_messages']));
-    error_log(implode($_SESSION['success_messages']));    
+    error_log(implode($_SESSION['success_messages']));   
 ?>

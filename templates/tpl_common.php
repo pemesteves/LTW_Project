@@ -26,7 +26,7 @@ function draw_body_header(){
                 </button>
                 <div class="dropdown_content" id="user_badge_dropdown">
                     <a href="user.php">Profile</a>
-                    <a href="#">Log out</a>
+                    <a href="../action/action_logout.php">Log out</a>
                 </div>
             </div>
         <?php
