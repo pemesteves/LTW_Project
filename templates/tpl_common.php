@@ -32,8 +32,7 @@ function draw_header($page, $name){
             <div class="dropdown">
 
                 <?php draw_user_image(); ?>
-                <button  class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?>
-                </button>
+                <button  class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?> </button>
                 <div class="dropdown_content" id="user_badge_dropdown">
                     <a href="<?=$page?>"><?=$name?></a>
                     <a href="../actions/action_logout.php">Log out</a>
@@ -57,7 +56,7 @@ function draw_header($page, $name){
 function draw_website_name(){
 ?>
     <header>
-        <h1><a href="index.php"> RENTIFY </a></h1>
+        <h1><a href="index.php"> Rentify </a></h1>
     </header>
 <?php
 }

@@ -1,6 +1,6 @@
 /* Header Style */
 body > header {
-    background-color: #92aedd;
+    background-color: #fff;
     color: white;
     padding: 1em;
 }
@@ -10,36 +10,40 @@ body > header h1 {
 }
   
 body > header a {
-    color: white;
+    color: #3542f0;
+    font-weight: lighter;
     text-decoration: none;  
 }
 
 #signup a:first-child {
-    border-right: 2px solid white;
+    border-right: 1.5px solid black;
     padding-right: 0.3em;
 }
 
 /* Fonts */
 
-header h1 {
-    font-size: 3.5em;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-}
-
-header #signup {
-    font-size: 1em;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-}
-
 body {
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
 }
 
-#menu {
-    font-family: "Helvetica";
+header h1 {
+    font-size: 3em;
+}
+
+header #signup {
+    font-size: 1.3em;
+
+}
+
+header #signup a {
+    color: black;
 }
 
 /* Menu layout */
+
+#menu {
+    display: none;  /** TEMPORARY **/
+}
 
 #menu ul {
     display: flex;
