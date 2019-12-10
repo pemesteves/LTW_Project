@@ -24,7 +24,7 @@ function draw_header($page, $name){
     <?php
     }
     ?>
-        <h1><a href="index.php"> RENTIFY </a></h1>
+        <h1><a href="index.php"> Rentify </a></h1>
 
         <?php
         if(isset($_SESSION['username'])) {
