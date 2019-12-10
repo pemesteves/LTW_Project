@@ -6,5 +6,5 @@
 
   $_SESSION['success_messages'][] = "User has been logged out";
   
-  header('Location: ' . $_SERVER['HTTP_REFERER']);  // CHECK THIS
+  header('Location: ../pages/index.php');  
 ?>

@@ -11,6 +11,10 @@ function draw_user_image(){
 }
 
 function draw_body_header(){
+    draw_header('user.php', 'Profile');
+}
+
+function draw_header($page, $name){
 ?>
     <header>
         <script src="../js/dropdown.js" async></script>
@@ -25,7 +29,7 @@ function draw_body_header(){
                 <button  class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?>
                 </button>
                 <div class="dropdown_content" id="user_badge_dropdown">
-                    <a href="user.php">Profile</a>
+                    <a href="<?=$page?>"><?=$name?></a>
                     <a href="../actions/action_logout.php">Log out</a>
                 </div>
             </div>

@@ -22,7 +22,7 @@
     </head>
     <body>
         <?php
-            draw_website_name();
+            draw_body_header();
             draw_body_menu();
         ?>
         

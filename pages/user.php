@@ -19,13 +19,8 @@
         <link href="../css/profile.css" rel="stylesheet">
     </head>
     <body>
-        <header>
-            <h1><a href="index.php"> RENTIFY </a></h1>
-            <div id="signup">
-                <a id="change_profile" href="change_profile.php">Change Profile</a>
-            </div>
-        </header>
         <?php
+            draw_header('change_profile.php', 'Change Profile');
             draw_body_menu();
         ?>
         <section id="user_info">
