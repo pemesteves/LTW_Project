@@ -99,4 +99,14 @@ function document_main_part(){
         <script src="../js/date.js" defer></script>
 <?php    
 }
+
+function draw_footer(){
+?>
+        <footer>
+
+        </footer>
+    </body>
+</html>
+<?php
+}
 ?>

@@ -11,7 +11,7 @@ body {
 /* Header Layout */
 body > header {
     display: grid;
-    grid-template-columns: 6fr 2fr;
+    grid-template-columns: 6fr 1fr;
     height: 100px;
 }
 
