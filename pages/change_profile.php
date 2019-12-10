@@ -35,8 +35,8 @@
                 <div id="fit_crop">
                     <img src="../images/<?=$image_name?>"/>
                     <input type="hidden" name="image_name" value="<?=$image_name?>"/>
+                    <p>Preferred size: 160px x 160px</p>
                 </div>
-                <p>Preferred size: 160px x 160px</p>
                 <div id="headers">
                     <h2><input id="full_name" type="text" name="full_name" value="<?=$user_info['full_name']?>" placeholder="<?=$user_info['full_name']?>"/></h2>
                     <h3>(<?=$user_info['username']?>)</h3>
