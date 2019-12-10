@@ -9,7 +9,6 @@
 <body>
     <?php 
     draw_website_name();
-    draw_body_menu(); 
     ?>
     
     <section id="main_account">
@@ -26,6 +25,6 @@
             </form>
         </section>
     </section>
-
-</body>
-</html>      
+<?php
+    draw_footer(false);
+?>

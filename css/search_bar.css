@@ -7,7 +7,11 @@
 .search_box .location, .search_box .date {
     height: 50px;
     padding: 0px;
+
     text-align: center;
+
+    border-radius: 5px;
+    border: 1.2px solid rgb(195, 197, 193);
 }
 
 .search_box .location {
@@ -19,11 +23,15 @@
 }
 
 .search_box .search_button {
-    height: 50px;
+    height: 52px;
     width: 100px;
-    background: #39409e;
-    padding: 1em;
+    padding: 0em;
+
+    background: #3542f0;
     color: #ffffff;
+
+    border-radius: 5px;
+    border: 1.2px solid rgb(195, 197, 193);    
 }
 
 .search_box .search_button:hover {
@@ -34,4 +42,18 @@
 .search_box {
     background-color: rgba(5, 6, 43, 0.5);  
     padding: 20px 30px;
+
+    border-radius: 15px;    
+}
+
+[type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+    
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
 }

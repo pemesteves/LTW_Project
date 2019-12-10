@@ -4,6 +4,7 @@
     include_once "../database/user.php";
     include_once "../database/reservations.php";
     include_once "../templates/tpl_common.php";
+    include_once "../templates/tpl_scroll_top.php";
 
     if(!isset($_SESSION['username'])){
         header('Location: ../pages/index.php');
@@ -17,6 +18,7 @@
     $reservations = getUserReservations($username);
 
     document_main_part();
+    include_scroll_top();
 ?>
         <link href="../css/user_page.css" rel="stylesheet">
         <link href="../css/properties_list.css" rel="stylesheet">
@@ -25,7 +27,6 @@
     <body>
         <?php
             draw_header('change_profile.php', 'Change Profile');
-            draw_body_menu();
         ?>
         <section id="user_info">
             <div id="fit_crop">
@@ -118,5 +119,6 @@
         }
         ?>
         </section>
-    </body>
-</html>
+<?php
+    draw_footer(true);
+?>

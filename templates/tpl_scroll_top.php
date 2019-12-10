@@ -1,7 +1,8 @@
 <?php
-function draw_scroll_to_top(){
+function include_scroll_top(){
 ?>
-    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <link rel="stylesheet" type="text/css" href="../css/scroll_button.css">
+    <script src="../js/scrollTop.js" defer></script>
 <?php
 }
 ?>

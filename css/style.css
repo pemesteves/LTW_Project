@@ -1,6 +1,6 @@
 /* Header Style */
 body > header {
-    background-color: #92aedd;
+    background-color: #fff;
     color: white;
     padding: 1em;
 }
@@ -10,62 +10,85 @@ body > header h1 {
 }
   
 body > header a {
-    color: white;
+    color: #3542f0;
+    font-weight: lighter;
     text-decoration: none;  
     outline: none;
 }
 
 #signup a:first-child {
-    border-right: 2px solid white;
+    border-right: 1.5px solid black;
     padding-right: 0.3em;
 }
 
 /* Fonts */
 
-header h1 {
-    font-size: 5em;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-}
-
-header #signup {
-    font-size: 1.5em;
-    font-family: 'Trebuchet MS', Helvetica, sans-serif;
-}
-
 body {
     font-family: 'Trebuchet MS', Helvetica, sans-serif;
 }
 
-#menu {
+header h1 {
+    font-size: 3em;
+}
+
+header #signup {
+    font-size: 1.3em;
+
+}
+
+header #signup a {
+    color: black;
+}
+
+#footer {
     font-family: "Helvetica";
 }
 
-/* Menu layout */
+/* Footer Layout*/
 
-#menu ul {
-    display: flex;
-    flex-direction: row;
-    padding-left: 0%;
-}
-  
-#menu li {
-    display: block;
-    flex: 1;
+html {
+    height: 100%;
 }
 
-/* Menu */
-
-#menu { 
+#footer {
+    display: grid;
+    grid-template-columns: auto 0.1fr;
     background-color: #2e3c49;
     padding: 0.1em;
     text-align: center;
+    margin: 0;
+    height: 3em;
+    align-self: end;
 }
 
-#menu a {
+#footer p {
+    grid-column: 1;
+    text-align: left;
+    margin-left: 5em;
+}
+
+#footer ul {
+    display: flex;
+    grid-column: 2;
+    flex-direction: row;
+    padding-left: 0%;
+    text-align: right;
+    margin-right: 5em;
+}
+
+#footer li {
+    display: block;
+    flex: 1;
+    list-style-type: none;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+#footer li:first-of-type {
+    border-right: 1px solid white;
+}
+
+#footer a {
     color: white;
     text-decoration: none;
-}
-
-#menu li {
-    list-style-type: none;
 }

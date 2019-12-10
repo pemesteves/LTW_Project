@@ -24,7 +24,7 @@ function draw_header($page, $name){
     <?php
     }
     ?>
-        <h1><a href="index.php"> RENTIFY </a></h1>
+        <h1><a href="index.php"> Rentify </a></h1>
 
         <?php
         if(isset($_SESSION['username'])) {
@@ -32,8 +32,7 @@ function draw_header($page, $name){
             <div class="dropdown">
 
                 <?php draw_user_image(); ?>
-                <button  class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?>
-                </button>
+                <button  class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?> </button>
                 <div class="dropdown_content" id="user_badge_dropdown">
                     <a href="<?=$page?>"><?=$name?></a>
                     <a href="../actions/action_logout.php">Log out</a>
@@ -57,19 +56,8 @@ function draw_header($page, $name){
 function draw_website_name(){
 ?>
     <header>
-        <h1><a href="index.php"> RENTIFY </a></h1>
+        <h1><a href="index.php"> Rentify </a></h1>
     </header>
-<?php
-}
-
-function draw_body_menu(){
-?>
-    <nav id="menu">  
-        <ul>
-            <li><a href="../pages/about.php">About</a></li>
-            <li><a href="../pages/contacts.php">Contacts</a></li>
-        </ul>
-    </nav>
 <?php
 }
 
@@ -100,10 +88,19 @@ function document_main_part(){
 <?php    
 }
 
-function draw_footer(){
+function draw_footer($include_button){
+    if($include_button){
 ?>
-        <footer>
-
+        <button id="scrollTop" title="Go to top"><img src="../images/arrow.png"/></button>
+<?php
+    }
+?>  
+        <footer id="footer">
+            <p><a href="../pages/index.php">Rentify™</a></p>
+            <ul>
+                <li><a href="../pages/about.php">About</a></li>
+                <li><a href="../pages/contacts.php">Contacts</a></li>
+            </ul>
         </footer>
     </body>
 </html>
