@@ -2,6 +2,7 @@
 body {
     background-color: #fff;   
     margin: 0;
+    height: 100vh;
     
     display: grid;
     grid-template-rows: [header] auto [nav] auto [properties] 1fr [footer] auto [end];

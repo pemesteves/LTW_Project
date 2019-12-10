@@ -27,7 +27,6 @@
     <body>
         <?php
             draw_body_header();
-            draw_body_menu();
         ?>
         
         <form id="upload_image_form" action="../actions/action_upload_image.php" method="post" enctype="multipart/form-data"> 
@@ -51,5 +50,6 @@
             </section>
             <input class="account_button" type="Submit" value="Update Profile"> 
         </form>
-    </body>
-</html>
+<?php
+    draw_footer(false);
+?>

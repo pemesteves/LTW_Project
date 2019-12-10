@@ -1,10 +1,11 @@
 <?php 
     include_once "../templates/tpl_common.php";
     include_once "../database/connection.php";
-    //include_once "../database/search.php";
     include_once "../database/property.php";
+    include_once "../templates/tpl_scroll_top.php";
     
     document_main_part();
+    include_scroll_top();
 ?>
         <link href="../css/property_page.css" rel="stylesheet">
         <script src="../js/slideshow.js" async></script>
@@ -77,5 +78,6 @@
             }
             ?>
         </section>
-    </body>
-</html>
+<?php
+    draw_footer(true);
+?>

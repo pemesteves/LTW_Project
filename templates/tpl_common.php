@@ -61,17 +61,6 @@ function draw_website_name(){
 <?php
 }
 
-function draw_body_menu(){
-?>
-    <nav id="menu">  
-        <ul>
-            <li><a href="../pages/about.php">About</a></li>
-            <li><a href="../pages/contacts.php">Contacts</a></li>
-        </ul>
-    </nav>
-<?php
-}
-
 function draw_search_bar(){
 ?>
     <form id="search_form" action="search_page.php" method="post"> 
@@ -99,10 +88,19 @@ function document_main_part(){
 <?php    
 }
 
-function draw_footer(){
+function draw_footer($include_button){
+    if($include_button){
 ?>
-        <footer>
-
+        <button id="scrollTop" title="Go to top"><img src="../images/arrow.png"/></button>
+<?php
+    }
+?>  
+        <footer id="footer">
+            <p><a href="../pages/index.php">Rentify™</a></p>
+            <ul>
+                <li><a href="../pages/about.php">About</a></li>
+                <li><a href="../pages/contacts.php">Contacts</a></li>
+            </ul>
         </footer>
     </body>
 </html>
