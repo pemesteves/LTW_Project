@@ -12,6 +12,7 @@ body > header h1 {
 body > header a {
     color: white;
     text-decoration: none;  
+    outline: none;
 }
 
 #signup a:first-child {
