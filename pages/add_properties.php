@@ -8,8 +8,7 @@
 </head>
 <body>
     <?php 
-    draw_website_name();
-    draw_body_menu(); 
+    draw_website_name(); 
     ?>
     
     <section id="main_rentify_properties">
@@ -29,6 +28,6 @@
             </form>
         </section>
     </section>
-
-</body>
-</html>      
+<?php
+    draw_footer(false);
+?>
