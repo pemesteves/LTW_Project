@@ -2,8 +2,10 @@
     include_once "../database/connection.php"; 
     include_once "../database/property.php"; 
     include_once "../templates/tpl_common.php";
+    include_once "../templates/tpl_scroll_top.php";
 
     document_main_part();
+    include_scroll_top();
 ?>
         <link href="../css/main_page.css" rel="stylesheet">
         <link href="../css/search_bar.css" rel="stylesheet">
@@ -12,7 +14,6 @@
     <body> 
         <?php
             draw_body_header();
-            draw_body_menu();
         ?>
         <section id="search_bar">
             <h1>Find the perfect place</h1>
@@ -39,5 +40,6 @@
                 <p>Welcome to Rentify, helping people everywhere travel better together.</p>
             </article>
         </section>
-    </body>
-</html>
+<?php
+    draw_footer(true);
+?>

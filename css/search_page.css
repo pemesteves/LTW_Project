@@ -4,6 +4,7 @@
     background: #2e3c49;
     text-align: center;
     border-top: solid rgba(5, 6, 43, 0.5);
+    border-bottom: solid rgba(5, 6, 43, 0.5);
 }
 
 #search_bar h1 {
