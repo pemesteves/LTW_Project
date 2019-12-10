@@ -17,7 +17,13 @@ function draw_body_header(){
 function draw_header($page, $name){
 ?>
     <header>
-        <script src="../js/dropdown.js" async></script>
+    <?php
+    if(isset($_SESSION['username'])){
+    ?>
+      <script src="../js/dropdown.js" async></script>
+    <?php
+    }
+    ?>
         <h1><a href="index.php"> RENTIFY </a></h1>
 
         <?php

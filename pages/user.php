@@ -4,7 +4,11 @@
     include_once "../database/user.php";
     include_once "../database/reservations.php";
     include_once "../templates/tpl_common.php";
-    
+
+    if(!isset($_SESSION['username'])){
+        header('Location: ../pages/index.php');
+    }
+
     $username = $_SESSION['username'];
     $password_hash = getUserPassword($username)['password'];
 

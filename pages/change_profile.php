@@ -4,6 +4,10 @@
     include_once "../templates/tpl_common.php";
     include_once "../templates/tpl_account.php";
     
+    if(!isset($_SESSION['username'])){
+        header('Location: ../pages/index.php');
+    }
+
     $username = $_SESSION['username'];
     $password_hash = getUserPassword($username)['password'];
 

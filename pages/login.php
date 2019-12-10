@@ -6,7 +6,6 @@
 ?>
     <link rel="stylesheet" type="text/css" href="../css/search_bar.css">
     <link rel="stylesheet" type="text/css" href="../css/account_layout.css">
-    <link rel="stylesheet" type="text/css" href="../css/login.css">
 </head>
 <body>
     <?php 
