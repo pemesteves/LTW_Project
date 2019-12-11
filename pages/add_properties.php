@@ -5,7 +5,8 @@
 
     document_main_part();
 ?>
-    <link rel="stylesheet" type="text/css" href="../css/add_properties.css">
+    <link rel="stylesheet" type="text/css" href="../css/add_properties.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/form.css"/>
     <script src="../js/upload_image.js" defer></script>
 </head>
 <body>
@@ -13,8 +14,8 @@
     draw_website_name(); 
     ?>
     
-    <section id="main_rentify_properties">
-        <section id="rentify_properties">
+    <section id="main_form_section">
+        <section id="rentify_form_section">
             <h2>Rentify your property</h2>
             <?php
             $image_name = "";
