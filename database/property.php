@@ -82,7 +82,7 @@
     function getRecommended(){
         global $db;
 		$stmt = $db->prepare('
-			SELECT Property.id as id, Property.title as title, Property.description as description, 
+			SELECT Property.id as id, Property.title as title, Property.price_per_day as price_per_day, Property.sleeps as sleeps, 
 				   PropertyImage.image_name as image, (
 				SELECT avg(price_per_day)
 				FROM Property
