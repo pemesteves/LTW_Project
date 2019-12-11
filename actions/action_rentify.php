@@ -15,13 +15,14 @@
         $id = $db->lastInsertId();
 
         foreach($_SESSION['images'] as $image) {
-            error_log("ola ".$image);
             rentifyPropertyImage($id, $image);
         }
         unset($_SESSION['images']);
+
         header('Location: ../pages/user.php'); // CHANGE
     } 
     catch (PDOException $e) {
+        unset($_SESSION['images']);
         die($e->getMessage());
         $_SESSION['error_messages'][] = "Failed to rentify house";
         header('Location: ../pages/add_properties.php');

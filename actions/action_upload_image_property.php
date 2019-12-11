@@ -27,7 +27,6 @@
     if (!isset($_SESSION['images']))
         $_SESSION['images'] = array();
     array_push($_SESSION['images'], $name);
-    error_log('imagesCenas'.$name);
 
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     exit;
