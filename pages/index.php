@@ -32,15 +32,17 @@
                 foreach($recommended as $recommendedArticle){
             ?>
                 <li>
-                    <article>
-                        <div class="height_crop">
-                            <img src="../images/<?=$recommendedArticle['image'] ?>" alt="<?=$recommendedArticle['image'] ?>"/>
-                        </div>
-                        <div class="info">
-                            <h3><?=$recommendedArticle['title'] ?></h3>
-                            <p><?=$recommendedArticle['description'] ?></p>
-                        </div>                                                
-                    </article>
+                    <a class="recommmended_link" href="property_page.php?property=<?=$recommendedArticle['id']?>">
+                        <article>
+                            <div class="height_crop">
+                                <img src="../images/<?=$recommendedArticle['image'] ?>" alt="<?=$recommendedArticle['image'] ?>"/>
+                            </div>
+                            <div class="info">
+                                <h3><?=$recommendedArticle['title'] ?></h3>
+                                <p><?=$recommendedArticle['description'] ?></p>
+                            </div>                                                
+                        </article>
+                    </a>
                 </li>
             <?php } 
             }catch(Exception $e){

@@ -112,6 +112,11 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1);
 }
 
+.recommmended_link {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Add new houses */
 #rent_new_houses {
     display: grid;

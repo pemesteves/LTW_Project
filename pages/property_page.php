@@ -69,6 +69,7 @@
                         <input type="date" name="start_date" value="2019-11-13" min="2019-11-13" /> <!-- Change start date to today with JS -->
                         <input type="date" name="end_date" value="2019-11-13" min="2019-11-14" /> <!-- Check if end date is after start date -->
                         <input type="number" name="sleeps" value="1" min="1" />
+                        <input type="submit" value="Book Property"/>
                     </form>
                 </article>
             </section>
