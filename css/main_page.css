@@ -96,7 +96,15 @@
     background-color: #3542f0;
 }
 
-#recommended .info p:nth-child(2)::after {
+#recommended .info p:nth-child(2)::before {
+    content: 'Sleeps: ';
+}
+
+#recommended .info p:nth-child(3)::before {
+    content: 'Price: ';
+}
+
+#recommended .info p:nth-child(3)::after {
     content: '$';
 }
 
