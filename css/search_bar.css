@@ -11,7 +11,7 @@
     text-align: center;
 
     border-radius: 5px;
-    border: 1.2px solid rgb(195, 197, 193);
+    border: 1.2px solid #FFFFFF;
 }
 
 .search_box .location {
@@ -51,9 +51,10 @@
 }
 
 [type="date"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;    
     display: none;
 }
-    
+
 [type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
 }

@@ -1,6 +1,6 @@
 /* Main color */
 body {
-    background-color: #fff;   
+    background-color: #F5F4F3;   
     margin: 0;
     height: 100vh;
     
@@ -14,7 +14,7 @@ body > header {
     display: grid;
     grid-template-columns: 6fr 1fr 1fr;
     grid-template-rows: 3fr 1fr 3fr;
-    height: 3.5em;
+    height: 3.0em;
 }
 
 body > header h1 {
@@ -37,7 +37,7 @@ body > header #user_photo {
 }
 
 body > header #user_badge {
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: black;
 }
 

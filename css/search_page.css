@@ -10,13 +10,20 @@
 #search_bar h1 {
     font-size: 30px;
     background: #2e3c49;
+    font-weight: lighter;
     padding: 1em;
     margin: 0%;
     grid-column: 1;
+    
+    display: none;
 }
 
 #search_bar #search_form {
     grid-column: 2;
+}
+
+#properties {
+    background-color: #FFFFFF;
 }
 
 /*Not found*/

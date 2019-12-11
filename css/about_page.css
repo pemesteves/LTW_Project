@@ -1,13 +1,17 @@
 /** ABOUT SECTION OF ABOUT PAGE **/
+
 #about article {
     padding-top: 0.5em;
     padding-bottom: 0.5em;
+    margin: 0em 20em;
 }
 
 #about article h2 {
-    color: #12197a;
+    color: black;
     width: 90%;
     margin: 1em auto 1em auto;
+    font-size: 2em;
+    font-weight: normal;
 }
 
 #about article p {
@@ -15,6 +19,7 @@
     margin: 0 auto;
     padding-bottom: 0.5em;
     text-align: justify;
+    font-size: 1.1em;
 }
 
 #about article p:last-child {
