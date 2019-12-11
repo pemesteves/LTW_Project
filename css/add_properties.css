@@ -11,15 +11,6 @@ body {
     grid-template-columns: 0.8fr 1.2fr 1.2fr 0.8fr;
 }
 
-/*Menu*/
-#menu {
-    filter: opacity(0.5);
-}
-
-#menu:hover {
-    filter: none;
-}
-
 /*Register new properties*/
 #rentify_properties {
     display: flex;

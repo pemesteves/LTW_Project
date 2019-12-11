@@ -53,7 +53,18 @@
             <div class="height_crop">
                 <img src="../images/main_paradise.jpg" alt="Main Page Rntify Image"/>
             </div>
+            <?php 
+                if (isset($_SESSION['username'])) {
+            ?>
             <form id="rentify_form" action="add_properties.php"> 
+            <?php
+                }
+                else {
+            ?>
+                <form id="rentify_form" action="login.php">
+            <?php
+                }
+            ?>
                 <div class="rentify_box">
                     <button class="rentify_button" type="submit">Rentify</button>
                 </div>
