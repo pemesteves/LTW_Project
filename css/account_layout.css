@@ -11,21 +11,13 @@ body {
     grid-template-columns: 0.8fr 1.2fr 1.2fr 0.8fr;
 }
 
-/*Menu*/
-#menu {
-    filter: opacity(0.5);
-}
-
-#menu:hover {
-    filter: none;
-}
-
 /*Account login/register*/
 #account {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 1.5em 2.5em 2em 2.5em;
+    margin-bottom: 3em;
     background: white;
 
     grid-row-start: 3;
