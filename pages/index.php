@@ -36,8 +36,10 @@
                         <div class="height_crop">
                             <img src="../images/<?=$recommendedArticle['image'] ?>" alt="<?=$recommendedArticle['image'] ?>"/>
                         </div>
-                        <h3><?=$recommendedArticle['title'] ?></h3>
-                        <p><?=$recommendedArticle['description'] ?></p>                                                
+                        <div class="info">
+                            <h3><?=$recommendedArticle['title'] ?></h3>
+                            <p><?=$recommendedArticle['description'] ?></p>
+                        </div>                                                
                     </article>
                 </li>
             <?php } 
