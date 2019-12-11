@@ -13,7 +13,8 @@
 		$stmt->execute(array($id));
         
         $propertyInfo = $stmt->fetch();
-		return $propertyInfo;
+        
+        return $propertyInfo;
     }
 
     function getPropertyImages($id){
