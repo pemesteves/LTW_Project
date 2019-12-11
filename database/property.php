@@ -107,4 +107,24 @@
         $stmt->execute(array($username));
         return $stmt->fetchAll();
     }
+
+    function rentifyProperty($owner_username, $title, $price, $location, $description, $sleeps){
+        global $db;
+
+        $stmt = $db->prepare('INSERT INTO Property 
+                          (owner_username, title, price_per_day, location, description, sleeps)
+                          VALUES
+                          (?, ?, ?, ?, ?, ?)');
+        $stmt->execute(array($owner_username, $title, $price, $location, $description, $sleeps));
+    }
+
+    function rentifyPropertyImage($id, $image) {
+        global $db;
+
+        $stmt = $db->prepare('INSERT INTO PropertyImage 
+                          (property_id, image_name)
+                          VALUES
+                          (?, ?)');
+        $stmt->execute(array($id, $image));
+    }
 ?>

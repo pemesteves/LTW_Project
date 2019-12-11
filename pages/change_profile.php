@@ -3,6 +3,7 @@
     include_once "../database/user.php";
     include_once "../templates/tpl_common.php";
     include_once "../templates/tpl_account.php";
+    include_once "../templates/tpl_upload_image.php";
     
     if(!isset($_SESSION['username'])){
         header('Location: ../pages/index.php');
@@ -27,12 +28,8 @@
     <body>
         <?php
             draw_body_header();
+            upload_image($image_name, 'profile');
         ?>
-        
-        <form id="upload_image_form" action="../actions/action_upload_image.php" method="post" enctype="multipart/form-data"> 
-            <input type="file" name="fileToUpload" value="../images/<?=$image_name?>" id="fileToUpload"/>
-            <input type="submit" value="Upload Image"/>      
-        </form>
         <form id="update_profile_form" action="../actions/action_update_profile.php" method="post">
             <section id="user_info">
                 <div id="fit_crop">

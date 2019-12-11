@@ -1,10 +1,12 @@
 <?php
     include_once "../templates/tpl_common.php";
     include_once "../templates/tpl_account.php";
+    include_once "../templates/tpl_upload_image.php";
 
     document_main_part();
 ?>
     <link rel="stylesheet" type="text/css" href="../css/add_properties.css">
+    <script src="../js/upload_image.js" defer></script>
 </head>
 <body>
     <?php 
@@ -14,7 +16,11 @@
     <section id="main_rentify_properties">
         <section id="rentify_properties">
             <h2>Rentify your property</h2>
-            <form id="rentify_form" action="../actions/action_login.php" method="post">
+            <?php
+            $image_name = "";
+            upload_image($image_name, 'property');
+            ?>
+            <form id="rentify_form" action="../actions/action_rentify.php" method="post">
                 <div class="rentify_box">
                     <?php
                     draw_input_box('title', 'text', 'Property title', true);
