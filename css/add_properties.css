@@ -1,0 +1,103 @@
+/*Background*/
+body {
+    background: url("../images/rentify_houses.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/*Main*/
+#main_rentify_properties {
+    display: grid;
+    grid-template-rows: auto 0.1fr 0.5fr 0.1fr;
+    grid-template-columns: 0.8fr 1.2fr 1.2fr 0.8fr;
+}
+
+/*Menu*/
+#menu {
+    filter: opacity(0.5);
+}
+
+#menu:hover {
+    filter: none;
+}
+
+/*Register new properties*/
+#rentify_properties {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1em 2em 1.5em 2em;
+    background: white;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    border-radius: 1em;
+}
+
+#rentify_properties .rentify_box {
+    text-align: left;
+}
+
+#rentify_properties .rentify_box div{
+    padding: 0em 3em 1em 2em;
+}
+
+#rentify_properties h2 {
+    color: #39409e;
+    text-align: left;
+}
+
+#rentify_properties .title {
+    padding:0.5em;
+}
+
+#rentify_properties .location {
+    padding:0.5em;
+}
+
+#rentify_properties .sleeps {
+    padding:0.5em;
+}
+
+#rentify_properties .price {
+    padding:0.5em;
+}
+
+#rentify_properties .description {
+    padding:0.5em;
+}
+
+#rentify_properties .rentify_button {
+    background: #39409e;
+    padding-left: 1em;
+    padding-right: 1em;
+    color: #ffffff;
+    margin-top: 1em;
+    height: 25px;
+    width: 80px;
+    float: right;
+}
+
+#rentify_properties .rentify_button:hover {
+    background: #12197a;
+    cursor: pointer;
+}
+
+#rentify_properties input {
+    width: 100%;
+    border: 2px solid #92aedd;
+    border-radius: 4px;
+}
+
+#rentify_properties .rentify_button {
+    border: none;
+}
+
+
+#rentify_properties .rentify_box .link_to {
+    text-align: left;
+}
+
+#rentify_properties .rentify_box .link_to a{
+    color: black;
+}

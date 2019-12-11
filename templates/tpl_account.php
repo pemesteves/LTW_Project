@@ -1,10 +1,20 @@
 <?php
 function draw_input_box($class, $type, $placeholder, $required){
+    draw_input_min_box($class, $type, $placeholder, $required, null);
+}
+
+function draw_input_min_box($class, $type, $placeholder, $required, $min){
 ?>
     <div class="<?=$class?>">
         <label for="<?=$class?>"><?=$placeholder?>:</label>
         <input name="<?=$class?>" type="<?=$type?>" placeholder="<?=$placeholder?>" 
-        <?php if($required){ ?> 
+        <?php if(is_int($min)){
+        ?>
+        value="<?=$min?>"
+        min="<?=$min?>"
+        <?php
+        }
+        if($required){ ?> 
             required 
         <?php } ?>
         />

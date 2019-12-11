@@ -27,9 +27,10 @@ CREATE TABLE PropertyImage(
 );
 
 CREATE TABLE Reservation(
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     id_property INTEGER REFERENCES Property(id) ON DELETE CASCADE ON UPDATE CASCADE,
     tourist_username TEXT REFERENCES User(username) ON DELETE CASCADE ON UPDATE CASCADE,
+    sleeps INTEGER NOT NULL,
     date_start DATE NOT NULL,
     date_end DATE NOT NULL,
     rating REAL NOT NULL,

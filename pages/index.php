@@ -53,7 +53,7 @@
             <div class="height_crop">
                 <img src="../images/main_paradise.jpg" alt="Main Page Rntify Image"/>
             </div>
-            <form id="rentify_form" action="login.php"> 
+            <form id="rentify_form" action="add_properties.php"> 
                 <div class="rentify_box">
                     <button class="rentify_button" type="submit">Rentify</button>
                 </div>

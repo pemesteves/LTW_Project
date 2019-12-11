@@ -111,7 +111,7 @@
 }
 
 #rent_new_houses .height_crop {
-    max-height: 530px; 
+    max-height: 30em; 
     overflow: hidden; 
     grid-row-start: 1;
     grid-row-end: 5;
