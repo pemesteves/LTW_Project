@@ -82,8 +82,12 @@
     border-width: 0em 0.2em 0.2em 0.2em;
     border-bottom-right-radius: 1em;
     border-bottom-left-radius: 1em;
-    background: #505ae0;
+    background: #777cc9;
     padding: 1em;
+}
+
+#recommended .info:hover {
+    background-color: #3542f0;
 }
 
 #recommended article h3 {
@@ -104,6 +108,8 @@
 
 #recommended ul li:hover {
     cursor: pointer;
+    border-radius: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1);
 }
 
 /* Add new houses */
