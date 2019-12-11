@@ -7,7 +7,6 @@
 ?>
     <link rel="stylesheet" type="text/css" href="../css/add_properties.css"/>
     <link rel="stylesheet" type="text/css" href="../css/form.css"/>
-    <script src="../js/upload_image.js" defer></script>
 </head>
 <body>
     <?php 
