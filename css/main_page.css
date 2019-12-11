@@ -119,6 +119,11 @@
     border-top-right-radius:1em;
 }
 
+.recommmended_link {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Add new houses */
 #rent_new_houses {
     display: grid;

@@ -21,7 +21,7 @@
     }
     
     $tmp_name = $_FILES["fileToUpload"]["tmp_name"];
-    $name = $username . '_' . basename($_FILES["fileToUpload"]["name"]);
+    $name = hash('sha256', 'profile_' . $username . '_' . date('Y-m-d h:i a'));  
     move_uploaded_file($tmp_name, "$target_dir/$name");
 
     $_SESSION['image_name'] = $name;
