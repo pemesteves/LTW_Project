@@ -35,6 +35,7 @@ function draw_header($page, $name){
                 <button  class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?> </button>
                 <div class="dropdown_content" id="user_badge_dropdown">
                     <a href="<?=$page?>"><?=$name?></a>
+                    <a href="add_properties.php">Rentify property</a>
                     <a href="../actions/action_logout.php">Log out</a>
                 </div>
             </div>
