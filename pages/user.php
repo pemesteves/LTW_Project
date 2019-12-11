@@ -92,7 +92,8 @@
                 <?php
                 if($reservation['rating'] == NULL){
                 ?>
-                    <form id="rating">
+                    <form id="rating" action="../actions/action_rate.php" method="post">
+                        <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
                         <input type="number" name="rating" value="5" min="0" max="10" required/>
                     </form>
                 <?php
@@ -105,8 +106,9 @@
                 <?php
                 if($reservation['comment'] == NULL){
                 ?>
-                    <form id="comment">
-                        <input type="text" name="comment" required/>
+                    <form id="comment" action="../actions/action_comment.php" method="post">
+                        <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
+                        <input type="text" name="comment" placeholder="My comment" required/>
                     </form>
                 <?php
                 }else{

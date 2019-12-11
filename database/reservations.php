@@ -36,4 +36,28 @@
         ');
         $stmt->execute(array($id_property, $username, $start_date, $end_date, $sleeps));
     }
+
+    function addComment($id, $comment){
+        global $db;
+
+        $stmt = $db->prepare('
+            UPDATE Reservation
+            SET comment = ?
+            WHERE id = ?
+        ');
+
+        $stmt->execute(array($comment, $id));
+    }
+
+    function addRating($id, $rating){
+        global $db;
+
+        $stmt = $db->prepare('
+            UPDATE Reservation
+            SET rating = ?
+            WHERE id = ?
+        ');
+
+        $stmt->execute(array($rating, $id));
+    }
 ?>
