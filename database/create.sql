@@ -33,7 +33,7 @@ CREATE TABLE Reservation(
     sleeps INTEGER NOT NULL,
     date_start DATE NOT NULL,
     date_end DATE NOT NULL,
-    rating REAL NOT NULL,
+    rating REAL,
     comment TEXT,
 
     CONSTRAINT valid_dates CHECK (date_end > date_start)

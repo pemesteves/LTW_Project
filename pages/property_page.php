@@ -63,7 +63,7 @@
                     <p><?=$property_info['price_per_day']?>$</p>
                 </article>
                 <article id="dates">
-                    <form action="../actions/action_booking.php">
+                    <form method="post" action="../actions/action_booking.php">
                         <legend>Dates</legend>
                         <input type="hidden" name="id_property" value="<?=$property_id?>" />
                         <input type="date" name="start_date" value="2019-11-13" min="2019-11-13" /> <!-- Change start date to today with JS -->

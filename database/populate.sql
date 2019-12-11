@@ -10,7 +10,7 @@ INSERT INTO User
     '1999-10-06',
     917146432,
     'pt.miguel99@hotmail.com',
-    12345  /* TEMPORARY */,
+    '8cb2237d0679ca88db6464eac60da96345513964',
     'user_placeholder.jpg'
     );
 
@@ -22,7 +22,7 @@ INSERT INTO User
     '1999-10-10',
     912345678,
     'pemesteves@hotmail.com',
-    12345  /* TEMPORARY */,
+    '8cb2237d0679ca88db6464eac60da96345513964',
     'user_placeholder.jpg'
     );
 
@@ -34,7 +34,7 @@ INSERT INTO User
     '1999-03-01',
     925409230,
     'nmtc01@gmail.com',
-    12345  /* TEMPORARY */,
+    '8cb2237d0679ca88db6464eac60da96345513964',
     'user_placeholder.jpg'
     );
 
@@ -46,7 +46,7 @@ INSERT INTO User
     '1969-06-09',
     916969696,
     'jacintoleitinho@gmail.com',
-    12345  /* TEMPORARY */,
+    '8cb2237d0679ca88db6464eac60da96345513964',
     'user_placeholder.jpg'
     );
 

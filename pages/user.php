@@ -85,31 +85,32 @@
             ?>
             <div id="user_reservation">
                 <h4>Property: <?=$property_info['title']?></h4>
-                <p>Start: <?=$property_info['date_start']?></p>
-                <p>End: <?=$property_info['date_end']?></p>
+                <h5>Location: <?=$property_info['location']?></h5>
+                <p>Start: <?=$reservation['date_start']?></p>
+                <p>End: <?=$reservation['date_end']?></p>
                 <p>Rating: 
                 <?php
-                if($property_info['rating'] == NULL){
+                if($reservation['rating'] == NULL){
                 ?>
                     <form id="rating">
                         <input type="number" name="rating" value="5" min="0" max="10" required/>
                     </form>
                 <?php
                 }else{
-                    print($property_info['rating']);
+                    print($reservation['rating']);
                 }
                 ?>
                 </p>
                 <p>Comment:
                 <?php
-                if($property_info['comment'] == NULL){
+                if($reservation['comment'] == NULL){
                 ?>
                     <form id="comment">
                         <input type="text" name="comment" required/>
                     </form>
                 <?php
                 }else{
-                    print($property_info['comment']);
+                    print($reservation['comment']);
                 }
                 ?>
                 </p>

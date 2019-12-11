@@ -12,13 +12,13 @@
     header('Location: ' . $_SERVER['HTTP_REFERER']);
   }
   $id_property = $_POST['id_property'];
-  
+
   if(!isset($_POST['start_date'])){
     //SEND MESSAGE: MISSING START DATE  
     header('Location: ' . $_SERVER['HTTP_REFERER']);
   }
   $start_date = $_POST['start_date']; 
-  
+
   if(!isset($_POST['end_date'])){
     //SEND MESSAGE: MISSING END DATE  
     header('Location: ' . $_SERVER['HTTP_REFERER']);
@@ -27,7 +27,7 @@
 
   if($end_date <= $start_date){
     //SEND MESSAGE: start date can't be greater than the end date
-    header('Loaction: ' . $_SERVER['HTTP_REFERER']); 
+    header('Location: ' . $_SERVER['HTTP_REFERER']); 
   }
 
   if(!isset($_POST['sleeps'])){
@@ -37,7 +37,7 @@
   $sleeps = $_POST['sleeps'];
 
   try{
-    $reservations = getHouseReservations($id_property, $start_date, $end_date);
+    $reservations = getHouseReservationsBetweenDates($id_property, $start_date, $end_date);
   }catch(PDOException $e){
     die($e->getMessage());
     $_SESSION['error_messages'][] = "Failed to get the house reservations";
@@ -50,7 +50,7 @@
   }
 
   try{
-      addReservation($id_property, $username, $start_date, $end_date);
+      addReservation($id_property, $username, $start_date, $end_date, $sleeps);
   }catch(PDOException $e){
       die($e->getMessage());
       $_SESSION['error_messages'][] = "Failed to add a reservation";
