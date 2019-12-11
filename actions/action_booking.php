@@ -4,35 +4,41 @@
 
   if (!isset($_SESSION['username'])){
     header('Location: ../pages/login.php');
+    die();
   } 
   $username = $_SESSION['username'];
 
   if(!isset($_POST['id_property'])){
     //SEND MESSAGE: MISSING PROPERTY ID  
     header('Location: ' . $_SERVER['HTTP_REFERER']);
+    die();
   }
   $id_property = $_POST['id_property'];
 
   if(!isset($_POST['start_date'])){
     //SEND MESSAGE: MISSING START DATE  
     header('Location: ' . $_SERVER['HTTP_REFERER']);
+    die();
   }
   $start_date = $_POST['start_date']; 
 
   if(!isset($_POST['end_date'])){
     //SEND MESSAGE: MISSING END DATE  
     header('Location: ' . $_SERVER['HTTP_REFERER']);
+    die();
   }
   $end_date = $_POST['end_date'];
 
   if($end_date <= $start_date){
     //SEND MESSAGE: start date can't be greater than the end date
     header('Location: ' . $_SERVER['HTTP_REFERER']); 
+    die();
   }
 
   if(!isset($_POST['sleeps'])){
     //SEND MESSAGE: MISSING SLEEPS  
     header('Location: ' . $_SERVER['HTTP_REFERER']);
+    die();
   }
   $sleeps = $_POST['sleeps'];
 
@@ -42,6 +48,7 @@
     die($e->getMessage());
     $_SESSION['error_messages'][] = "Failed to get the house reservations";
     header('Location: ' . $_SERVER['HTTP_REFERER']);
+    die();
   }
 
   if(count($reservations) != 0){
@@ -55,7 +62,9 @@
       die($e->getMessage());
       $_SESSION['error_messages'][] = "Failed to add a reservation";
       header('Location: ' . $_SERVER['HTTP_REFERER']);
+      die();
   }
 
   header('Location: ../pages/index.php');  // CHECK THIS
+  die();
 ?>

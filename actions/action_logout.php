@@ -7,4 +7,5 @@
   $_SESSION['success_messages'][] = "User has been logged out";
   
   header('Location: ../pages/index.php');  
+  die();
 ?>

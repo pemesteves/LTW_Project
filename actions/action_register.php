@@ -76,4 +76,5 @@
     clearMessages();
     error_log(implode($_SESSION['error_messages']));
     error_log(implode($_SESSION['success_messages']));   
+    die();
 ?>

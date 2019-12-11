@@ -29,5 +29,6 @@
     mail($email_from, $subject, $new_message, $headers);
 
     header('Location: ../pages/contacts.php');
+    die();
 ?>
 

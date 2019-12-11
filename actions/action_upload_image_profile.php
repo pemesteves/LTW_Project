@@ -27,5 +27,5 @@
     $_SESSION['image_name'] = $name;
 
     header('Location: ../pages/change_profile.php');
-    exit;
+    die();
 ?>
