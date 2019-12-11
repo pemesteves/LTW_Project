@@ -1,6 +1,7 @@
 <?php
     include_once "../database/connection.php";
     include_once "../database/property.php";
+    include_once "../database/search.php";
     include_once "../templates/tpl_common.php";
     include_once "../templates/tpl_scroll_top.php";
 
@@ -26,7 +27,7 @@
     <section id="properties">
         <h2 id="properties_h">Properties</h2>
         <?php 
-        $articles = getPropertyByLocation($location);
+        $articles = getPropertyByLocationBetweenDates($location, $start_date, $end_date);
         if(count($articles) == 0){
         ?>    
         <article id="not_found">

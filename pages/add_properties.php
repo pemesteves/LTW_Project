@@ -3,6 +3,9 @@
     include_once "../templates/tpl_account.php";
     include_once "../templates/tpl_upload_image.php";
 
+    if(!isset($_SESSION['username']))
+        header('Location: login.php');
+
     document_main_part();
 ?>
     <link rel="stylesheet" type="text/css" href="../css/add_properties.css"/>
@@ -10,7 +13,7 @@
 </head>
 <body>
     <?php 
-    draw_website_name(); 
+        draw_body_header();
     ?>
     
     <section id="main_form_section">

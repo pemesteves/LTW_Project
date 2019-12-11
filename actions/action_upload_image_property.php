@@ -31,5 +31,5 @@
     array_push($_SESSION['images'], $name);
 
     header('Location: ' . $_SERVER['HTTP_REFERER']);
-    exit;
+    die();
 ?>

@@ -11,4 +11,5 @@
     $_SESSION['error_messages'][] = "Login failed";
     header('Location: ../pages/login.php');
   }  
+  die();
 ?>

@@ -27,4 +27,5 @@
         $_SESSION['error_messages'][] = "Failed to rentify house";
         header('Location: ../pages/add_properties.php');
     }
+    die();
 ?>

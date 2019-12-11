@@ -7,6 +7,7 @@
     
     if(!isset($_SESSION['username'])){
         header('Location: ../pages/index.php');
+        die();
     }
 
     $username = $_SESSION['username'];

@@ -13,5 +13,5 @@
     updateUserInformation($full_name, $email, $phone, $birthdate, $image_name,$username);
 
     header('Location: ../pages/user.php');
-    exit;
+    die();
 ?>
