@@ -8,6 +8,7 @@
     $location = $_POST['location'];
     $start_date = $_POST['start_date'];
     $end_date = $_POST['end_date']; 
+    $guests = $_POST['guests'];
 
     document_main_part();
     include_scroll_top();
@@ -27,7 +28,7 @@
     <section id="properties">
         <h2 id="properties_h">Properties</h2>
         <?php 
-        $articles = getPropertyByLocationBetweenDates($location, $start_date, $end_date);
+        $articles = searchProperties($location, $start_date, $end_date, $guests);
         if(count($articles) == 0){
         ?>    
         <article id="not_found">
