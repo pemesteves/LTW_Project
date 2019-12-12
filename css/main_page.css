@@ -96,18 +96,6 @@
     background-color: #3542f0;
 }
 
-#recommended .info p:nth-child(2)::before {
-    content: 'Sleeps: ';
-}
-
-#recommended .info p:nth-child(3)::before {
-    content: 'Price per day: ';
-}
-
-#recommended .info p:nth-child(3)::after {
-    content: '$';
-}
-
 #recommended article h3 {
     color: white;
     font-weight: lighter;

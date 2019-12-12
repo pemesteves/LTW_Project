@@ -39,8 +39,8 @@
                             </div>
                             <div class="info">
                                 <h3><?=$recommendedArticle['title'] ?></h3>
-                                <p><?=$recommendedArticle['sleeps'] ?></p>
-                                <p><?=$recommendedArticle['price_per_day'] ?></p>
+                                <p>Sleeps: <?=$recommendedArticle['sleeps'] ?></p>
+                                <p>Price per day: <?=$recommendedArticle['price_per_day'] ?>$</p>
                             </div>                                                
                         </article>
                     </a>
