@@ -1,6 +1,6 @@
 <?php
-    include_once "../includes/init.php";
-    include_once "../database/property.php";
+    include_once('../includes/init.php');
+    include_once('../database/property.php');
 
     global $db;
     $owner_username = $_SESSION['username'];

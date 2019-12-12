@@ -80,54 +80,6 @@
             <?php    
             }
             ?>
-            <section id="rating">
-            <?php
-                try{
-                    $ratings = getPropertyRatings($property_id);
-                    if(($num_ratings = count($ratings)) != 0){
-                        $rating_sum = 0;
-                        foreach($ratings as $rating){
-                            $rating_sum += $rating['rating'];
-                        }
-                        $rating_sum /= $num_ratings;
-            ?>
-                <p>Rating: <?=$rating_sum?>/10</p>
-            <?php
-                    }else{
-            ?>
-                <p>Rating: No one has rated this property yet.</p>
-            <?php
-                    }
-                }catch(PDOException $e){
-                    die($e->getMessage());
-                }
-            ?>
-            <!--RATING-->
-            </section>
-            <?php
-            try{
-                $comments = getPropertyComments($property_id);
-            ?>
-            <section id="comments">
-                <h4>Comments</h4>
-            <?php
-                if(count($comments) != 0){
-                    foreach ($comments as $comment) {
-            ?>
-                    <h5 id="tourist_name"><?=$comment['tourist']?></h4>
-                    <p><?=$comment['comment']?></p>    
-            <?php
-                    }
-                }else{
-            ?>  
-                    <p>There are no comments yet</p>
-            <?php
-                }
-            }catch(PDOException $e){
-                die($e->getMessage());
-            }
-            ?>
-            </section>
         </section>
 <?php
     draw_footer(true);

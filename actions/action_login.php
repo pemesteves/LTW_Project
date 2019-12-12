@@ -1,6 +1,6 @@
 <?php
-  include_once "../includes/init.php";
-  include_once "../database/user.php";
+  include_once('../includes/init.php');
+  include_once('../database/user.php');
 
   if (checkLogin($_POST['username'], $_POST['password'])) {
     setCurrentUser($_POST['username']);

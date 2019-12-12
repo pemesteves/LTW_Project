@@ -1,6 +1,6 @@
 <?php
-  include_once "../includes/init.php";
-  include_once "../database/reservations.php";
+  include_once('../includes/init.php');
+  include_once('../database/reservations.php');
 
   if (!isset($_SESSION['username'])){
     header('Location: ../pages/login.php');
