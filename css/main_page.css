@@ -101,7 +101,7 @@
 }
 
 #recommended .info p:nth-child(3)::before {
-    content: 'Price: ';
+    content: 'Price per day: ';
 }
 
 #recommended .info p:nth-child(3)::after {

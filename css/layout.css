@@ -11,9 +11,6 @@ body {
 
 /* Header Layout */
 body > header {
-    display: grid;
-    grid-template-columns: 6fr 1fr 1fr;
-    grid-template-rows: 3fr 1fr 3fr;
     height: 3.0em;
 }
 
@@ -23,6 +20,7 @@ body > header h1 {
     grid-row-end: 3;
 
     padding-left: 0.3em;
+    padding-right: 0.3em;
 }
 
 body > header #signup {
@@ -50,7 +48,7 @@ body > header #user_badge {
     grid-template-rows: 1.2fr 0.1fr;
     justify-items: start;
 
-    margin-right: 1em;
+    margin-right: 3em;
 }
 
 .dropdown .dropdown_button {
