@@ -45,5 +45,18 @@
 		}
 
 		return $matches;
-    } 
+	} 
+	
+	function searchProperties($location, $start_date, $end_date, $guests){
+		$properties = getPropertyByLocationBetweenDates($location, $start_date, $end_date);
+
+		$matches = array();
+
+		foreach ($properties as $property) {
+			if($property['sleeps'] >= $guests)
+				array_push($matches, $property);
+		}
+
+		return $matches;
+	}
 ?>

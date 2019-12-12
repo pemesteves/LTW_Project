@@ -4,7 +4,7 @@
     z-index: 1;
 }
 
-.search_box .location, .search_box .date {
+.search_box .location, .search_box .date, .search_box .guests {
     height: 50px;
     padding: 0px;
 
@@ -20,6 +20,10 @@
 
 .search_box .date {
     width: 150px;
+}
+
+.search_box .guests {
+    width: 50px;
 }
 
 .search_box .search_button {
@@ -57,4 +61,11 @@
 
 [type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
+}
+
+.guests[type=number]::-webkit-inner-spin-button, 
+
+.guests[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

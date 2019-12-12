@@ -69,8 +69,9 @@ function draw_search_bar(){
     <form id="search_form" action="search_page.php" method="post"> 
         <div class="search_box">
             <input class="location" name="location" type="text" placeholder="Where to?"/>
-            <input class="date" name="start_date" type="date" value="2019-11-13" min="2019-11-13">
-            <input class="date" name="end_date" type="date" value="2019-11-14" min="2019-11-14">
+            <input class="date" name="start_date" type="date" value="2019-11-13" min="2019-11-13"/>
+            <input class="date" name="end_date" type="date" value="2019-11-14" min="2019-11-14"/>
+            <input class="guests" name="guests" type="number" placeholder="Guests" min="1" required/>
             <button class="search_button" type="submit">Search</button>
         </div>
     </form>
