@@ -100,4 +100,40 @@
                           (?, ?)');
         $stmt->execute(array($id, $image));
     }
+
+    function getPropertyComments($id){
+        global $db;
+
+        $stmt = $db->prepare('
+            SELECT Reservation.comment as comment, Reservation.tourist_username as tourist
+            FROM Property
+            JOIN Reservation
+            ON Property.id = Reservation.id_property
+            WHERE Property.id = ? 
+                  AND 
+                  Reservation.comment IS NOT NULL
+        ');
+        
+        $stmt->execute(array($id));
+
+        return $stmt->fetchAll();
+    }
+
+    function getPropertyRatings($id){
+        global $db;
+
+        $stmt = $db->prepare('
+            SELECT Reservation.rating as rating
+            FROM Property
+            JOIN Reservation
+            ON Property.id = Reservation.id_property
+            WHERE Property.id = ? 
+                  AND 
+                  Reservation.rating IS NOT NULL
+        ');
+        
+        $stmt->execute(array($id));
+
+        return $stmt->fetchAll();
+    }
 ?>
