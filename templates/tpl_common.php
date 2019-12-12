@@ -59,7 +59,9 @@ function draw_header($page, $name){
 function draw_website_name(){
 ?>
     <header>
-        <h1><a href="index.php"> Rentify </a></h1>
+        <div id="fixed">
+            <h1><a href="index.php"> Rentify </a></h1>
+        </div>
     </header>
 <?php
 }
