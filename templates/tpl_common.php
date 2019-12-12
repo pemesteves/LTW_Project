@@ -17,6 +17,7 @@ function draw_body_header(){
 function draw_header($page, $name){
 ?>
     <header>
+        <div id="fixed">
     <?php
     if(isset($_SESSION['username'])){
     ?>
@@ -50,6 +51,7 @@ function draw_header($page, $name){
         <?php
         }
         ?>
+        </div>
     </header>
 <?php
 }
