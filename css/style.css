@@ -1,6 +1,6 @@
 /* Header Style */
 body > header {
-    padding-bottom: 1em;
+    padding-bottom: 2em;
     z-index: 2;
 }
 
@@ -9,6 +9,7 @@ body > header #fixed {
     padding: 1em;
     background-color: #F5F4F3;
     height: inherit;
+    width:100%;
     display: grid;
     grid-template-columns: 6fr auto 1fr;
 }
