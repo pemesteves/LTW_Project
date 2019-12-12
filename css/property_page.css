@@ -1,6 +1,7 @@
 /*MAIN*/
 #property {
   display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 #property #slideshow {
@@ -11,17 +12,21 @@
 #property #main_info {
   grid-column: 1;
   grid-row: 2;
+  padding: 2em;
 }
 
 #property #reservation_info {
   grid-column: 2;
   grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row-end: 3;
+  padding: 2em;
+  color: white;
+  border: solid #0b116b;
+  border-width: 0.3em 0.3em 0em 0.3em;
+  background: #777cc9;
 }
 
 /*SLIDESHOW*/
-/* * {box-sizing:border-box} */
-
 #slideshow img {
   width: 100%;
 }
