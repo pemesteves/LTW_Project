@@ -23,8 +23,8 @@
                 $property_commodities = getCommodities($property_id); 
             
             ?>
-            <section id="property">
-                <article id="slideshow" >
+            <article id="property">
+                <div id="slideshow" >
                     <div class="slideshow-container">
                     <?php foreach($property_images as $image){?>
                         <div class="mySlides">
@@ -40,39 +40,43 @@
                         <span class="dot"></span>
                     <?php } ?>
                     </div>
-                </article>
-                <h2><?=$property_info['title']?></h2>
-                <article id="description">
-                    <h3>Description</h3>
-                    <p><?=$property_info['description']?></p>
-                </article>
-                <article id="comodities">
-                    <h3>Commodities</h3>
-                    <ul>
-                    <?php  
-                        foreach($property_commodities as $commodity) {
-                    ?>
-                        <li><p><?=$commodity['commodity']?></p></li>
-                    <?php
-                        }
-                    ?>
-                    </ul>
-                </article>
-                <article id="price">
-                    <h3>Price</h3>
-                    <p><?=$property_info['price_per_day']?>$</p>
-                </article>
-                <article id="dates">
-                    <form method="post" action="../actions/action_booking.php">
-                        <legend>Dates</legend>
-                        <input type="hidden" name="id_property" value="<?=$property_id?>" />
-                        <input type="date" name="start_date" value="2019-11-13" min="2019-11-13" /> <!-- Change start date to today with JS -->
-                        <input type="date" name="end_date" value="2019-11-13" min="2019-11-14" /> <!-- Check if end date is after start date -->
-                        <input type="number" name="sleeps" value="1" min="1" />
-                        <input type="submit" value="Book Property"/>
-                    </form>
-                </article>
-            </section>
+                </div>
+                <div id="main_info">
+                    <h2><?=$property_info['title']?></h2>
+                    <div id="comodities">
+                        <h3>Commodities</h3>
+                        <ul>
+                        <?php  
+                            foreach($property_commodities as $commodity) {
+                        ?>
+                            <li><p><?=$commodity['commodity']?></p></li>
+                        <?php
+                            }
+                        ?>
+                        </ul>
+                    </div>
+                    <div id="description">
+                        <h3>Description</h3>
+                        <p><?=$property_info['description']?></p>
+                    </div>
+                </div>
+                <div id="reservation_info">
+                    <div id="price">
+                        <h3>Price</h3>
+                        <p><?=$property_info['price_per_day']?>$</p>
+                    </div>
+                    <div id="dates">
+                        <form method="post" action="../actions/action_booking.php">
+                            <legend>Dates</legend>
+                            <input type="hidden" name="id_property" value="<?=$property_id?>" />
+                            <input type="date" name="start_date" value="2019-11-13" min="2019-11-13" /> <!-- Change start date to today with JS -->
+                            <input type="date" name="end_date" value="2019-11-13" min="2019-11-14" /> <!-- Check if end date is after start date -->
+                            <input type="number" name="sleeps" value="1" min="1" />
+                            <input type="submit" value="Book Property"/>
+                        </form>
+                    </div>
+                </div>
+            </article>
             <?php 
             }catch(Exception $e){ 
             ?>
