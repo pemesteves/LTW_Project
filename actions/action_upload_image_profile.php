@@ -1,5 +1,5 @@
 <?php
-    include "../includes/init.php";
+    include_once "../includes/init.php";
 
     $username = $_SESSION['username'];
     
