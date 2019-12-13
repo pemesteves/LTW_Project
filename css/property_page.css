@@ -148,9 +148,16 @@ body {
 }
 
 #comments {
-  background-color: #12197a;
+  background-color: #3542f0;
   margin: 1em;
+  padding: 2em;
+  padding-top: 1em;
   border-radius: 1em;
+  border: solid white;
+}
+
+#comments p {
+  color: white;
 }
 
 /*SLIDESHOW*/
