@@ -165,6 +165,10 @@ body {
   background-color: #777cc9;
 }
 
+#slideshow img {
+  max-width: 100%;
+}
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
