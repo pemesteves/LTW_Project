@@ -1,6 +1,7 @@
 /*MAIN*/
 #property {
   display: grid;
+  grid-template-columns: 2fr 1fr;
 }
 
 #property #slideshow {
@@ -11,17 +12,91 @@
 #property #main_info {
   grid-column: 1;
   grid-row: 2;
+  padding: 2em;
 }
 
 #property #reservation_info {
   grid-column: 2;
   grid-row-start: 1;
-  grid-row-end: 2;
+  grid-row-end: 3;
+  padding: 2em;
+  font-size: 1.5em;
+  color: white;
+  border: solid #0b116b;
+  border-width: 0em 0em 0em 0.2em;
+  background: #777cc9;
+}
+
+#property #price {
+  display:flex;
+}
+
+#property #price p {
+  margin: 0%;
+  margin-left: 1em;
+  align-self: center;
+}
+
+#property #price h3 {
+  margin: 0%;
+}
+
+#property #dates form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+  width: 100%;
+}
+
+#property #dates legend{
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  text-align: left;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row: 1;
+}
+
+#property #dates [type="date"] {
+  height: 5em;
+}
+
+#property #dates [name="start_date"] {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#property #dates [name="end_date"] {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#property #dates [type="number"] {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 3;
+  padding: 0%;
+}
+
+#property #dates [type="submit"] {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row: 4;
+  margin-top: 1em;
+  height: 3em;
+  border-radius: 1em;
+  border: solid white;
+  border-width: 0.15em;
+  background: #3542f0;
+  color: white;
+}
+
+#property #dates [type="submit"]:hover {
+  cursor: pointer;
+  background: #12197a;
 }
 
 /*SLIDESHOW*/
-/* * {box-sizing:border-box} */
-
 #slideshow img {
   width: 100%;
 }

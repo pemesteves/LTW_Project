@@ -15,8 +15,8 @@
         $stmt->execute();
         $articles = $stmt->fetchAll();
 
-
-        $pattern = '/\b'.$location.'\b/i';
+		$location = preg_quote($location);
+		$pattern = '#\b'.$location.'\b#i';
         $matches = [];
         $index = 0;
         foreach($articles as $article) {
