@@ -84,10 +84,11 @@
 }
 
 #recommended .info {
-    border-width: 0em 0.2em 0.2em 0.2em;
     border-radius:1em;
     background: #777cc9;
-    padding: 1em; ;
+    padding: 1em; 
+    margin-top:-0.8em;
+    position: relative;
 }
 
 #recommended .info:hover {
