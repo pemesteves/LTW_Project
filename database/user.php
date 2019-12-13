@@ -77,4 +77,28 @@
 
     $stmt->execute(array($full_name, $email, $phone, $birthdate, $image_name, $username));
   }
+
+  function updateUsername($username, $new_username){
+    global $db;
+
+    $stmt = $db->prepare('
+      UPDATE User
+      SET username = ?
+      WHERE username = ?
+    ');
+
+    $stmt->execute(array($new_username, $username));
+  }
+
+  function updateUserPassword($username, $new_password){
+    global $db;
+    
+    $stmt = $db->prepare('
+      UPDATE User
+      SET password_hash = ?
+      WHERE username = ?
+    ');
+
+    $stmt->execute(array(sha1($new_password), $username));
+  }
 ?>
