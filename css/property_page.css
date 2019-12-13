@@ -150,6 +150,7 @@ body {
 #comments {
   background-color: #3542f0;
   margin: 1em;
+  margin-bottom: 3em;
   padding: 2em;
   padding-top: 1em;
   border-radius: 1em;
@@ -179,7 +180,7 @@ body {
 /* Hide the images by default */
 .mySlides {
   height: 505px;
-  text-align: center;
+  overflow: hidden;
 }
 
 /* Next & previous buttons */
