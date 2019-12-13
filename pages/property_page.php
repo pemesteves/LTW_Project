@@ -43,28 +43,51 @@
                 </div>
                 <div id="main_info">
                     <h2><?=$property_info['title']?></h2>
-                    <div id="comodities">
-                        <h3>Commodities</h3>
-                        <ul>
-                        <?php  
-                            foreach($property_commodities as $commodity) {
-                        ?>
-                            <li><p><?=$commodity['commodity']?></p></li>
-                        <?php
-                            }
-                        ?>
-                        </ul>
-                    </div>
                     <div id="description">
                         <h3>Description</h3>
                         <p><?=$property_info['description']?></p>
                     </div>
                 </div>
+                <div id="comodities">
+                    <h3>Commodities</h3>
+                    <ul>
+                    <?php  
+                        foreach($property_commodities as $commodity) {
+                    ?>
+                        <li><p><?=$commodity['commodity']?></p></li>
+                    <?php
+                        }
+                    ?>
+                    </ul>
+                </div>
                 <div id="reservation_info">
                     <div id="price">
-                        <h3>Price</h3>
+                        <h3>Price per night:</h3>
                         <p><?=$property_info['price_per_day']?>$</p>
                     </div>
+                    <div id="rating">
+                        <legend>Rating</legend>
+                    <?php
+                        try{
+                            $ratings = getPropertyRatings($property_id);
+                            if(($num_ratings = count($ratings)) != 0){
+                                $rating_sum = 0;
+                                foreach($ratings as $rating){
+                                    $rating_sum += $rating['rating'];
+                                }
+                                $rating_sum /= $num_ratings;
+                    ?>
+                        <p><?=$rating_sum?>/10</p>
+                    <?php
+                            }else{
+                    ?>
+                        <p>No one has rated this property yet.</p>
+                    <?php
+                            }
+                        }catch(PDOException $e){
+                            die($e->getMessage());
+                        }
+                    ?>
                     <div id="dates">
                         <form method="post" action="../actions/action_booking.php">
                             <legend>Dates</legend>
@@ -84,29 +107,6 @@
             <?php    
             }
             ?>
-              <section id="rating">
-            <?php
-                try{
-                    $ratings = getPropertyRatings($property_id);
-                    if(($num_ratings = count($ratings)) != 0){
-                        $rating_sum = 0;
-                        foreach($ratings as $rating){
-                            $rating_sum += $rating['rating'];
-                        }
-                        $rating_sum /= $num_ratings;
-            ?>
-                <p>Rating: <?=$rating_sum?>/10</p>
-            <?php
-                    }else{
-            ?>
-                <p>Rating: No one has rated this property yet.</p>
-            <?php
-                    }
-                }catch(PDOException $e){
-                    die($e->getMessage());
-                }
-            ?>
-            </section>
             <?php
             try{
                 $comments = getPropertyComments($property_id);

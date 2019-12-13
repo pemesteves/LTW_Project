@@ -1,3 +1,9 @@
+/*Background*/
+body {
+  background: url("../images/landscape_snow.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
 /*MAIN*/
 #property {
   display: grid;
@@ -11,20 +17,46 @@
 
 #property #main_info {
   grid-column: 1;
-  grid-row: 2;
-  padding: 2em;
+  grid-row: 3;
+  padding: 20px;
+  padding-top: 20px;
+  margin: 60px;
+  margin-left: 100px;
+  margin-top: 100px;
+  border: solid #0b116b;
+  border-radius: 1em;
+  background: #777cc9;
+  color: white;
 }
 
 #property #reservation_info {
   grid-column: 2;
   grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-end: 2;
   padding: 2em;
   font-size: 1.5em;
   color: white;
-  border: solid #0b116b;
-  border-width: 0em 0em 0em 0.2em;
   background: #777cc9;
+  border-bottom: solid #0b116b;
+  border-bottom-width: 8px;
+}
+
+#property #comodities {
+  grid-column: 2;
+  grid-row: 3;
+  padding: 20px;
+  padding-top: 20px;
+  margin: 60px;
+  margin-right: 100px;
+  margin-top: 100px;
+  border: solid #0b116b;
+  border-radius: 1em;
+  background: #777cc9;
+  color: white;
+}
+
+#property #comodities h3 {
+  color: black;
 }
 
 #property #price {
@@ -39,6 +71,19 @@
 
 #property #price h3 {
   margin: 0%;
+  color: black;
+}
+
+#property #rating {
+  margin-top: 1em;
+}
+
+#property #rating legend{
+  color: black;
+}
+
+#property #rating p{
+  margin-top: 0;
 }
 
 #property #dates form{
@@ -55,10 +100,13 @@
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row: 1;
+  color: black;
 }
 
 #property #dates [type="date"] {
   height: 5em;
+  border: solid #0b116b;
+  text-align: center;
 }
 
 #property #dates [name="start_date"] {
@@ -76,6 +124,9 @@
   grid-column-end: 3;
   grid-row: 3;
   padding: 0%;
+  border: solid #0b116b;
+  border-top: 0em;
+  height: 2em;
 }
 
 #property #dates [type="submit"] {
@@ -96,7 +147,17 @@
   background: #12197a;
 }
 
+#comments {
+  background-color: #12197a;
+  margin: 1em;
+  border-radius: 1em;
+}
+
 /*SLIDESHOW*/
+#slideshow {
+  background-color: #777cc9;
+}
+
 #slideshow img {
   width: 100%;
 }
@@ -163,6 +224,12 @@
 /* The dots */
 .dots {
   text-align: center;
+  grid-column: 1;
+  grid-row: 2;
+  border-bottom: solid #0b116b;
+  border-bottom-width: 8px;
+  padding-top: 1em;
+  padding-bottom: 1.8em;
 }
 
 .dot {
@@ -170,14 +237,14 @@
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #12197a;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #92aedd;;
+  background-color: white;
 }
 
 /* Fading animation */
