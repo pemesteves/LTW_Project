@@ -1,6 +1,6 @@
 'use strict'
 
-let search_bar_dates = document.querySelectorAll('#search_form .search_box .date');
+let search_bar_dates = document.querySelectorAll('#search_form .date');
 
 if(search_bar_dates.length == 2){
     const now = new Date(Date.now());

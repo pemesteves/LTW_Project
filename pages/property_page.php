@@ -7,8 +7,10 @@
     document_main_part();
     include_scroll_top();
 ?>
-        <link href="../css/property_page.css" rel="stylesheet">
+        <link href="../css/property_page.css" rel="stylesheet"/>
+        <link href="../css/search_bar.css" rel="stylesheet"/>
         <script src="../js/slideshow.js" async></script>
+        <script src="../js/data.js" defer></script>
     </head>
     <body>
         <?php draw_body_header(); ?>
@@ -50,6 +52,13 @@
                 </div>
                 <div id="comodities">
                     <h3>Commodities</h3>
+                    <?php
+                    if(count($property_commodities) == 0){
+                    ?>
+                    <p>The commodities will be added soon.</p>
+                    <?php                        
+                    }
+                    ?>
                     <ul>
                     <?php  
                         foreach($property_commodities as $commodity) {
@@ -87,17 +96,33 @@
                         }catch(PDOException $e){
                             die($e->getMessage());
                         }
+
+                        if(isset($_SESSION['username'])){
+                            if($property_info['owner_username'] === $_SESSION['username']){ 
+                    ?>
+                    </div>
+                    <a id="change_property_link" href="change_property.php">
+                        <div id="change_property">
+                            <p>Edit Property</p>
+                        </div>
+                    </a>
+                    <?php
+                            }
+                        }else{
                     ?>
                     <div id="dates">
-                        <form method="post" action="../actions/action_booking.php">
+                        <form id="search_form" method="post" action="../actions/action_booking.php">
                             <legend>Dates</legend>
                             <input type="hidden" name="id_property" value="<?=$property_id?>" />
-                            <input type="date" name="start_date" value="2019-11-13" min="2019-11-13" /> <!-- Change start date to today with JS -->
-                            <input type="date" name="end_date" value="2019-11-13" min="2019-11-14" /> <!-- Check if end date is after start date -->
-                            <input type="number" name="sleeps" value="1" min="1" />
+                            <input class="date" type="date" name="start_date" value="2019-11-13" min="2019-11-13" required/> <!-- Change start date to today with JS -->
+                            <input class="date" type="date" name="end_date" value="2019-11-13" min="2019-11-14" required/> <!-- Check if end date is after start date -->
+                            <input class="guests" type="number" name="sleeps" placeholder="Guests" min="1" required />
                             <input type="submit" value="Book Property"/>
                         </form>
                     </div>
+                    <?php
+                        }
+                    ?>
                 </div>
             </article>
             <?php 
