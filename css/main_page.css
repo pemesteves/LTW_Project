@@ -87,8 +87,8 @@
     border-radius:1em;
     background: #777cc9;
     padding: 1em; 
-    margin-top:-0.8em;
     position: relative;
+    top: -0.8em;
 }
 
 #recommended .info:hover {
