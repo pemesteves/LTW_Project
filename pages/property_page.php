@@ -10,7 +10,6 @@
         <link href="../css/property_page.css" rel="stylesheet"/>
         <link href="../css/search_bar.css" rel="stylesheet"/>
         <script src="../js/slideshow.js" async></script>
-        <script src="../js/data.js" defer></script>
     </head>
     <body>
         <?php draw_body_header(); ?>

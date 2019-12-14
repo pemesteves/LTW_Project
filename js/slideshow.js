@@ -15,6 +15,9 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
   let dots = document.getElementsByClassName("dot");
+  if(slides.length == 0 || dots.length == 0)
+    return;
+
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
@@ -30,12 +33,20 @@ function showSlides(n) {
 //Event listeners
 //Previous and next arrows
 let prev = document.getElementsByClassName("prev")[0];
-prev.addEventListener("click", function(){plusSlides(-1)});
+if(prev){
+  prev.addEventListener("click", function(){plusSlides(-1)});
+}
+
 let next = document.getElementsByClassName("next")[0];
-next.addEventListener("click", function(){plusSlides(1)});
+if(next != null){
+  next.addEventListener("click", function(){plusSlides(1)});
+}
+
 //Get current slide
 let dots = document.getElementsByClassName("dot");
-for (let i = 0; i < dots.length; i++) {
-  let current_slide = dots[i];
-  current_slide.addEventListener("click", function(){currentSlide(i+1)});
+if(dots != null){
+  for (let i = 0; i < dots.length; i++) {
+    let current_slide = dots[i];
+    current_slide.addEventListener("click", function(){currentSlide(i+1)});
+  }
 }
