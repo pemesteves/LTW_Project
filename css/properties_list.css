@@ -19,6 +19,7 @@
     grid-template-columns: 320px auto 103px;
     grid-template-rows: auto  1fr;
     margin: 2em;
+    max-height: 250px;
 }
 
 #properties #property:hover{
@@ -38,7 +39,7 @@
     grid-row-end: 6;
     display:flex;
     align-items: center;
-    height: 220px;
+    height: 250px;
     overflow: hidden;
 }
 
@@ -59,13 +60,14 @@
 }
 
 /*Description*/
-#properties #property #description {
+#properties #property .description {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row: 2;
     padding-left: 1em;
     color: white;
     margin: 0%;
+    max-height: 100px;
 }
 
 /*Sleeps*/

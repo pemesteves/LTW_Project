@@ -1,7 +1,9 @@
 /*Script to exchange long descriptions by ...*/
-let el = document.getElementById('description');
-let string_max_size = 200;
+let el = document.getElementsByClassName('description');
+let string_max_size = 180;
 
-if(el.textContent.length > string_max_size) {
-    el.textContent = el.textContent.substr(0, string_max_size) + '...';
+for (let i = 0; i < el.length; i++) {
+    if(el[i].textContent.length > string_max_size) {
+        el[i].textContent = el[i].textContent.substr(0, string_max_size) + '...';
+    }
 }
