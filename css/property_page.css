@@ -4,6 +4,11 @@ body {
   background-size: cover;
 }
 
+/*Not found*/
+#not_found {
+  height: 100%;
+}
+
 /*MAIN*/
 #property {
   display: grid;
@@ -298,17 +303,17 @@ body {
 
 /* Not Found Message */
 #not_found {
-  width: 50%;
+  width: 30em;
   background-color: #777cc9;
   border: 2px solid #0b116b;
   border-radius: 1em;
-  vertical-align: middle;
   margin: auto;
   display: grid;
 }
 
 #not_found img {
-  margin: 0 auto;
+  max-width: 25em;
+  margin: auto;
 }
 
 #not_found p {
