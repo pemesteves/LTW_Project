@@ -156,6 +156,9 @@
                         <p>There are no comments yet</p>
                 <?php
                     }
+                ?>
+            </section>
+            <?php
                 }catch(PDOException $e){
                     die($e->getMessage());
                 }
@@ -163,7 +166,6 @@
                 draw_not_found_message('Property not found!');
             }
             ?>
-            </section>
         </section>
 <?php
     draw_footer(true);
