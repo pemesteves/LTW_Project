@@ -38,7 +38,7 @@
     grid-row-end: 6;
     display:flex;
     align-items: center;
-    min-height: 200px;
+    height: 220px;
     overflow: hidden;
 }
 
