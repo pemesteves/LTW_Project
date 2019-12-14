@@ -112,4 +112,13 @@ function draw_footer($include_button){
 </html>
 <?php
 }
+
+function draw_not_found_message($message){
+?>
+    <article id="not_found">
+        <img src="../images/search.png" alt="Not found"/>
+        <p><?=$message?></p> 
+    </article>
+<?php
+}
 ?>

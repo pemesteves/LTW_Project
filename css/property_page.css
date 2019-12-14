@@ -295,3 +295,30 @@ body {
 #change_property:hover {
   background: whitesmoke
 } 
+
+/* Not Found Message */
+#not_found {
+  width: 50%;
+  background-color: #777cc9;
+  border: 2px solid #0b116b;
+  border-radius: 1em;
+  vertical-align: middle;
+  margin: auto;
+  display: grid;
+}
+
+#not_found img {
+  margin: 0 auto;
+}
+
+#not_found p {
+  width: 90%;
+  text-align: center;
+  border: 2px solid #0b116b;
+  border-bottom: 0;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  margin: 0 auto;
+  color: whitesmoke;
+  font-size: 1.5em;
+}

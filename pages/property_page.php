@@ -21,10 +21,16 @@
             $property_id = $_GET['property'];
             try{
                 $property_info = getPropertyInfo($property_id);
-                $property_images = getPropertyImages($property_id);
-                $property_commodities = getCommodities($property_id); 
+            }catch(PDOException $e){
+                die($e->getMessage());
+            }
             
-            ?>
+            if($property_info != null){
+                try{
+                    $property_images = getPropertyImages($property_id);
+                    $property_commodities = getCommodities($property_id); 
+                
+                ?>
             <article id="property">
                 <div id="slideshow" >
                     <div class="slideshow-container">
@@ -101,7 +107,7 @@
                             if($property_info['owner_username'] === $_SESSION['username']){ 
                     ?>
                     </div>
-                    <a id="change_property_link" href="change_property.php">
+                    <a id="change_property_link" href="change_property.php?property=<?=$property_id?>">
                         <div id="change_property">
                             <p>Edit Property</p>
                         </div>
@@ -125,34 +131,37 @@
                     ?>
                 </div>
             </article>
-            <?php 
-            }catch(Exception $e){ 
-            ?>
-                <p>Can't find property information!</p>
-            <?php    
-            }
-            ?>
-            <?php
-            try{
-                $comments = getPropertyComments($property_id);
-            ?>
+                <?php 
+                }catch(Exception $e){ 
+                ?>
+                    <p>Can't find property information!</p>
+                <?php    
+                }
+                ?>
+                <?php
+                try{
+                    $comments = getPropertyComments($property_id);
+                ?>
             <section id="comments">
                 <h4>Comments</h4>
-            <?php
-                if(count($comments) != 0){
-                    foreach ($comments as $comment) {
-            ?>
+                <?php
+                    if(count($comments) != 0){
+                        foreach ($comments as $comment) {
+                ?>
                     <h5 id="tourist_name"><?=$comment['tourist']?></h4>
                     <p><?=$comment['comment']?></p>    
-            <?php
+                <?php
+                        }
+                    }else{
+                ?>  
+                        <p>There are no comments yet</p>
+                <?php
                     }
-                }else{
-            ?>  
-                    <p>There are no comments yet</p>
-            <?php
+                }catch(PDOException $e){
+                    die($e->getMessage());
                 }
-            }catch(PDOException $e){
-                die($e->getMessage());
+            }else{ //If the property does not exist
+                draw_not_found_message('Property not found!');
             }
             ?>
             </section>

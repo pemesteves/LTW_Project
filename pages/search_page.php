@@ -30,12 +30,7 @@
         <?php 
         $articles = searchProperties($location, $start_date, $end_date, $guests);
         if(count($articles) == 0){
-        ?>    
-        <article id="not_found">
-            <img src="../images/search.png" alt="Not found"/>
-            <p>No results were found for the specified search.</p> 
-        </article>
-        <?php
+            draw_not_found_message('No results were found for the specified search.');
         }
         else{
         foreach($articles as $propertyArticle){
