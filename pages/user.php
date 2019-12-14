@@ -24,6 +24,7 @@
         <link href="../css/user_page.css" rel="stylesheet">
         <link href="../css/properties_list.css" rel="stylesheet">
         <link href="../css/profile.css" rel="stylesheet">
+        <script src="../js/longDescription.js" async></script>
     </head>
     <body>
         <?php
