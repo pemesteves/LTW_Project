@@ -131,4 +131,19 @@
         $stmt->execute(array($id));
         return $stmt->fetchAll();
     }
+
+    function updateProperty($property_id, $title, $description, $price_per_day){
+        global $db;
+
+        $stmt = $db->prepare('
+            UPDATE Property
+            SET
+                title = ?,
+                description = ?,
+                price_per_day = ?
+            WHERE id = ?
+        ');
+
+        $stmt->execute(array($title, $description, $price_per_day, $property_id));
+    }
 ?>
