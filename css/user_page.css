@@ -18,12 +18,12 @@ body {
     border-radius: 1em;
     margin: 0em 3em 3em 3em;
     background-color: rgba(146, 174, 221, 0.7);
+    color: white;
 }
 
 #user_reservations h3 {
-    color: white;
     padding-bottom: 1em;
-    padding-left: 1em;
+    padding-left: 40px;
 }
 
 #user_reservation {

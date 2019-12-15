@@ -5,11 +5,12 @@
     margin: 3em;
     border: solid #92aedd;
     border-radius: 1em;
+    color: white;
 }
 
 #properties #properties_h {
     color: white;
-    margin: 2em;
+    margin: 40px;
 }
 
 /*Property*/
