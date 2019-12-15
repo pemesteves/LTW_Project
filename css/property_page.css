@@ -140,7 +140,7 @@ body {
   margin-top: 1em;
   height: 3em;
   border-radius: 1em;
-  border: solid white;
+  border: solid #F5F4F3;
   border-width: 0.15em;
   background: #3542f0;
   color: white;
@@ -158,7 +158,7 @@ body {
   padding: 2em;
   padding-top: 1em;
   border-radius: 1em;
-  border: solid white;
+  border: solid #F5F4F3;
 }
 
 #comments p {
