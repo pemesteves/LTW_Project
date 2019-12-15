@@ -33,6 +33,27 @@
     text-align: left;
 }
 
+#rentify_form_section #upload_image_form {
+    padding: 2em;
+}
+
+#rentify_form_section #upload_image_form input{
+    padding: 0%;
+    width: 90%;
+}
+
+#rentify_form_section #upload_image_form [type="submit"] {
+    height: 3em;
+    background: #39409e;
+    color: white;
+    border: none;
+}
+
+#rentify_form_section #upload_image_form [type="submit"]:hover {
+    background: #12197a;
+    cursor: pointer;
+}
+
 #rentify_form_section .title {
     padding:0.5em;
 }
