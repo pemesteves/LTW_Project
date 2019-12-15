@@ -12,11 +12,15 @@
     }
 
     $username = $_SESSION['username'];
-    $password_hash = getUserPassword($username)['password'];
 
-    $user_info = getUserInfo($username, $password_hash);
-    $property_ids = getUserProperties($username); 
-    $reservations = getUserReservations($username);
+    try{
+        $password_hash = getUserPassword($username)['password'];
+        $user_info = getUserInfo($username, $password_hash);
+        $property_ids = getUserProperties($username); 
+        $reservations = getUserReservations($username);
+    }catch(PDOException $e){
+        catchException($e);
+    }
 
     document_main_part();
     include_scroll_top();
@@ -52,8 +56,12 @@
         }
         else{
             foreach ($property_ids as $id) {
-                $property_info = getPropertyInfo($id['id']);
-                $property_images = getPropertyImages($id['id']);
+                try{
+                    $property_info = getPropertyInfo($id['id']);
+                    $property_images = getPropertyImages($id['id']);
+                }catch(PDOException $e){
+                    catchException($e);
+                }
             ?>
             <a href="property_page.php?property=<?=$id['id']?>">
                 <article id="property">
@@ -83,38 +91,46 @@
         <?php
         }else{
             foreach ($reservations as $reservation) {
-                $property_info = getPropertyInfo($reservation['id_property']);
+                try{
+                    $property_info = getPropertyInfo($reservation['id_property']);
+                }catch(PDOException $e){
+                    catchException($e);
+                }
             ?>
             <div id="user_reservation">
                 <h4>Property: <?=$property_info['title']?></h4>
                 <h5>Location: <?=$property_info['location']?></h5>
                 <p>Start: <?=$reservation['date_start']?></p>
                 <p>End: <?=$reservation['date_end']?></p>
+                <?php 
+                if(date($reservation['date_end']) <= date('Y-m-d')){
+                ?>
                 <p>Rating: 
                 <?php
-                if($reservation['rating'] == NULL){
+                    if($reservation['rating'] == NULL){
                 ?>
                     <form id="rating" action="../actions/action_rate.php" method="post">
                         <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
                         <input type="number" name="rating" value="5" min="0" max="10" required/>
                     </form>
                 <?php
-                }else{
-                    print($reservation['rating']);
-                }
+                    }else{
+                        print($reservation['rating']);
+                    }
                 ?>
                 </p>
                 <p>Comment:
                 <?php
-                if($reservation['comment'] == NULL){
+                    if($reservation['comment'] == NULL){
                 ?>
                     <form id="comment" action="../actions/action_comment.php" method="post">
                         <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
                         <input type="text" name="comment" placeholder="My comment" required/>
                     </form>
                 <?php
-                }else{
-                    print($reservation['comment']);
+                    }else{
+                        print($reservation['comment']);
+                    }
                 }
                 ?>
                 </p>

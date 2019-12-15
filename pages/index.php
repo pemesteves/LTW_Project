@@ -49,7 +49,8 @@
             }catch(Exception $e){
             ?>
                 <p>Can't find recommended houses!</p>
-            <?php }
+            <?php 
+            }
             ?>
             </ul>
         </section>

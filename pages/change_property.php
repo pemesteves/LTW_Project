@@ -14,7 +14,7 @@
     try{
         $property_info = getPropertyInfo($property_id);
     }catch(PDOException $e){
-        die($e->getMessage());
+        catchException($e);
     }
     
     if($property_info['owner_username'] !== $_SESSION['username']){ 

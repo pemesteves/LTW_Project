@@ -1,6 +1,7 @@
 <?php
   include_once "../includes/init.php";
   include_once "../database/reservations.php";
+  include_once "../database/property.php";
 
   if (!isset($_SESSION['username'])){
     header('Location: ../pages/login.php');
@@ -14,6 +15,18 @@
     die();
   }
   $id_property = $_POST['id_property'];
+
+  try{
+    $info = getPropertyInfo($id_property);
+  }catch(PDOException $e){
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    die($e->getMessage());
+  }
+
+  if($info['owner_username'] === $username){
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    die('Owner can\'t book one of his properties.');
+  }
 
   if(!isset($_POST['start_date'])){
     //SEND MESSAGE: MISSING START DATE  
@@ -45,10 +58,9 @@
   try{
     $reservations = getHouseReservationsBetweenDates($id_property, $start_date, $end_date);
   }catch(PDOException $e){
-    die($e->getMessage());
     $_SESSION['error_messages'][] = "Failed to get the house reservations";
     header('Location: ' . $_SERVER['HTTP_REFERER']);
-    die();
+    die($e->getMessage());
   }
 
   if(count($reservations) != 0){
@@ -59,10 +71,9 @@
   try{
       addReservation($id_property, $username, $start_date, $end_date, $sleeps);
   }catch(PDOException $e){
-      die($e->getMessage());
       $_SESSION['error_messages'][] = "Failed to add a reservation";
       header('Location: ' . $_SERVER['HTTP_REFERER']);
-      die();
+      die($e->getMessage());
   }
 
   header('Location: ../pages/index.php');  // CHECK THIS

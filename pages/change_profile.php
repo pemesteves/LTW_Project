@@ -11,9 +11,13 @@
     }
 
     $username = $_SESSION['username'];
-    $password_hash = getUserPassword($username)['password'];
-
-    $user_info = getUserInfo($username, $password_hash);
+    
+    try{
+        $password_hash = getUserPassword($username)['password'];
+        $user_info = getUserInfo($username, $password_hash);
+    }catch(PDOException $e){
+        catchException($e);
+    }
     
     if(isset($_SESSION['image_name']))
         $image_name = $_SESSION['image_name'];
