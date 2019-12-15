@@ -25,6 +25,7 @@
         <link href="../css/change_profile.css" rel="stylesheet">
         <link href="../css/profile.css" rel="stylesheet">
         <script src="../js/upload_image.js" defer></script>
+        <script src="../js/resizable_input.js" defer></script>
     </head>
     <body>
         <?php
@@ -40,17 +41,18 @@
                 </div>
                 <div id="headers">
                     <h2><input id="full_name" type="text" name="full_name" value="<?=$user_info['full_name']?>" placeholder="<?=$user_info['full_name']?>"/></h2>
-                    <h3>(<input id="full_name" type="text" name="username" value="<?=$user_info['username']?>" placeholder="<?=$user_info['username']?>"/>)</h3>
+                    <h3>(<input id="username" type="text" name="username" value="<?=$user_info['username']?>" placeholder="<?=$user_info['username']?>"/>)</h3>
                 </div>
                 <p id="email">Email: <input type="email" name="email" value="<?=$user_info['email']?>" placeholder="<?=$user_info['email']?>"/></p>
                 <p id="phone">Phone Number: <input type="tel" name="phone" value="<?=$user_info['phone']?>" placeholder="<?=$user_info['phone']?>"/></p>
                 <p id="birthdate">Birthdate: <input type="date" name="birthdate" value="<?=$user_info['birthdate']?>" placeholder="<?=$user_info['birthdate']?>"/></p>
-            
-                <input id="password" type="password" name="old_password" placeholder="Current Password"/>
-                <input id="password" type="password" name="new_password" placeholder="New Password"/>
-                <input id="password" type="password" name="confirm_password" placeholder="Confirm Password"/>
-            </section>
-            <input class="account_button" type="Submit" value="Update Profile"> 
+                <div id ="pass_info">
+                    <input id="password" type="password" name="old_password" placeholder="Current Password"/>
+                    <input id="password" type="password" name="new_password" placeholder="New Password"/>
+                    <input id="password" type="password" name="confirm_password" placeholder="Confirm Password"/>
+                </div>
+                <input class="account_button" type="Submit" value="Update Profile">
+            </section> 
         </form>
 <?php
     draw_footer(false);

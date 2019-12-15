@@ -8,6 +8,7 @@
     border: solid #2e3c49;
     border-radius: 1em;
     background: white;
+    padding-bottom: 1em;
 }
 
 #user_info #fit_crop {
@@ -36,14 +37,20 @@
 }
 
 #user_info h3 {
-    margin: 0px 0px 0px 16px;
+    margin: 0px 16px 0px 16px;
     color: #2e3c49;
+}
+
+#user_info h3 input{
+    min-width:50px;
+    max-width:460px;
+    text-align:center;
 }
 
 #user_info #email {
     grid-column: 2;
     grid-row: 2;
-    margin: 0px 0px 0px 16px;
+    margin: 0px 32px 0px 16px;
     color: #2e3c49;
 }
 

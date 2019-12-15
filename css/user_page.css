@@ -4,7 +4,7 @@
 body {
     background: url("../images/user_lake.jpg") no-repeat center center fixed;
     background-size: cover;
-  }
+}
 
 /*User data*/
 #user_info h2 {
