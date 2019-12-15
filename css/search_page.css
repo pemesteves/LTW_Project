@@ -1,9 +1,12 @@
+/*Background*/
+body {
+    background: url("../images/search_page.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
 /*Search bar*/
 #search_bar {
-    background: #2e3c49;
     text-align: center;
-    border-top: solid rgba(5, 6, 43, 0.5);
-    border-bottom: solid rgba(5, 6, 43, 0.5);
 }
 
 #search_bar h1 {
@@ -36,4 +39,5 @@
     text-align: center;
     margin: 0 auto;
     font-size: 1.5em;
+    color: #92aedd;
 }

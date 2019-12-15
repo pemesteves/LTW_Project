@@ -41,7 +41,7 @@
                     <img src="../images/<?=$propertyArticle['image'] ?>" alt="<?=$propertyArticle['image']?>"/>
                 </div>
                 <h3 id="property_name"><?=$propertyArticle['title']?></h3>
-                <p id="description"><?=$propertyArticle['description']?></p>
+                <p class="description"><?=$propertyArticle['description']?></p>
                 <div id="price_box">
                     <p id="price"><?=$propertyArticle['price_per_day']?></p>
                 </div>

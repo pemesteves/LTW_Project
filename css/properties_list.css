@@ -1,14 +1,14 @@
 /*Properties*/
 #properties {
-    background-color: #92aedd;
+    background: rgba(5, 6, 43, 0.9);
     padding: 1em 3em 3em 3em;
     margin: 3em;
-    border: solid #2e3c49;
+    border: solid #92aedd;
     border-radius: 1em;
 }
 
 #properties #properties_h {
-    color: black;
+    color: white;
     margin: 2em;
 }
 
@@ -16,6 +16,7 @@
 #properties #property{
     display: grid;
     border: solid #2e3c49;
+    background: #92aedd;
     grid-template-columns: 320px auto 103px;
     grid-template-rows: auto  1fr;
     margin: 2em;
