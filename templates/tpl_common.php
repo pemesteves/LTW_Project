@@ -121,4 +121,9 @@ function draw_not_found_message($message){
     </article>
 <?php
 }
+
+function catchException($e){
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    die($e->getMessage());
+}
 ?>

@@ -28,7 +28,12 @@
     <section id="properties">
         <h2 id="properties_h">Properties</h2>
         <?php 
-        $articles = searchProperties($location, $start_date, $end_date, $guests);
+        try{
+            $articles = searchProperties($location, $start_date, $end_date, $guests);
+        }catch(PDOException $e){
+            catchException($e);
+        }
+        
         if(count($articles) == 0){
             draw_not_found_message('No results were found for the specified search.');
         }

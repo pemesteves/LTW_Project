@@ -21,7 +21,7 @@
             try{
                 $property_info = getPropertyInfo($property_id);
             }catch(PDOException $e){
-                die($e->getMessage());
+                catchException($e);
             }
             
             if($property_info != null){
@@ -99,7 +99,7 @@
                     <?php
                             }
                         }catch(PDOException $e){
-                            die($e->getMessage());
+                            catchException($e);
                         }
 
                         if(isset($_SESSION['username']) && $property_info['owner_username'] === $_SESSION['username']){
@@ -158,7 +158,7 @@
             </section>
             <?php
                 }catch(PDOException $e){
-                    die($e->getMessage());
+                    catchException($e);
                 }
             }else{ //If the property does not exist
                 draw_not_found_message('Property not found!');
