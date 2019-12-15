@@ -5,6 +5,12 @@
     include_once "../templates/tpl_common.php";
     include_once "../templates/tpl_scroll_top.php";
 
+    if(!isset($_POST['location']) || !isset($_POST['start_date'])
+    || !isset($_POST['end_date']) || !isset($_POST['guests'])){
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        die;
+    }
+
     $location = $_POST['location'];
     $start_date = $_POST['start_date'];
     $end_date = $_POST['end_date']; 
