@@ -13,10 +13,29 @@ body {
 
 /*User reservations*/
 #user_reservations {
-    padding: 0em 3em 3em 3em;
-    color: #2e3c49
+    padding: 3em 3em 3em 3em; 
+    border: solid rgb(7, 8, 54);
+    border-radius: 1em;
+    margin: 0em 3em 3em 3em;
+    background-color: rgba(146, 174, 221, 0.7);
 }
 
 #user_reservations h3 {
-    color: #12197a;
+    color: white;
+    padding-bottom: 1em;
+    padding-left: 1em;
 }
+
+#user_reservation {
+    padding: 2em 2em 2em 2em; 
+    border: solid white;
+    border-radius: 1em;
+    margin: 0em 1em 1em 1em;
+    background: rgb(7, 8, 54);
+    color: rgb(197, 37, 104);
+}
+
+#user_reservation h4 {
+    color: white;
+}
+
