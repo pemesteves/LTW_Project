@@ -29,4 +29,6 @@
         
         $stmt->execute(array($property_id, $commodityID));
     }
+
+    header('Location: ../pages/index.php');
 ?>

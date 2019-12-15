@@ -102,8 +102,7 @@
                             die($e->getMessage());
                         }
 
-                        if(isset($_SESSION['username'])){
-                            if($property_info['owner_username'] === $_SESSION['username']){ 
+                        if(isset($_SESSION['username']) && $property_info['owner_username'] === $_SESSION['username']){
                     ?>
                     </div>
                     <a id="change_property_link" href="change_property.php?property=<?=$property_id?>">
@@ -112,7 +111,6 @@
                         </div>
                     </a>
                     <?php
-                            }
                         }else{
                     ?>
                     <div id="dates">
