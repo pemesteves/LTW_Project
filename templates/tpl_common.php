@@ -4,7 +4,12 @@ include_once "../includes/init.php";
 include_once "../database/user.php";
 
 function draw_user_image(){
-    $image_name = getUserImagePath($_SESSION['username']);
+    try{
+        $image_name = getUserImagePath($_SESSION['username']);
+    }catch(PDOException $e){
+        catchException($e);
+    }
+    
     $image_path = "../images/".$image_name['image_name'];
 
     echo "<img src=".$image_path." alt=\"User's photo\" id=\"user_photo\">";
@@ -120,10 +125,5 @@ function draw_not_found_message($message){
         <p><?=$message?></p> 
     </article>
 <?php
-}
-
-function catchException($e){
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-    die($e->getMessage());
 }
 ?>
