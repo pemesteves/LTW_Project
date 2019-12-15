@@ -12,7 +12,7 @@
     flex-direction: column;
     text-align: center;
     padding: 1em 2em 1.5em 2em;
-    background: white;
+    background: #F5F4F3;
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 2;
