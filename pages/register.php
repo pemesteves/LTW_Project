@@ -12,6 +12,8 @@
     draw_website_name();
     ?>
 
+    <script type="module" src="../js/ajax_register.js" async></script>
+
     <section id="main_account">
         <section id="account">
             <h2>Register</h2>
