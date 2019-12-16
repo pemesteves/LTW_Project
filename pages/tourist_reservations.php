@@ -1,7 +1,7 @@
 <?php
     include_once "../includes/init.php";
     include_once "../database/property.php"; 
-    include_once "../database/reservations.php"; 
+    include_once "../database/reservations.php";
     include_once "../templates/tpl_common.php";
     include_once "../templates/tpl_scroll_top.php";
 
@@ -22,7 +22,7 @@
     document_main_part();
     include_scroll_top();
 ?>
-        <link href="../css/requested.css" rel="stylesheet">
+        <link href="../css/tourist_reservations.css" rel="stylesheet">
         <script src="../js/longDescription.js" async></script>
     </head>
     <body>
@@ -51,6 +51,7 @@
                     <p>Location: <?=$property_info['location']?></h5>
                     <p>Start: <?=$reservation['date_start']?></p>
                     <p>End: <?=$reservation['date_end']?></p>
+                    <p>Username: <?=$reservation['tourist_username']?></p>
                     <?php 
                     if(date($reservation['date_end']) <= date('Y-m-d')){
                     ?>
