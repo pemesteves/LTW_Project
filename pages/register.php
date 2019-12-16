@@ -24,8 +24,8 @@
                     draw_input_box('email', 'email', 'Email', true);
                     draw_input_box('first_name', 'text', 'First Name', true);
                     draw_input_box('last_name', 'text', 'Last Name', true);
-                    draw_input_box('phone', 'tel', 'Phone Number', false);
-                    draw_input_box('birthdate', 'date', 'Birthdate', false);
+                    draw_input_box('phone', 'tel', 'Phone Number', true);
+                    draw_input_box('birthdate', 'date', 'Birthdate', true);
                     draw_input_box('password', 'password', 'Password', true);
                     draw_account_submit('Register', 'login', 'Already have an account? Sign in');
                     ?>

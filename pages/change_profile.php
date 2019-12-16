@@ -44,12 +44,12 @@
                     <p>Preferred size: 160px x 160px</p>
                 </div>
                 <div id="headers">
-                    <h2><input id="full_name" type="text" name="full_name" value="<?=$user_info['full_name']?>" placeholder="<?=$user_info['full_name']?>"/></h2>
-                    <h3>(<input id="username" type="text" name="username" value="<?=$user_info['username']?>" placeholder="<?=$user_info['username']?>"/>)</h3>
+                    <h2><?php draw_input_id('full_name', 'text', 'full_name', $user_info['full_name'], $user_info['full_name'], true);?></h2>
+                    <h3>(<?php draw_input_id('username', 'text', 'username', $user_info['username'], $user_info['username'], true);?>)</h3>
                 </div>
-                <p id="email">Email: <input type="email" name="email" value="<?=$user_info['email']?>" placeholder="<?=$user_info['email']?>"/></p>
-                <p id="phone">Phone Number: <input type="tel" name="phone" value="<?=$user_info['phone']?>" placeholder="<?=$user_info['phone']?>"/></p>
-                <p id="birthdate">Birthdate: <input type="date" name="birthdate" value="<?=$user_info['birthdate']?>" placeholder="<?=$user_info['birthdate']?>"/></p>
+                <p id="email">Email: <?php draw_input('email', 'email', $user_info['email'], $user_info['email'], true);?></p>
+                <p id="phone">Phone Number: <?php draw_input('tel', 'phone', $user_info['phone'], $user_info['phone'], true);?></p>
+                <p id="birthdate">Birthdate:  <?php draw_input('date', 'birthdate', $user_info['birthdate'], $user_info['birthdate'], true);?></p>
                 <div id ="pass_info">
                     <input id="password" type="password" name="old_password" placeholder="Current Password"/>
                     <input id="password" type="password" name="new_password" placeholder="New Password"/>
