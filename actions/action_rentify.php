@@ -4,11 +4,11 @@
 
     global $db;
     $owner_username = $_SESSION['username'];
-    $title = $_POST['title'];
-    $location = $_POST['location'];
-    $sleeps = $_POST['sleeps'];
-    $price = $_POST['price'];   
-    $description = $_POST['description'];
+    $title = htmlspecialchars($_POST['title']);
+    $location = htmlspecialchars($_POST['location']);
+    $sleeps = htmlspecialchars($_POST['sleeps']);
+    $price = htmlspecialchars($_POST['price']);   
+    $description = htmlspecialchars($_POST['description']);
 
     try {
         rentifyProperty($owner_username, $title, $price, $location, $description, $sleeps);

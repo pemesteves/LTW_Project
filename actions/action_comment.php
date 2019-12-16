@@ -1,7 +1,7 @@
 <?php   
     include_once "../database/reservations.php";
     
-    $comment = $_POST['comment'];
+    $comment = htmlspecialchars($_POST['comment']);
     $id = $_POST['reservation'];
 
     try{

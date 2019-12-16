@@ -5,7 +5,7 @@ CREATE TABLE User(
     phone INTEGER NOT NULL,
     email TEXT NOT NULL,
     password_hash INTEGER NOT NULL,
-    image_name TEXT NOT NULL 
+    image_name TEXT NOT NULL DEFAULT 'user_placeholder.jpg'
 );
 
 CREATE TABLE Property(
