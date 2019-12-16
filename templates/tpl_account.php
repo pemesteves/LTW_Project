@@ -4,6 +4,10 @@ function draw_input_box($class, $type, $placeholder, $required){
 }
 
 function draw_input_min_box($class, $type, $placeholder, $required, $min){
+    draw_input_step_box($class, $type, $placeholder, $required, $min, null);
+}
+
+function draw_input_step_box($class, $type, $placeholder, $required, $min, $step){
 ?>
     <div class="<?=$class?>">
         <label for="<?=$class?>"><?=$placeholder?>:</label>
@@ -12,6 +16,11 @@ function draw_input_min_box($class, $type, $placeholder, $required, $min){
         ?>
         value="<?=$min?>"
         min="<?=$min?>"
+        <?php
+        }
+        if(is_numeric($step)){
+        ?>
+        step="<?=$step?>"
         <?php
         }
         if($required){ ?> 

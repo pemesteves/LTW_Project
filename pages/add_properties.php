@@ -29,7 +29,7 @@
                     draw_input_box('title', 'text', 'Property title', true);
                     draw_input_box('location', 'text', 'Location', true);
                     draw_input_min_box('sleeps', 'number', 'Sleeps', true, 1);
-                    draw_input_box('price', 'number', 'Price per day', true);
+                    draw_input_step_box('price', 'number', 'Price per day', true, 0, 0.01);
                     draw_input_box('description', 'text', 'Description', true);
                     ?>
                     <input class="rentify_button" type="Submit" value="Rentify">
