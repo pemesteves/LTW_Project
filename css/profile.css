@@ -4,7 +4,7 @@
     grid-template-columns: 0.4fr auto;
     grid-template-rows: auto;
     margin: 3em;
-    margin-right: 40%;
+    max-width: 60%;
     border: solid #12197a;
     border-radius: 1em;
     background: #F5F4F3;
@@ -33,7 +33,7 @@
 }
 
 #user_info h2 {
-    margin: 16px 0px 0px 16px;
+    margin: 16px 16px 0px 16px;
 }
 
 #user_info h3 {

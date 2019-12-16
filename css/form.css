@@ -2,7 +2,7 @@
 /*Main*/
 #main_form_section {
     display: grid;
-    grid-template-rows: auto 0.1fr 0.5fr 0.1fr;
+    grid-template-rows: 1fr 5fr 5fr 1fr;
     grid-template-columns: 0.8fr 1.2fr 1.2fr 0.8fr;
 }
 
@@ -13,7 +13,7 @@
     text-align: center;
     padding: 1em 2em 1.5em 2em;
     background: #F5F4F3;
-    grid-row-start: 3;
+    grid-row-start: 2;
     grid-row-end: 4;
     grid-column-start: 2;
     grid-column-end: 4;
