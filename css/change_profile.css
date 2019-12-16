@@ -55,25 +55,12 @@ input {
     border-radius: 0.3em;
 }
 
-[type="date"] {
-    text-align: center;
-}
-
-[type="date"] {
-    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
-}
-
-[type="date"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;    
-    display: none;
-}
-
-[type="date"]::-webkit-calendar-picker-indicator {
-    opacity: 0;
-}
-
 #user_info [type="email"] {
     width: 80%;
+}
+
+[type="date"] {
+    text-align: center;
 }
 
 /*Update profile button*/
