@@ -60,4 +60,18 @@
 
         $stmt->execute(array($rating, $id));
     }
+
+    function getTouristsReservations($username) {
+        global $db;
+        $stmt = $db->prepare('
+            SELECT *
+            FROM Reservation
+            JOIN Property
+            ON Property.id = Reservation.id_property
+            WHERE Property.owner_username = ?
+            ORDER BY Property.id
+        ');
+        $stmt->execute(array($username));
+        return $stmt->fetchAll();
+    }
 ?>

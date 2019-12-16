@@ -1,0 +1,41 @@
+/*Background*/
+body {
+    background: url("../images/requested_page.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#properties {
+    background: rgba(5, 6, 43, 0.4);
+    padding: 1em;
+}
+
+/*Tourists reservations*/
+#tourists_reservations {
+    padding: 2em 2em 2em 2em;
+    border: solid rgb(7, 8, 54);
+    border-radius: 1em;
+    margin: 3em 3em 3em 3em;
+    background: rgba(146, 174, 221, 0.7);
+}
+
+#tourists_reservations a {
+    text-decoration: none;
+}
+
+#tourists_reservations h3 {
+    color: rgb(7, 8, 54);
+    padding-left: 3em;
+}
+
+#tourist_reservation {
+    padding: 2em 2em 2em 2em; 
+    border: solid white;
+    border-radius: 1em;
+    margin: 3em 3em 3em 3em;
+    background: rgb(22, 24, 126);
+    color: rgb(37, 197, 130);
+}
+
+#tourist_reservation h4 {
+    color: white;
+}
