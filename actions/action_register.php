@@ -2,13 +2,13 @@
     include_once "../includes/init.php";
     include_once "../database/user.php";
 
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];   
-    $phone = $_POST['phone'];
-    $birthdate = $_POST['birthdate'];         
-    $password = $_POST['password'];
+    $username = htmlspecialchars($_POST['username']);
+    $email = htmlspecialchars($_POST['email']);
+    $first_name = htmlspecialchars($_POST['first_name']);
+    $last_name = htmlspecialchars($_POST['last_name']);   
+    $phone = htmlspecialchars($_POST['phone']);
+    $birthdate = htmlspecialchars($_POST['birthdate']);         
+    $password = htmlspecialchars($_POST['password']);
 
     if (!isset($username) || $username === '' || !preg_match ("/[A-Za-z0-9]+/", $username)) {
         $_SESSION['error_messages'][] = "Username can only contain aplhabetical letters and numbers";
