@@ -1,5 +1,3 @@
-PRAGMA foreign_keys = ON;
-
 CREATE TABLE User(
     username TEXT UNIQUE PRIMARY KEY,
     full_name TEXT NOT NULL,

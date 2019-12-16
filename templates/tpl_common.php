@@ -97,6 +97,7 @@ function document_main_part(){
         <link href="../css/layout.css" rel="stylesheet">
         <link href="../css/style.css" rel="stylesheet">
         <script src="../js/date.js" defer></script>
+        <script src="../js/windowPosition.js" async></script>
 <?php    
 }
 

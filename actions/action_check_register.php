@@ -17,7 +17,7 @@
     switch($type)
     {
         case 'username':
-            if (preg_match ("/[A-Za-z0-9]+/", $value) && !usernameAlreadyExists($value)) {
+            if (preg_match ("/^[A-Za-z0-9]+$/", $value) && !usernameAlreadyExists($value)) {
                 $valid = true;
             }
             break;
