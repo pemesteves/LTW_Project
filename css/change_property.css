@@ -1,0 +1,27 @@
+/*Style of change_property page's inputs*/
+
+input {
+    width: 60%;
+    height: 2em;
+    border:solid #0b116b;
+    border-radius: 0.5em;
+    color: grey;
+}
+
+[type="submit"] {
+    margin-top:1em;
+    width: 100px;
+    height: 40px;
+    color:white;
+    background: #0b116b;
+}
+
+[type="submit"]:hover {
+    cursor: pointer;
+    background: #3542f0;
+}
+
+#description input {
+    width: 100%;
+    height: 3em;
+}

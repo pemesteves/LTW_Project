@@ -33,6 +33,7 @@
 ?>
         <link href="../css/property_page.css" rel="stylesheet"/>
         <link href="../css/search_bar.css" rel="stylesheet"/>
+        <link href="../css/change_property.css" rel="stylesheet"/>
         <script src="../js/slideshow.js" async></script>
     </head>
     <body>
