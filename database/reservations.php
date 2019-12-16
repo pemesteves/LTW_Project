@@ -74,4 +74,27 @@
         $stmt->execute(array($username));
         return $stmt->fetchAll();
     }
+
+    function getReservationInfo($id){
+        global $db;
+        $stmt = $db->prepare('
+            SELECT *
+            FROM Reservation
+            WHERE id = ?
+        ');
+        $stmt->execute(array($id));
+
+        $result = $stmt->fetch();
+
+        return $result;
+    }
+
+    function cancelReservation($id){
+        global $db;
+        $stmt = $db->prepare('
+            DELETE FROM Reservation
+            WHERE id = ?
+        ');
+        $stmt->execute(array($id));
+    }
 ?>

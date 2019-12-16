@@ -103,6 +103,15 @@
                 <p>Start: <?=$reservation['date_start']?></p>
                 <p>End: <?=$reservation['date_end']?></p>
                 <?php 
+                if(date('Y-m-d') < date($reservation['date_start'])){
+                ?>
+                <form action="../actions/action_cancel_reservation.php" method="post">
+                    <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
+                    <input type="submit" value="Cancel Reservation"/>
+                </form>
+                <?php
+                }
+
                 if(date($reservation['date_end']) <= date('Y-m-d')){
                 ?>
                 <p>Rating: 
