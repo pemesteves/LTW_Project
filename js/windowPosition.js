@@ -2,7 +2,7 @@
 
 window.addEventListener("scroll", function () {
     //set scroll position in session storage
-    sessionStorage.scrollPos = $(window).scrollTop();
+    sessionStorage.scrollPos = window.scrollY;
 });
 
 var init = function () {
