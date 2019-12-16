@@ -28,14 +28,40 @@ body {
 }
 
 #tourist_reservation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     padding: 2em 2em 2em 2em; 
     border: solid white;
     border-radius: 1em;
     margin: 3em 3em 3em 3em;
     background: rgb(22, 24, 126);
     color: rgb(37, 197, 130);
+    min-width: 600px;
 }
 
 #tourist_reservation h4 {
     color: white;
+}
+
+#tourist_reservation #property_info {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#tourist_reservation #user_contacts {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#tourist_reservation #user_image {
+    grid-row: 1;
+    grid-column: 3;
+    height: 50%;
+    border: solid;
+    border-radius: 50%;
+    align-self: center;
+}
+
+#tourist_reservation #other_info {
+    grid-row: 2;
 }

@@ -17,6 +17,15 @@
     return $stmt->fetch();
   }
 
+  function getUserContacts($username){
+    global $db;
+
+    $stmt = $db->prepare('SELECT User.email, User.phone FROM User WHERE username = ?');
+    $stmt->execute(array($username));
+
+    return $stmt->fetch();
+  }
+
   function usernameAlreadyExists($username) {
     global $db;
   
