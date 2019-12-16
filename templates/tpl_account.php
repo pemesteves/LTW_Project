@@ -39,4 +39,28 @@ function draw_account_submit($current, $next, $text){
     </div>
 <?php
 }
+
+function draw_input_id($id, $type, $name, $value, $placeholder, $required){
+?>
+    <input 
+    <?php if(!is_null($id)){
+    ?>
+    id="<?=$id?>"
+    <?php
+    }
+    ?>
+    type="<?=$type?>" name="<?=$name?>" value="<?=$value?>" placeholder="<?=$placeholder?>"
+    <?php if($required){
+    ?>
+    required
+    <?php
+    }
+    ?>
+    />
+<?php
+}
+
+function draw_input($type, $name, $value, $placeholder, $required){
+    draw_input_id(null, $type, $name, $value, $placeholder, $required);
+}
 ?>
