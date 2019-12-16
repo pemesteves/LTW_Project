@@ -22,8 +22,14 @@
         error_log("BAD EMAIL");
         die(header('Location: ../pages/register.php'));        
     }
-
-    if(usernameAlreadyExists($username)) {
+    
+    try{
+        $usernameExists = usernameAlreadyExists($username);
+    }catch(PDOException $e){
+        catchException($e);
+    }
+    
+    if($usernameExists) {
         $_SESSION['error_messages'][] = "Username's already taken";  
         error_log("REPEATED USERNAME");    
         die(header('Location: ../pages/register.php'));          
