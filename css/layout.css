@@ -49,6 +49,11 @@ body > header #user_badge {
     margin-right: 3em;
 }
 
+.dropdown #user_photo {
+    grid-column: 2;
+    grid-row: 1;
+}
+
 .dropdown .dropdown_button {
     width: 190px;
     cursor: pointer;
@@ -61,7 +66,7 @@ body > header #user_badge {
     font-family: inherit;
     margin: 0;
     grid-row: 1;
-    grid-column: 2;
+    grid-column: 3;
     text-align: left;
 }
 
@@ -72,7 +77,38 @@ body > header #user_badge {
     box-shadow: 0px 8px 16px 0px rgb(0,0,0);
     z-index: 1;
     grid-row: 3;
+    grid-column: 3;
+}
+
+.dropdown #notifications {
+    grid-column: 1;
+    align-self: end;
+    margin-right: 1em;
+    display:grid;
+}
+
+.dropdown #notifications:hover {
+    cursor: pointer;
+}
+
+.dropdown #notifications img{
+    width:40px;
+    padding: 0.5em;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.dropdown #notifications p{
+    background: rgb(255, 145, 0);
+    padding: 2px 8px 2px 8px;
+    border-radius: 50%;
+    border: solid black;
+    color: white;
     grid-column: 2;
+    grid-row: 1;
+    margin: 0%;
 }
   
 .dropdown_content a {
