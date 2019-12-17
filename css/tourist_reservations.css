@@ -1,21 +1,12 @@
 /*Background*/
 body {
-    background: url("../images/requested_page.jpg") no-repeat center center fixed;
-    background-size: cover;
-}
-
-#properties {
-    background: rgba(5, 6, 43, 0.4);
-    padding: 1em;
+    background-color: #e5edee;
 }
 
 /*Tourists reservations*/
 #tourists_reservations {
-    padding: 2em 2em 2em 2em;
-    border: solid rgb(7, 8, 54);
-    border-radius: 1em;
-    margin: 3em 3em 3em 3em;
-    background: rgba(146, 174, 221, 0.7);
+    padding: 1em 2em 2em 2em;
+    margin: 1em 3em 3em 3em;
 }
 
 #tourists_reservations a {
@@ -24,23 +15,26 @@ body {
 
 #tourists_reservations h3 {
     color: rgb(7, 8, 54);
-    padding-left: 3em;
+    padding-left: 2em;
+    font-size: 1.5em;
 }
 
 #tourist_reservation {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 2em 2em 2em 2em; 
-    border: solid white;
-    border-radius: 1em;
+    border: solid #2e3c49;
+    border-radius: 0.5em;
     margin: 3em 3em 3em 3em;
-    background: rgb(22, 24, 126);
-    color: rgb(37, 197, 130);
+    background: whitesmoke;
+    color: #2e3c49;
     min-width: 600px;
 }
 
 #tourist_reservation h4 {
-    color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
 #tourist_reservation #property_info {

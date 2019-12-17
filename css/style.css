@@ -109,3 +109,31 @@ html {
     color: white;
     text-decoration: none;
 }
+
+/** Date Input **/
+[type="date"] {
+    background:#fff url(https://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/calendar_2.png)  97% 50% no-repeat ;
+}
+
+[type="date"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;    
+    display: none;
+}
+
+[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
+
+/** Cancel Reservation Button **/
+.cancelReservation {
+    border-radius: 1em;
+    border: 1px solid gray;
+    margin: 0;
+    padding: 5px 10px;
+    box-shadow: -1px -1px 1px gray;
+    color: #113252;
+}
+
+.cancelReservation:hover {
+    background-color: gray;
+}..

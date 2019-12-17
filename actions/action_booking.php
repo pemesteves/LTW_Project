@@ -66,6 +66,7 @@
   if(count($reservations) != 0){
     //SEND MESSAGE: House can't be booked   
     header('Location: ' . $_SERVER['HTTP_REFERER']);
+    die;
   }
 
   try{
@@ -76,6 +77,6 @@
       die($e->getMessage());
   }
 
-  header('Location: ../pages/index.php');  // CHECK THIS
+  header('Location: ../pages/user.php');
   die();
 ?>

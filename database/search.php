@@ -10,8 +10,9 @@
 			SELECT Property.*, PropertyImage.image_name as image
 			FROM Property
 			JOIN PropertyImage 
-            ON Property.id = PropertyImage.property_id'
-        );
+			ON Property.id = PropertyImage.property_id
+			GROUP BY Property.id
+		');
         $stmt->execute();
         $articles = $stmt->fetchAll();
 
@@ -50,13 +51,16 @@
 	function searchProperties($location, $start_date, $end_date, $guests){
 		$properties = getPropertyByLocationBetweenDates($location, $start_date, $end_date);
 
-		$matches = array();
+		if(!is_null($guests) && is_numeric($guests) && $guests >= 1){
+			$matches = array();
 
-		foreach ($properties as $property) {
-			if($property['sleeps'] >= $guests)
-				array_push($matches, $property);
+			foreach ($properties as $property) {
+				if($property['sleeps'] >= $guests)
+					array_push($matches, $property);
+			}
+			return $matches;
 		}
-
-		return $matches;
+		
+		return $properties;
 	}
 ?>

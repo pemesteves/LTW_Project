@@ -35,7 +35,7 @@
         <?php
         if(count($reservations) == 0){
         ?>
-            <p>Tourists didn't booked any of your properties yet.</p>
+            <p>Tourists didn't book any of your properties yet.</p>
         <?php
         }
         else{
@@ -51,52 +51,44 @@
             <a href="property_page.php?property=<?=$property_info['id']?>">
                 <article id="tourist_reservation">
                     <div id="property_info">
-                        <h4>Property: <?=$property_info['title']?></h4>
+                        <h4><?=$property_info['title']?></h4>
                         <p>Location: <?=$property_info['location']?></p>
                         <p>Start: <?=$reservation['date_start']?></p>
                         <p>End: <?=$reservation['date_end']?></p>
                     </div>
                     <div id="user_contacts">
-                        <h4>User info</h4>
+                        <h4>User</h4>
                         <p>Username: <?=$reservation['tourist_username']?></p>
                         <p>Email: <?=$user_contacts['email']?></p>
                         <p>Phone: <?=$user_contacts['phone']?></p>
                     </div>
                     <img id="user_image" src="../images/<?=$user_image['image_name']?>" alt="<?=$user_image['image_name']?>" />
                     <?php 
-                    if(date($reservation['date_end']) <= date('Y-m-d')){
+                    if($reservation['rating'] != NULL){
                     ?>
                     <div id="other_info">
-                        <p>Rating: 
-                        <?php
-                            if($reservation['rating'] == NULL){
-                        ?>
-                            <form id="rating" action="../actions/action_rate.php" method="post">
-                                <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
-                                <input type="number" name="rating" value="5" min="0" max="10" required/>
-                            </form>
-                        <?php
-                            }else{
-                                print($reservation['rating']);
-                            }
-                        ?>
-                        </p>
-                        <p>Comment:
-                        <?php
-                            if($reservation['comment'] == NULL){
-                        ?>
-                            <form id="comment" action="../actions/action_comment.php" method="post">
-                                <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
-                                <input type="text" name="comment" placeholder="My comment" required/>
-                            </form>
-                        <?php
-                            }else{
-                                print($reservation['comment']);
-                            }
-                        }
-                        ?>
-                        </p>
+                        <p>Rating: <?=$reservation['rating'];?></p>
+                    <?php
+                    }
+
+                    if($reservation['comment'] != NULL){
+                    ?>
+                        <p>Comment: <?=$reservation['comment'];?></p>
+                    <?php
+                    }
+                    ?>
                     </div>
+
+                    <?php
+                    if(date('Y-m-d') < date($reservation['date_start'])){
+                    ?>
+                    <form action="../actions/action_cancel_reservation.php" method="post">
+                        <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
+                        <input type="submit" class="cancelReservation" value="Cancel Reservation"/>
+                    </form>
+                    <?php
+                    }
+                    ?>
                 </article>
             </a>
         <?php

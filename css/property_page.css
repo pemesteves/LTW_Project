@@ -1,7 +1,6 @@
 /*Background*/
 body {
-  background: url("../images/landscape_snow.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background-color: #e5edee;
 }
 
 /*Not found*/
@@ -28,10 +27,10 @@ body {
   margin: 60px;
   margin-left: 100px;
   margin-top: 100px;
-  border: solid #0b116b;
-  border-radius: 1em;
-  background: #777cc9;
-  color: white;
+  border: solid #2e3c49;
+  border-radius: 0.5em;
+  background: whitesmoke;
+  color: #2e3c49;
 }
 
 #property #reservation_info {
@@ -40,10 +39,9 @@ body {
   grid-row-end: 2;
   padding: 2em;
   font-size: 1.5em;
-  color: white;
-  background: #777cc9;
-  border-bottom: solid #0b116b;
-  border-bottom-width: 8px;
+  color: #2e3c49;
+  background: whitesmoke;
+  border-bottom: 0.05em solid #2e3c49;
 }
 
 #property #comodities {
@@ -53,10 +51,10 @@ body {
   margin: 60px;
   margin-right: 100px;
   margin-top: 100px;
-  border: solid #0b116b;
-  border-radius: 1em;
-  background: #777cc9;
-  color: white;
+  border: solid #2e3c49;
+  border-radius: 0.5em;
+  background: whitesmoke;
+  color: #2e3c49;
 }
 
 #property #comodities h3 {
@@ -109,18 +107,20 @@ body {
 
 #property #dates [type="date"] {
   height: 5em;
-  border: solid #0b116b;
+  border: 0.1em solid #2e3c49;
   text-align: center;
 }
 
 #property #dates [name="start_date"] {
   grid-column: 1;
   grid-row: 2;
+  border-right: 0.05em solid #2e3c49;
 }
 
 #property #dates [name="end_date"] {
   grid-column: 2;
   grid-row: 2;
+  border-left: 0.05em solid #2e3c49;
 }
 
 #property #dates [type="number"] {
@@ -128,7 +128,7 @@ body {
   grid-column-end: 3;
   grid-row: 3;
   padding: 0%;
-  border: solid #0b116b;
+  border: 0.1em solid #2e3c49;
   border-top: 0em;
   height: 2em;
 }
@@ -139,35 +139,34 @@ body {
   grid-row: 4;
   margin-top: 1em;
   height: 3em;
-  border-radius: 1em;
-  border: solid #F5F4F3;
-  border-width: 0.15em;
-  background: #3542f0;
+  border-radius: 0.3em;
+  border: 0.1em solid #2e3c49;
+  background: rgba(146, 174, 221, 0.7);
   color: white;
 }
 
 #property #dates [type="submit"]:hover {
   cursor: pointer;
-  background: #12197a;
+  background: rgba(103, 123, 158, 0.7);
 }
 
 #comments {
-  background-color: #3542f0;
+  background-color: whitesmoke;
   margin: 1em;
   margin-bottom: 3em;
   padding: 2em;
   padding-top: 1em;
-  border-radius: 1em;
-  border: solid #F5F4F3;
+  border-radius: 0.5em;
+  border: solid #2e3c49;
 }
 
 #comments p {
-  color: white;
+  color: #2e3c49;
 }
 
 /*SLIDESHOW*/
 #slideshow {
-  background-color: #777cc9;
+  background-color: whitesmoke;
 }
 
 #slideshow img {
@@ -240,8 +239,7 @@ body {
   text-align: center;
   grid-column: 1;
   grid-row: 2;
-  border-bottom: solid #0b116b;
-  border-bottom-width: 8px;
+  border-bottom: 0.1em solid #2e3c49;
   padding-top: 1em;
   padding-bottom: 1.8em;
 }
@@ -251,14 +249,15 @@ body {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #12197a;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  background-color: #2e3c49;
+  transition: background-color 0.5s ease-out;
 }
 
 .active, .dot:hover {
-  background-color: white;
+  transition: background-color 0.5s ease-in;
+  background-color: rgb(190, 190, 190);
 }
 
 /* Fading animation */
@@ -286,8 +285,8 @@ body {
 }
 
 #change_property {
-  border: solid #0b116b;
-  border-radius: 1em;
+  border: solid #2e3c49;
+  border-radius: 0.5em;
   background: white;
 }
 
@@ -307,7 +306,7 @@ body {
   width: 30em;
   background-color: #777cc9;
   border: 2px solid #0b116b;
-  border-radius: 1em;
+  border-radius: 0.5em;
   margin: auto;
   display: grid;
 }

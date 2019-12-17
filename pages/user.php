@@ -25,7 +25,6 @@
     document_main_part();
     include_scroll_top();
 ?>
-        <link href="../css/user_page.css" rel="stylesheet">
         <link href="../css/properties_list.css" rel="stylesheet">
         <link href="../css/profile.css" rel="stylesheet">
         <script src="../js/longDescription.js" async></script>
@@ -34,6 +33,7 @@
         <?php
             draw_header('change_profile.php', 'Change Profile');
         ?>
+        <h3 id="profile">Profile</h3>
         <section id="user_info">
             <div id="fit_crop">
                 <img src="../images/<?=$user_info['image_name']?>"/>
@@ -98,11 +98,21 @@
                 }
             ?>
             <div id="user_reservation">
-                <h4>Property: <?=$property_info['title']?></h4>
+                <h4><?=$property_info['title']?></h4>
                 <h5>Location: <?=$property_info['location']?></h5>
+                <p>Total Price: <?=$reservation['sleeps']?>x<?=$property_info['price_per_day']?>$ = <?=$reservation['sleeps']*$property_info['price_per_day']?>$</p>
                 <p>Start: <?=$reservation['date_start']?></p>
                 <p>End: <?=$reservation['date_end']?></p>
                 <?php 
+                if(date('Y-m-d') < date($reservation['date_start'])){
+                ?>
+                <form action="../actions/action_cancel_reservation.php" method="post">
+                    <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
+                    <input type="submit" class="cancelReservation" value="Cancel Reservation"/>
+                </form>
+                <?php
+                }
+
                 if(date($reservation['date_end']) <= date('Y-m-d')){
                 ?>
                 <p>Rating: 

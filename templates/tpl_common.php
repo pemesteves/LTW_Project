@@ -111,7 +111,7 @@ function draw_search_bar(){
             <input class="location" name="location" type="text" placeholder="Where to?"/>
             <input class="date" name="start_date" type="date" value="2019-11-13" min="2019-11-13" required/>
             <input class="date" name="end_date" type="date" value="2019-11-14" min="2019-11-14" required/>
-            <input class="guests" name="guests" type="number" placeholder="Guests" min="1" required/>
+            <input class="guests" name="guests" type="number" placeholder="Guests" min="1"/>
             <input class="search_button" type="submit" value="Search"/>
         </div>
     </form>
@@ -124,10 +124,10 @@ function document_main_part(){
 <html lang="en">
     <head>
         <title>Rentify</title>
-        <meta name="keywords" content="unicode emoji characters, utf-8">
-        <link rel="icon" href="../images/icon.png">
-        <link href="../css/layout.css" rel="stylesheet">
-        <link href="../css/style.css" rel="stylesheet">
+        <meta name="keywords" content="unicode emoji characters, utf-8"/>
+        <link rel="icon" href="../images/icon.png"/>
+        <link href="../css/layout.css" rel="stylesheet"/>
+        <link href="../css/style.css" rel="stylesheet"/>
         <script src="../js/date.js" defer></script>
         <script src="../js/windowPosition.js" async></script>
 <?php    
