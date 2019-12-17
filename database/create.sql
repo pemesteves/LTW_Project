@@ -52,8 +52,7 @@ CREATE TABLE PropertyCommodity(
 
 CREATE TABLE Notification(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    reservation_id INTEGER REFERENCES Reservation(id),
-    date DATE NOT NULL,
+    property_id INTEGER REFERENCES Property(id),
     description TEXT NOT NULL,
     active INTEGER NOT NULL
 );

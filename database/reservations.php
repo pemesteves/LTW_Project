@@ -35,6 +35,14 @@
                 (?, ?, ?, ?, ?)
         ');
         $stmt->execute(array($id_property, $username, $start_date, $end_date, $sleeps));
+
+        $stmt = $db->prepare('
+            INSERT INTO Notification 
+                (property_id, date, description, active) 
+            VALUES
+                (?, "User ".?." has booked your property" , 1)
+        ');
+        $stmt->execute(array($id_property, $username));
     }
 
     function addComment($id, $comment){
@@ -80,9 +88,8 @@
         $stmt = $db->prepare('
             SELECT *
             FROM Notification
-            JOIN Reservation
             JOIN Property
-            ON Reservation.id = Notification.reservation_id
+            ON Notification.property_id = Property.id
             WHERE Property.owner_username = ?
             AND Notification.active = 1
             ORDER BY Property.id
