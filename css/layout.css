@@ -37,6 +37,10 @@ body > header #user_badge {
     padding: 14px 16px;
 }
 
+body > header #user_badge:hover {
+    cursor: pointer;
+}
+
 .dropdown {
     display: grid;
     grid-column: 3;

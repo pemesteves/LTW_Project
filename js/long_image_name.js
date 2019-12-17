@@ -1,6 +1,6 @@
 /*Script to exchange long image names by ...*/
 let el = document.getElementsByClassName('image_name');
-let string_max_size = 10;
+let string_max_size = 20;
 
 for (let i = 0; i < el.length; i++) {
     if(el[i].textContent.length > string_max_size) {
