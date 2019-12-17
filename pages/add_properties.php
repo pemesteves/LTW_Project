@@ -24,18 +24,6 @@
             upload_image("", 'property');
             if(isset($_SESSION['image_names'])){
             ?>
-            <p>Uploaded Images: </p>
-            <ul id="uploadedImages">
-            <?php
-                $images = $_SESSION['image_names'];
-                foreach($images as $image){
-            ?>
-                <li class="image_name"><?=$image?></li>
-            <?php
-                }
-            }
-            ?>
-            </ul>
             <form id="rentify_form" action="../actions/action_rentify.php" method="post">
                 <div class="rentify_box">
                     <?php
@@ -48,6 +36,20 @@
                     <input class="rentify_button" type="Submit" value="Rentify">
                 </div>
             </form>
+            <div id="uploaded_images">
+                <p>Uploaded Images: </p>
+                <ul id="uploadedImages">
+                <?php
+                    $images = $_SESSION['image_names'];
+                    foreach($images as $image){
+                ?>
+                    <li class="image_name"><?=$image?></li>
+                <?php
+                    }
+                }
+                ?>
+                </ul>
+            </div>
         </section>
     </section>
 <?php
