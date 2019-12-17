@@ -123,3 +123,17 @@ html {
 [type="date"]::-webkit-calendar-picker-indicator {
     opacity: 0;
 }
+
+/** Cancel Reservation Button **/
+.cancelReservation {
+    border-radius: 1em;
+    border: 1px solid gray;
+    margin: 0;
+    padding: 5px 10px;
+    box-shadow: -1px -1px 1px gray;
+    color: #113252;
+}
+
+.cancelReservation:hover {
+    background-color: gray;
+}..

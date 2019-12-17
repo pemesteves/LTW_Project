@@ -107,7 +107,7 @@
                 ?>
                 <form action="../actions/action_cancel_reservation.php" method="post">
                     <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
-                    <input type="submit" value="Cancel Reservation"/>
+                    <input type="submit" class="cancelReservation" value="Cancel Reservation"/>
                 </form>
                 <?php
                 }

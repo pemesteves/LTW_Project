@@ -64,39 +64,31 @@
                     </div>
                     <img id="user_image" src="../images/<?=$user_image['image_name']?>" alt="<?=$user_image['image_name']?>" />
                     <?php 
-                    if(date($reservation['date_end']) <= date('Y-m-d')){
+                    if($reservation['rating'] != NULL){
                     ?>
                     <div id="other_info">
-                        <p>Rating: 
-                        <?php
-                            if($reservation['rating'] == NULL){
-                        ?>
-                            <form id="rating" action="../actions/action_rate.php" method="post">
-                                <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
-                                <input type="number" name="rating" value="5" min="0" max="10" required/>
-                            </form>
-                        <?php
-                            }else{
-                                print($reservation['rating']);
-                            }
-                        ?>
-                        </p>
-                        <p>Comment:
-                        <?php
-                            if($reservation['comment'] == NULL){
-                        ?>
-                            <form id="comment" action="../actions/action_comment.php" method="post">
-                                <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
-                                <input type="text" name="comment" placeholder="My comment" required/>
-                            </form>
-                        <?php
-                            }else{
-                                print($reservation['comment']);
-                            }
-                        }
-                        ?>
-                        </p>
+                        <p>Rating: <?=$reservation['rating'];?></p>
+                    <?php
+                    }
+
+                    if($reservation['comment'] != NULL){
+                    ?>
+                        <p>Comment: <?=$reservation['comment'];?></p>
+                    <?php
+                    }
+                    ?>
                     </div>
+
+                    <?php
+                    if(date('Y-m-d') < date($reservation['date_start'])){
+                    ?>
+                    <form action="../actions/action_cancel_reservation.php" method="post">
+                        <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
+                        <input type="submit" class="cancelReservation" value="Cancel Reservation"/>
+                    </form>
+                    <?php
+                    }
+                    ?>
                 </article>
             </a>
         <?php
