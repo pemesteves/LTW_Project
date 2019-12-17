@@ -6,8 +6,8 @@
 
     try{
         addRating($id, $rating);
-    }catch(PDOException $e){
-        die($e->message());
+    }catch(PDOException $e){      
+        catchException($e);
     }
     
     header('Location: ' . $_SERVER['HTTP_REFERER']);

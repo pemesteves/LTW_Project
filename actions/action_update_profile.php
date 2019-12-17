@@ -24,8 +24,7 @@
                 try{
                     updateUserPassword($username, $new_password);
                 }catch(PDOException $e){
-                    header('Location: ' . $_SERVER['HTTP_REFERER']);
-                    die($e->getMessage());
+                    catchException($e);
                 }
             }
         }else{
@@ -44,8 +43,7 @@
     try{
         updateUserInformation($full_name, $email, $phone, $birthdate, $image_name, $username);
     }catch(PDOException $e){
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
-        die($e->getMessage());
+        catchException($e);
     }
 
     $new_username = htmlspecialchars($_POST['username']);
@@ -60,8 +58,7 @@
             updateUsername($username, $new_username);
             $_SESSION['username'] = $new_username;
         }catch(PDOException $e){
-            header('Location: ' . $_SERVER['HTTP_REFERER']);
-            die($e->getMessage());
+            catchException($e);
         }
             
     }

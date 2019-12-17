@@ -11,8 +11,7 @@
     updateNotifications($_SESSION['username']);
   }catch(PDOException $e){
     $_SESSION['error_messages'][] = "Failed to get the notifications";
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-    die($e->getMessage());
+    catchException($e);
   }
 
   header('Location: ../pages/tourist_reservations.php');  // CHECK THIS
