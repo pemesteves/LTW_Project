@@ -83,7 +83,8 @@
                     if(date('Y-m-d') < date($reservation['date_start'])){
                     ?>
                     <form action="../actions/action_cancel_reservation.php" method="post">
-                        <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
+                        <!--TODO Corrigir: -->
+                        <input type="hidden" name="reservation" value="<?=$reservation['reservation']?>"/>
                         <input type="submit" class="cancelReservation" value="Cancel Reservation"/>
                     </form>
                     <?php

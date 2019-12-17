@@ -14,6 +14,8 @@
   }
   $id_reservation = $_POST['reservation'];
 
+  error_log("Reservation: " . $id_reservation);
+
   try{
       $reservationInfo = getReservationInfo($id_reservation);
     
