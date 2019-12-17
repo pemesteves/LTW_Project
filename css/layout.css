@@ -15,8 +15,6 @@ body > header {
 
 body > header h1 {
     grid-column: 1;
-    grid-row-start: 1;
-    grid-row-end: 3;
 
     padding-left: 0.3em;
     padding-right: 0.3em;
@@ -24,7 +22,7 @@ body > header h1 {
 
 body > header #signup {
     grid-column: 3;
-    grid-row: 2;
+    align-self: center;
 }
 
 body > header #user_photo {
