@@ -53,7 +53,7 @@ CREATE TABLE PropertyCommodity(
 CREATE TABLE Notification(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     property_id INTEGER REFERENCES Property(id),
-    owner_username TEXT REFERENCES User(owner_username),
+    owner_username TEXT REFERENCES User(username),
     date DATE NOT NULL,
     description TEXT NOT NULL,
     active INTEGER NOT NULL

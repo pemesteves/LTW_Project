@@ -42,7 +42,7 @@
             WHERE id = ?
         ');
         $stmt->execute(array($id_property));
-        $owner_username = $stmt->fetchAll();
+        $owner_username = $stmt->fetch();
 
         $description = "User ".$username." has booked your property";
         $active = 1;
