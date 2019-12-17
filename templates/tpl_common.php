@@ -39,14 +39,16 @@ function draw_header($page, $name){
                 $notifications = getActiveNotifications($_SESSION['username']);
             }catch(PDOException $e){
                 catchException($e);
-            }
-        ?> 
-            <div class="dropdown">
+            } 
+        ?>
 
+            <script type="module" src="../js/ajax_notification.js" async></script>
+
+            <div class="dropdown">
                 <?php draw_user_image(); ?>
-                <a id="notifications" href="../actions/action_notification.php">
+                <a id="notifications"> <!--href="../actions/action_notification.php">-->
                     <img src="../images/notifications_bell.png" alt="notifications_bell" />
-                    <p><?=count($notifications)?></p>
+                    <p id="notification_number"><?=count($notifications)?></p>
                 </a>
                 <button  class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?> </button>
                 <div class="dropdown_content" id="user_badge_dropdown">
