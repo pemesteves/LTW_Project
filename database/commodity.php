@@ -30,5 +30,16 @@
         $stmt->execute(array($property_id, $commodityID));
     }
 
-    header('Location: ../pages/index.php');
+    function createCommodity($commodity){
+        global $db;
+
+        $stmt = $db->prepare('
+            INSERT INTO Commodity
+                (description)
+            VALUES
+                (?)
+        ');
+
+        $stmt->execute(array($commodity));
+    }
 ?>

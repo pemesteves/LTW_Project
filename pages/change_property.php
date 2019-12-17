@@ -22,11 +22,11 @@
         die('Only the owner can change its properties.');
     }
 
-        if(isset($_SESSION['property_id'])){
-            unset($_SESSION['property_id']);
-        }
+    if(isset($_SESSION['property_id'])){
+        unset($_SESSION['property_id']);
+    }
 
-        $_SESSION['property_id'] = $property_id;
+    $_SESSION['property_id'] = $property_id;
 
     document_main_part();
     include_scroll_top();
