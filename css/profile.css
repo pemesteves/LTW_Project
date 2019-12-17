@@ -1,12 +1,63 @@
-/*Profile data*/
+/** USER PAGE STYLE **/
+
+/*Background*/
+body {
+    background-color: #e5edee;
+}
+
+#profile{
+    padding: 0 4em; 
+    font-weight: lighter;
+    font-size: 2em;
+    margin-bottom: 0;
+}
+
+/*User data*/
+#user_info h2 {
+    color: #12197a;
+}
+
+/***********************/
+/** User reservations **/
+/***********************/
+
+#user_reservations {
+    padding: 0em 4em 3em 4em; 
+    margin: 0em 3em 3em 3em;
+}
+
+#user_reservations h3 {
+    padding-left: 0.5em;
+    font-size: 2em;
+    font-weight: lighter;
+}
+
+#user_reservation {
+    padding: 1em 1em 2em 2em; 
+    border: 0.1em solid #2e3c49;
+    border-radius: 0.5em;
+    margin: 0em 1em 1em 1em;
+    background: #F5F4F3;
+    color: #536a91;
+}
+
+#user_reservation h4 {
+    color: black;
+}
+
+/******************/
+/** Profile data **/
+/******************/
+
 #user_info {
     display: grid;
     grid-template-columns: 0.4fr auto;
     grid-template-rows: auto;
-    margin: 3em;
+    margin-left: 8em;
+    margin-top: 2em;
     max-width: 60%;
-    border: solid #12197a;
-    border-radius: 1em;
+    border: 0.1em solid #2e3c49;
+    border-radius: 0.5em;
     background: #F5F4F3;
     padding-bottom: 1em;
 }
@@ -19,7 +70,8 @@
     width: 160px;
     overflow: hidden;
     margin: 2em 2em 0em 2em;
-    border: solid #2e3c49
+    border: 0.1em solid #2e3c49;
+    border-radius: 0.2em;
 }
 
 #user_info img {

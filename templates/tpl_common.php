@@ -2,6 +2,7 @@
 
 include_once "../includes/init.php";
 include_once "../database/user.php";
+include_once "../database/reservations.php";
 
 function draw_user_image(){
     try{
@@ -34,15 +35,46 @@ function draw_header($page, $name){
 
         <?php
         if(isset($_SESSION['username'])) {
-        ?> 
-            <div class="dropdown">
+            try{
+                $notifications = getActiveNotifications($_SESSION['username']);
+                $index = 0;
+            }catch(PDOException $e){
+                catchException($e);
+            } 
+        ?>
 
+            <script type="module" src="../js/ajax_notification.js" async></script>
+
+            <div class="dropdown">
                 <?php draw_user_image(); ?>
-                <button  class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?> </button>
+                <div class="dropdown_button" id="notifications" > 
+                    <img class="dropdown_button" id="notification_img" src="../images/notifications_bell.png" alt="notifications_bell" />
+                    <p class="dropdown_button" id="notification_number"><?=count($notifications)?></p>
+                </div>
+                <div class="dropdown_content" id="notifications_dropdown">
+                    <?php 
+                    if (count($notifications) == 0) { ?>
+                        <p id="zero_nots">You don't have notifications</p>
+                    <?php }
+                    else {
+                        foreach($notifications as $notification) {
+                            $index++;
+                            if ($index > 3)
+                                break;  
+                        ?>
+                        <a href="../actions/action_notification.php">
+                            <p><?=$notification['date']?></p>
+                            <p><?=$notification['description']?></p>
+                        </a>
+                        <?php } 
+                    }?>
+                </div>
+
+                <button class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?> </button>
                 <div class="dropdown_content" id="user_badge_dropdown">
                     <a href="<?=$page?>"><?=$name?></a>
                     <a href="add_properties.php">Rentify property</a>
-                    <a href="tourist_reservations.php">Requests</a>
+                    <a href="../actions/action_notification.php">Requests</a>
                     <a href="../actions/action_logout.php">Log out</a>
                 </div>
             </div>

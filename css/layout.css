@@ -15,8 +15,6 @@ body > header {
 
 body > header h1 {
     grid-column: 1;
-    grid-row-start: 1;
-    grid-row-end: 3;
 
     padding-left: 0.3em;
     padding-right: 0.3em;
@@ -24,11 +22,11 @@ body > header h1 {
 
 body > header #signup {
     grid-column: 3;
-    grid-row: 2;
+    align-self: center;
 }
 
 body > header #user_photo {
-    width: 40px;                 /* CHANGE */
+    width: 2.5em;                 /* CHANGE */
     border-radius: 50%;
     align-self: center;    
 }
@@ -36,6 +34,7 @@ body > header #user_photo {
 body > header #user_badge {
     font-size: 1.1em;
     color: black;
+    padding: 14px 16px;
 }
 
 .dropdown {
@@ -49,19 +48,22 @@ body > header #user_badge {
     margin-right: 3em;
 }
 
+.dropdown #user_photo {
+    grid-column: 2;
+    grid-row: 1;
+}
+
 .dropdown .dropdown_button {
     width: 190px;
     cursor: pointer;
     font-size: 16px;  
     border: none;
     outline: none;
-    color: white;
-    padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
     grid-row: 1;
-    grid-column: 2;
+    grid-column: 3;
     text-align: left;
 }
 
@@ -72,7 +74,47 @@ body > header #user_badge {
     box-shadow: 0px 8px 16px 0px rgb(0,0,0);
     z-index: 1;
     grid-row: 3;
-    grid-column: 2;
+    grid-column: 3;
+}
+
+.dropdown #notifications {
+    grid-column: 1;
+    align-self: end;
+    margin-right: 1em;
+    display:flex;
+    border: none;
+    background: none;
+    justify-content: flex-end;
+}
+
+.dropdown #notifications:hover {
+    cursor: pointer;
+}
+
+.dropdown #notifications img{
+    width:2.5em;
+}
+
+.dropdown #notifications p{
+    background: rgb(255, 145, 0);
+    padding: 2px 8px 2px 8px;
+    border-radius: 50%;
+    border: solid black;
+    color: white;
+    margin: 0%;
+    width: 0.5em;
+    height: fit-content;
+    position: relative;
+    bottom: 0.5em;
+    right: 1em;
+}
+
+#notifications_dropdown {
+    grid-column: 1;
+}
+
+#zero_nots {
+    padding-left: 1em;
 }
   
 .dropdown_content a {

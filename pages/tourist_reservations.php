@@ -35,7 +35,7 @@
         <?php
         if(count($reservations) == 0){
         ?>
-            <p>Tourists didn't booked any of your properties yet.</p>
+            <p>Tourists didn't book any of your properties yet.</p>
         <?php
         }
         else{
