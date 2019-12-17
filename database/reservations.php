@@ -36,15 +36,23 @@
         ');
         $stmt->execute(array($id_property, $username, $start_date, $end_date, $sleeps));
 
+        $stmt = $db->prepare('
+            SELECT owner_username 
+            FROM Property
+            WHERE id = ?
+        ');
+        $stmt->execute(array($id_property));
+        $owner_username = $stmt->fetchAll();
+
         $description = "User ".$username." has booked your property";
         $active = 1;
         $stmt = $db->prepare('
             INSERT INTO Notification 
-                (property_id, date, description, active) 
+                (property_id, owner_username, date, description, active) 
             VALUES
-                (?, ?, ?)
+                (?, ?, ?, ?, ?)
         ');
-        $stmt->execute(array($id_property, $description, $active));
+        $stmt->execute(array($id_property, $owner_username, date("Y-m-d"), $description, $active));
     }
 
     function addComment($id, $comment){
@@ -99,4 +107,16 @@
         $stmt->execute(array($username));
         return $stmt->fetchAll();
     }
+
+    function updateNotifications($username){
+        global $db;
+        
+        $stmt = $db->prepare('
+          UPDATE Notification
+          SET active = 0
+          WHERE owner_username = ?
+        ');
+    
+        $stmt->execute(array($username));
+      }
 ?>

@@ -45,7 +45,7 @@ function draw_header($page, $name){
             <div class="dropdown">
 
                 <?php draw_user_image(); ?>
-                <a id="notifications" href="tourist_reservations.php">
+                <a id="notifications" href="../actions/action_notification.php">
                     <img src="../images/notifications_bell.png" alt="notifications_bell" />
                     <p><?=count($notifications)?></p>
                 </a>
@@ -53,7 +53,7 @@ function draw_header($page, $name){
                 <div class="dropdown_content" id="user_badge_dropdown">
                     <a href="<?=$page?>"><?=$name?></a>
                     <a href="add_properties.php">Rentify property</a>
-                    <a href="tourist_reservations.php">Requests</a>
+                    <a href="../actions/action_notification.php">Requests</a>
                     <a href="../actions/action_logout.php">Log out</a>
                 </div>
             </div>
