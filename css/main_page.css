@@ -89,7 +89,7 @@
     background: rgb(226, 226, 226);
     padding: 1em; 
     position: relative;
-    top: -0.8em;
+    bottom: 0.8em;
 }
 
 #recommended .info:hover {
