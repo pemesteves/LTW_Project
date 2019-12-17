@@ -36,13 +36,15 @@
         ');
         $stmt->execute(array($id_property, $username, $start_date, $end_date, $sleeps));
 
+        $description = "User ".$username." has booked your property";
+        $active = 1;
         $stmt = $db->prepare('
             INSERT INTO Notification 
                 (property_id, date, description, active) 
             VALUES
-                (?, "User ".?." has booked your property" , 1)
+                (?, ?, ?)
         ');
-        $stmt->execute(array($id_property, $username));
+        $stmt->execute(array($id_property, $description, $active));
     }
 
     function addComment($id, $comment){

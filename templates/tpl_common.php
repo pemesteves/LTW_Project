@@ -37,7 +37,7 @@ function draw_header($page, $name){
         <?php
         if(isset($_SESSION['username'])) {
             try{
-                $notifications = getActiveNotifications($_SESSION['username']); 
+                $notifications = getActiveNotifications($_SESSION['username']);
             }catch(PDOException $e){
                 catchException($e);
             }
