@@ -51,13 +51,13 @@
             <a href="property_page.php?property=<?=$property_info['id']?>">
                 <article id="tourist_reservation">
                     <div id="property_info">
-                        <h4>Property: <?=$property_info['title']?></h4>
+                        <h4><?=$property_info['title']?></h4>
                         <p>Location: <?=$property_info['location']?></p>
                         <p>Start: <?=$reservation['date_start']?></p>
                         <p>End: <?=$reservation['date_end']?></p>
                     </div>
                     <div id="user_contacts">
-                        <h4>User info</h4>
+                        <h4>User</h4>
                         <p>Username: <?=$reservation['tourist_username']?></p>
                         <p>Email: <?=$user_contacts['email']?></p>
                         <p>Phone: <?=$user_contacts['phone']?></p>
@@ -83,8 +83,7 @@
                     if(date('Y-m-d') < date($reservation['date_start'])){
                     ?>
                     <form action="../actions/action_cancel_reservation.php" method="post">
-                        <!--TODO Corrigir: -->
-                        <input type="hidden" name="reservation" value="<?=$reservation['reservation']?>"/>
+                        <input type="hidden" name="reservation" value="<?=$reservation['id']?>"/>
                         <input type="submit" class="cancelReservation" value="Cancel Reservation"/>
                     </form>
                     <?php

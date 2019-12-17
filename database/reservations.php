@@ -64,7 +64,7 @@
     function getTouristsReservations($username) {
         global $db;
         $stmt = $db->prepare('
-            SELECT *
+            SELECT Reservation.*
             FROM Reservation
             JOIN Property
             ON Property.id = Reservation.id_property

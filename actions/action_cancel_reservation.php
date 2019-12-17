@@ -1,6 +1,7 @@
 <?php
   include_once "../includes/init.php";
   include_once "../database/reservations.php";
+  include_once "../database/property.php";
 
   if (!isset($_SESSION['username'])){
     header('Location: ../pages/login.php');
@@ -14,12 +15,12 @@
   }
   $id_reservation = $_POST['reservation'];
 
-  error_log("Reservation: " . $id_reservation);
-
   try{
       $reservationInfo = getReservationInfo($id_reservation);
-    
-      if($username !== $reservationInfo['tourist_username']){
+
+      $propertyInfo = getPropertyInfo($reservationInfo['id_property']);
+
+      if($username !== $reservationInfo['tourist_username'] && $username !== $propertyInfo['owner_username']){
         header('Location: ' . $_SERVER['HTTP_REFERER']);
         die('Can\'t cancel reservation from other user.');
       }
