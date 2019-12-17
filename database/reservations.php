@@ -4,7 +4,13 @@
     function getUserReservations($username){
         global $db;
 
-        $stmt = $db->prepare('SELECT * FROM Reservation WHERE tourist_username = ?');
+        $stmt = $db->prepare('
+            SELECT * 
+            FROM Reservation 
+            WHERE tourist_username = ?
+            ORDER BY date_start ASC,
+                     date_end ASC
+        ');
         $stmt->execute(array($username));
 
         return $stmt->fetchAll();
@@ -19,7 +25,7 @@
                   AND ((date_start >= Date(?) AND date_end <= Date(?)) 
                        OR (date_end >= Date(?) AND date_start <= Date(?))
                        OR (date_start <= Date(?) AND date_end >= Date(?))) 
-            ');
+        ');
         $stmt->execute(array($id_property, $start_date, $end_date, $end_date, $end_date, $start_date, $start_date));
 
         return $stmt->fetchAll();
