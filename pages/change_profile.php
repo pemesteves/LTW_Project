@@ -6,7 +6,7 @@
     include_once "../templates/tpl_upload_image.php";
     
     if(!isset($_SESSION['username'])){
-        header('Location: ../pages/index.php');
+        header('Location: ../pages/login.php');
         die();
     }
 

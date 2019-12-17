@@ -49,6 +49,6 @@
     }
 
 
-    header('Location: ../pages/user.php');
+    header('Location: ../pages/property_page.php?property='.$property_id);
     die();
 ?>
