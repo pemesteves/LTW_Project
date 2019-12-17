@@ -32,17 +32,18 @@
             INSERT INTO Reservation 
                 (id_property, tourist_username, date_start, date_end, sleeps) 
             VALUES
-                (?, ?, ?, ?, ?)
+                (?, ?, ?, ?, ?);
         ');
         $stmt->execute(array($id_property, $username, $start_date, $end_date, $sleeps));
 
         $stmt = $db->prepare('
-            SELECT owner_username 
+            SELECT * 
             FROM Property
-            WHERE id = ?
+            WHERE id = ?;
         ');
         $stmt->execute(array($id_property));
-        $owner_username = $stmt->fetch();
+        $owner = $stmt->fetch();
+        $owner_username = $owner['owner_username'];
 
         $description = "User ".$username." has booked your property";
         $active = 1;
@@ -50,7 +51,7 @@
             INSERT INTO Notification 
                 (property_id, owner_username, date, description, active) 
             VALUES
-                (?, ?, ?, ?, ?)
+                (?, ?, ?, ?, ?);
         ');
         $stmt->execute(array($id_property, $owner_username, date("Y-m-d"), $description, $active));
     }
@@ -61,7 +62,7 @@
         $stmt = $db->prepare('
             UPDATE Reservation
             SET comment = ?
-            WHERE id = ?
+            WHERE id = ?;
         ');
 
         $stmt->execute(array($comment, $id));
