@@ -50,6 +50,20 @@ body {
     padding:0.5em;
 }
 
+.error_box {
+    display: none;
+    margin-left: 5em;
+    background-color: rgb(245, 81, 81);
+    border-radius: 0.5em;
+}
+
+.error_box p {
+    padding: 1em 0em 1em 0em;
+    text-align: center;
+    font-size: 0.9em;
+    color: black;
+}
+
 #account .account_button {
     background: #3542f0;
     padding-left: 1em;
