@@ -56,7 +56,7 @@ function draw_header($page, $name){
                     if (count($notifications) == 0) { ?>
                         <p id="zero_nots">You don't have notifications</p>
                     <?php }
-                    else {
+
                         foreach($notifications as $notification) {
                             $index++;
                             if ($index > 3)
@@ -67,7 +67,7 @@ function draw_header($page, $name){
                             <p><?=$notification['description']?></p>
                         </a>
                         <?php } 
-                    }?>
+                    ?>
                 </div>
 
                 <button class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?> </button>
@@ -106,6 +106,7 @@ function draw_website_name(){
 
 function draw_search_bar(){
 ?>
+    <script src="../js/book.js" async></script>        
     <form id="search_form" action="search_page.php" method="post"> 
         <div class="search_box">
             <input class="location" name="location" type="text" placeholder="Where to?"/>
