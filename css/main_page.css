@@ -85,19 +85,20 @@
 
 #recommended .info {
     border-radius:1em;
-    background: #777cc9;
+    border: 0.1em solid #2e3c49;
+    background: rgb(226, 226, 226);
     padding: 1em; 
     position: relative;
     top: -0.8em;
 }
 
 #recommended .info:hover {
-    background-color: #3542f0;
+    background-color: #cccccc;
 }
 
 #recommended article h3 {
-    color: white;
-    font-weight: lighter;
+    color: black;
+    font-size: 1.3em;
     margin-top: 0%;
 }
 
