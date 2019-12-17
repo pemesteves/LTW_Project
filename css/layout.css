@@ -81,9 +81,10 @@ body > header #user_badge {
     grid-column: 1;
     align-self: end;
     margin-right: 1em;
-    display:grid;
+    display:flex;
     border: none;
     background: none;
+    justify-content: flex-end;
 }
 
 .dropdown #notifications:hover {
@@ -92,11 +93,6 @@ body > header #user_badge {
 
 .dropdown #notifications img{
     width:2.5em;
-    padding: 0.5em;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
 }
 
 .dropdown #notifications p{
@@ -105,11 +101,14 @@ body > header #user_badge {
     border-radius: 50%;
     border: solid black;
     color: white;
-    grid-column: 2;
-    grid-row: 1;
     margin: 0%;
     width: 0.5em;
+    height: fit-content;
+    position: relative;
+    bottom: 0.5em;
+    right: 1em;
 }
+
 #notifications_dropdown {
     grid-column: 1;
 }
