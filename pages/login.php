@@ -11,11 +11,16 @@
     draw_website_name();
     ?>
     
+    <script type="module" src="../js/ajax_login.js" async></script>
+
     <section id="main_account">
         <section id="account">
             <h2>Login</h2>
             <form id="account_form" action="../actions/action_login.php" method="post">
                 <div class="account_box">
+                    <div id="login_error" class="error_box">
+                        <p>Wrong username/password</p>
+                    </div>
                     <?php
                     draw_input_box('username', 'text', 'Username', true);
                     draw_input_box('password', 'password', 'Password', true);
