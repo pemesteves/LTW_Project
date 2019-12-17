@@ -10,6 +10,7 @@
 ?>
     <link rel="stylesheet" type="text/css" href="../css/add_properties.css"/>
     <link rel="stylesheet" type="text/css" href="../css/form.css"/>
+    <script src="../js/long_image_name.js" defer></script>
 </head>
 <body>
     <?php 
@@ -20,9 +21,21 @@
         <section id="rentify_form_section">
             <h2>Rentify your property</h2>
             <?php
-            $image_name = "";
-            upload_image($image_name, 'property');
+            upload_image("", 'property');
+            if(isset($_SESSION['image_names'])){
             ?>
+            <p>Uploaded Images: </p>
+            <ul id="uploadedImages">
+            <?php
+                $images = $_SESSION['image_names'];
+                foreach($images as $image){
+            ?>
+                <li class="image_name"><?=$image?></li>
+            <?php
+                }
+            }
+            ?>
+            </ul>
             <form id="rentify_form" action="../actions/action_rentify.php" method="post">
                 <div class="rentify_box">
                     <?php

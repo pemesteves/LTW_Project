@@ -18,11 +18,13 @@
             rentifyPropertyImage($id, $image);
         }
         unset($_SESSION['images']);
+        unset($_SESSION['image_names']);
 
         header('Location: ../pages/user.php'); // CHANGE
     } 
     catch (PDOException $e) {
         unset($_SESSION['images']);
+        unset($_SESSION['image_names']);
         die($e->getMessage());
         $_SESSION['error_messages'][] = "Failed to rentify house";
         header('Location: ../pages/add_properties.php');
