@@ -41,7 +41,7 @@ body {
   font-size: 1.5em;
   color: #2e3c49;
   background: whitesmoke;
-  border-bottom: 0.05em solid #2e3c49;
+  border-bottom: 2px solid #2e3c49;
 }
 
 #property #comodities {
@@ -239,7 +239,7 @@ body {
   text-align: center;
   grid-column: 1;
   grid-row: 2;
-  border-bottom: 0.1em solid #2e3c49;
+  border-bottom: 2px solid #2e3c49;
   padding-top: 1em;
   padding-bottom: 1.8em;
 }
