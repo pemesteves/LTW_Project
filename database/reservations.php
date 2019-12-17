@@ -97,7 +97,7 @@
     function getActiveNotifications($username) {
         global $db;
         $stmt = $db->prepare('
-            SELECT *
+            SELECT Notification.description, Notification.date
             FROM Notification
             JOIN Property
             ON Notification.property_id = Property.id

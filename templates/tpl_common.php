@@ -37,6 +37,7 @@ function draw_header($page, $name){
         if(isset($_SESSION['username'])) {
             try{
                 $notifications = getActiveNotifications($_SESSION['username']);
+                $index = 0;
             }catch(PDOException $e){
                 catchException($e);
             } 
@@ -46,11 +47,30 @@ function draw_header($page, $name){
 
             <div class="dropdown">
                 <?php draw_user_image(); ?>
-                <a id="notifications"> <!--href="../actions/action_notification.php">-->
-                    <img src="../images/notifications_bell.png" alt="notifications_bell" />
-                    <p id="notification_number"><?=count($notifications)?></p>
-                </a>
-                <button  class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?> </button>
+                <div class="dropdown_button" id="notifications" > 
+                    <img class="dropdown_button" src="../images/notifications_bell.png" alt="notifications_bell" />
+                    <p class="dropdown_button" id="notification_number"><?=count($notifications)?></p>
+                </div>
+                <div class="dropdown_content" id="notifications_dropdown">
+                    <?php 
+                    if (count($notifications) == 0) { ?>
+                        <p id="zero_nots">You don't have notifications</p>
+                    <?php }
+                    else {
+                        foreach($notifications as $notification) {
+                            $index++;
+                            if ($index > 3)
+                                break;  
+                        ?>
+                        <a href="../actions/action_notification.php">
+                            <p><?=$notification['date']?></p>
+                            <p><?=$notification['description']?></p>
+                        </a>
+                        <?php } 
+                    }?>
+                </div>
+
+                <button class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?> </button>
                 <div class="dropdown_content" id="user_badge_dropdown">
                     <a href="<?=$page?>"><?=$name?></a>
                     <a href="add_properties.php">Rentify property</a>

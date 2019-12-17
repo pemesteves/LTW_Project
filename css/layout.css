@@ -26,7 +26,7 @@ body > header #signup {
 }
 
 body > header #user_photo {
-    width: 40px;                 /* CHANGE */
+    width: 2.5em;                 /* CHANGE */
     border-radius: 50%;
     align-self: center;    
 }
@@ -34,6 +34,7 @@ body > header #user_photo {
 body > header #user_badge {
     font-size: 1.1em;
     color: black;
+    padding: 14px 16px;
 }
 
 .dropdown {
@@ -58,8 +59,6 @@ body > header #user_badge {
     font-size: 16px;  
     border: none;
     outline: none;
-    color: white;
-    padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -83,6 +82,8 @@ body > header #user_badge {
     align-self: end;
     margin-right: 1em;
     display:grid;
+    border: none;
+    background: none;
 }
 
 .dropdown #notifications:hover {
@@ -90,7 +91,7 @@ body > header #user_badge {
 }
 
 .dropdown #notifications img{
-    width:40px;
+    width:2.5em;
     padding: 0.5em;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -107,6 +108,14 @@ body > header #user_badge {
     grid-column: 2;
     grid-row: 1;
     margin: 0%;
+    width: 0.5em;
+}
+#notifications_dropdown {
+    grid-column: 1;
+}
+
+#zero_nots {
+    padding-left: 1em;
 }
   
 .dropdown_content a {
