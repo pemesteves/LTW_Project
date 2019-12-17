@@ -9,15 +9,19 @@ function dropdown_nots() {
   
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(e) {
-    if (!e.target.matches('.dropdown_button')) {
-        let dropdown_obj1 = document.getElementById("user_badge_dropdown");
-        let dropdown_obj2 = document.getElementById("notifications_dropdown");
-
-        if (dropdown_obj1.classList.contains('show')) {
-            dropdown_obj1.classList.remove('show');
+    if (!e.target.matches('#notifications')) {
+        let dropdown_obj = document.getElementById("notifications_dropdown");
+        
+        if (dropdown_obj.classList.contains('show')) {
+            dropdown_obj.classList.remove('show');
         }
-        if (dropdown_obj2.classList.contains('show')) {
-            dropdown_obj2.classList.remove('show');
+    }
+
+    if (!e.target.matches('#user_badge')) {
+        let dropdown_obj = document.getElementById("user_badge_dropdown");
+
+        if (dropdown_obj.classList.contains('show')) {
+            dropdown_obj.classList.remove('show');
         }
     }
 }

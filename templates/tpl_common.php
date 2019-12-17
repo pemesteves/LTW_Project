@@ -48,8 +48,8 @@ function draw_header($page, $name){
             <div class="dropdown">
                 <?php draw_user_image(); ?>
                 <div class="dropdown_button" id="notifications" > 
-                    <img class="dropdown_button" src="../images/notifications_bell.png" alt="notifications_bell" />
-                    <p class="dropdown_button" id="notification_number"><?=count($notifications)?></p>
+                    <img class="dropdown_button" id="notifications" src="../images/notifications_bell.png" alt="notifications_bell" />
+                    <p class="dropdown_button" id="notifications" id="notification_number"><?=count($notifications)?></p>
                 </div>
                 <div class="dropdown_content" id="notifications_dropdown">
                     <?php 
