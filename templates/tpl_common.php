@@ -53,10 +53,10 @@ function draw_header($page, $name){
                 </div>
                 <div class="dropdown_content" id="notifications_dropdown">
                     <?php 
-                    /*if (count($notifications) == 0) { ?>
+                    if (count($notifications) == 0 && $index == 0) { ?>
                         <p id="zero_nots">You don't have notifications</p>
                     <?php }
-                    else {*/
+                    else {
                         foreach($notifications as $notification) {
                             $index++;
                             if ($index > 3)
@@ -67,7 +67,9 @@ function draw_header($page, $name){
                             <p><?=$notification['description']?></p>
                         </a>
                         <?php } 
-                    /*}*/?>
+                    }
+                    $index = 0;
+                    ?>
                 </div>
 
                 <button class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?> </button>
