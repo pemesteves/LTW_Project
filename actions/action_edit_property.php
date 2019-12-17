@@ -32,7 +32,7 @@
     }
 
     if(isset($_POST['commodity'])){
-        $commodity = $_POST['commodity'];
+        $commodity = ucwords($_POST['commodity']);
         try{
             $commodityID = getCommodityID($commodity);
 
