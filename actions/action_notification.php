@@ -14,4 +14,7 @@
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     die($e->getMessage());
   }
+
+  header('Location: ../pages/tourist_reservations.php');  // CHECK THIS
+  die();
 ?>
