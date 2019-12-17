@@ -28,7 +28,6 @@ function draw_header($page, $name){
     if(isset($_SESSION['username'])){
     ?>
       <script src="../js/dropdown.js" async></script>
-      <script src="../js/notifications.js" async></script>
     <?php
     }
     ?>
