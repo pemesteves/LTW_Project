@@ -74,4 +74,20 @@
         $stmt->execute(array($username));
         return $stmt->fetchAll();
     }
+
+    function getActiveNotifications($username) {
+        global $db;
+        $stmt = $db->prepare('
+            SELECT *
+            FROM Notification
+            JOIN Reservation
+            JOIN Property
+            ON Reservation.id = Notification.reservation_id
+            WHERE Property.owner_username = ?
+            AND Notification.active = 1
+            ORDER BY Property.id
+        ');
+        $stmt->execute(array($username));
+        return $stmt->fetchAll();
+    }
 ?>

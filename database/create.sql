@@ -49,3 +49,11 @@ CREATE TABLE PropertyCommodity(
     commodity_id INTEGER REFERENCES Commodity(id),
     PRIMARY KEY(property_id, commodity_id)
 );
+
+CREATE TABLE Notification(
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    reservation_id INTEGER REFERENCES Reservation(id),
+    date DATE NOT NULL,
+    description TEXT NOT NULL,
+    active INTEGER NOT NULL
+);

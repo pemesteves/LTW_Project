@@ -2,7 +2,7 @@
 
 include_once "../includes/init.php";
 include_once "../database/user.php";
-include_once "../database/notifications.php";
+include_once "../database/reservations.php";
 
 function draw_user_image(){
     try{
@@ -47,6 +47,7 @@ function draw_header($page, $name){
                 <?php draw_user_image(); ?>
                 <a id="notifications" href="tourist_reservations.php">
                     <img src="../images/notifications_bell.png" alt="notifications_bell" />
+                    <p><?=$notifications?></p>
                 </a>
                 <button  class="dropdown_button" id="user_badge" > <?php echo $_SESSION['username'] ?> </button>
                 <div class="dropdown_content" id="user_badge_dropdown">
