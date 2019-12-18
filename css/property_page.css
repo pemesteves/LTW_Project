@@ -27,7 +27,7 @@ body {
   margin: 60px;
   margin-left: 100px;
   margin-top: 100px;
-  border: solid #2e3c49;
+  border: 0.1em solid #2e3c49;
   border-radius: 0.5em;
   background: whitesmoke;
   color: #2e3c49;
@@ -45,7 +45,7 @@ body {
   font-size: 1.5em;
   color: #2e3c49;
   background: whitesmoke;
-  border-bottom: 2px solid #2e3c49;
+  border-bottom: 0.05em solid #2e3c49;
 }
 
 #property #comodities {
@@ -55,7 +55,7 @@ body {
   margin: 60px;
   margin-right: 100px;
   margin-top: 100px;
-  border: solid #2e3c49;
+  border: 0.1em solid #2e3c49;
   border-radius: 0.5em;
   background: whitesmoke;
   color: #2e3c49;
@@ -166,7 +166,7 @@ body {
   padding: 2em;
   padding-top: 1em;
   border-radius: 0.5em 0.5em 0 0;
-  border: solid #2e3c49;
+  border: 0.1em solid #2e3c49;
 }
 
 #comments h4 {
@@ -258,7 +258,7 @@ body {
   text-align: center;
   grid-column: 1;
   grid-row: 2;
-  border-bottom: 2px solid #2e3c49;
+  border-bottom: 0.1em solid #2e3c49;
   padding-top: 1em;
   padding-bottom: 1.8em;
 }
