@@ -113,7 +113,7 @@
                     <?php
                         }else{
                     ?>
-                    <script src="../js/book.js" async></script>        
+                    <script type="module" src="../js/ajax_reservation.js" async></script>        
                     <div id="dates">
                         <form id="search_form" method="post" action="../actions/action_booking.php">
                             <legend>Dates</legend>
