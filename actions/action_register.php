@@ -41,21 +41,21 @@
     if (!isset($first_name) || $first_name === '') {
         $_SESSION['error_messages'][] = "First name cannot be empty";
         error_log("BAD FIRST NAME"); 
-        header('Location: ../pages/register.php')
+        header('Location: ../pages/register.php');
         die();
     }
 
     if (!isset($last_name) || $last_name === '') {
         $_SESSION['error_messages'][] = "Last name cannot be empty";
         error_log("BAD LAST NAME");
-        header('Location: ../pages/register.php')
+        header('Location: ../pages/register.php');
         die();
     }
 
     if(!isset($phone) || $phone === '' || !preg_match("/^[1-9][0-9]{7,12}$/", $phone)) {
         $_SESSION['error_messages'][] = "Invalid phone number";
         error_log("BAD PHONE NUMBER");
-        header('Location: ../pages/register.php')
+        header('Location: ../pages/register.php');
         die();
     }
     
@@ -63,14 +63,14 @@
     if(!isset($birthdate) || $birthdate === '') { //|| !preg_match($date_pattern, $birthdate)) {
         $_SESSION['error_messages'][] = "Invalid date";
         error_log("BAD BIRTHDATE");
-        header('Location: ../pages/register.php')
+        header('Location: ../pages/register.php');
         die();        
     }
 
     if(!isset($password) || $password === '') {
         $_SESSION['error_messages'][] = "Password does not meet requirements";
         error_log("BAD PASSWORD");
-        header('Location: ../pages/register.php')
+        header('Location: ../pages/register.php');
         die();            
     }
 
