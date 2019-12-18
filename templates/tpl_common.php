@@ -56,7 +56,7 @@ function draw_header($page, $name){
                     if (count($notifications) == 0 && $index == 0) { ?>
                         <p id="zero_nots">You don't have notifications</p>
                     <?php }
-
+                    else {
                         foreach($notifications as $notification) {
                             $index++;
                             if ($index > 3)
