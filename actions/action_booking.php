@@ -54,6 +54,11 @@
   }
   $sleeps = $_POST['sleeps'];
 
+  if($sleeps > $info['sleeps']){
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    die;
+  }
+
   try{
     $reservations = getHouseReservationsBetweenDates($id_property, $start_date, $end_date);
   }catch(PDOException $e){

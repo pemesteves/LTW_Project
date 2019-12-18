@@ -53,7 +53,8 @@
                     <div id="description">
                         <h3>Description</h3>
                         <p><?=$property_info['description']?></p>
-                    </div>
+                    </div>    
+                    <p><b>Max Guests:</b> <?=$property_info['sleeps']?></p>
                 </div>
                 <div id="comodities">
                     <h3>Commodities</h3>

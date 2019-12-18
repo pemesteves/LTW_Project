@@ -6,6 +6,7 @@ window.addEventListener('load', function() {
 
         let date1 = document.querySelector('input[name="start_date"]').value;
         let date2 = document.querySelector('input[name="end_date"]').value;
+        let guests = document.querySelector('input[name="sleeps"]').value;
         
         let parts = window.location.search.substr(1).split("&");
         let $_GET = {};
@@ -23,7 +24,8 @@ window.addEventListener('load', function() {
         request.send(encodeForAjax({
             "property": property_id,
             "start": date1,
-            "end": date2
+            "end": date2,
+            "guests": guests
         }));        
 
         return false;
@@ -58,17 +60,29 @@ function checkReservation() {
         dates.forEach(element => {
             element.style.borderColor = "red";
         });
-        return false;
     }
-    else {
+    if(response.over_limit) {
+        document.querySelector('input[name="sleeps"]').style.borderColor = "red";
+    }
+
+
+    if(!response.exists) {
         dates.forEach(element => {
             element.style.borderColor = null;
         });
+    }
 
+    if(!response.over_limit) {
+        document.querySelector('input[name="sleeps"]').style.borderColor = null;
+    }
+
+    if(!response.exists && !response.over_limit) {
         let form = document.getElementById('search_form');
         form.submit();
         return true;
     }
+
+    return false;
 }
 
 function addDays(date, days) {
