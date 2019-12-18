@@ -33,6 +33,10 @@ body {
   color: #2e3c49;
 }
 
+#property #main_info h2 {
+  color: #0b116b;
+}
+
 #property #reservation_info {
   grid-column: 2;
   grid-row-start: 1;
@@ -165,7 +169,17 @@ body {
   border: solid #2e3c49;
 }
 
+#comments h4 {
+  margin-top: 0.5em;
+  font-size: 1.5em;
+}
+
+#comments h5 {
+  font-size: 1em;
+  margin-left: 0.5em;
+}
 #comments p {
+  padding-left: 1.5em;
   color: #2e3c49;
 }
 

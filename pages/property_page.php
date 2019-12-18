@@ -146,7 +146,7 @@
                     if(count($comments) != 0){
                         foreach ($comments as $comment) {
                 ?>
-                    <h5 id="tourist_name"><?=$comment['tourist']?></h4>
+                    <h5 id="tourist_name"><?=$comment['tourist']?>:</h4>
                     <p><?=$comment['comment']?></p>    
                 <?php
                         }
