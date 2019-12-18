@@ -113,6 +113,7 @@
                     <?php
                         }else{
                     ?>
+                    <script src="../js/book.js" async></script>        
                     <div id="dates">
                         <form id="search_form" method="post" action="../actions/action_booking.php">
                             <legend>Dates</legend>
@@ -145,7 +146,7 @@
                     if(count($comments) != 0){
                         foreach ($comments as $comment) {
                 ?>
-                    <h5 id="tourist_name"><?=$comment['tourist']?></h4>
+                    <h5 id="tourist_name"><?=$comment['tourist']?>:</h4>
                     <p><?=$comment['comment']?></p>    
                 <?php
                         }

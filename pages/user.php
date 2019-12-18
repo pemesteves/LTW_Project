@@ -99,7 +99,7 @@
             ?>
             <div id="user_reservation">
                 <h4><?=$property_info['title']?></h4>
-                <h5>Location: <?=$property_info['location']?></h5>
+                <h5><?=$property_info['location']?></h5>
                 <p>Total Price: <?=$reservation['sleeps']?>x<?=$property_info['price_per_day']?>$ = <?=$reservation['sleeps']*$property_info['price_per_day']?>$</p>
                 <p>Start: <?=$reservation['date_start']?></p>
                 <p>End: <?=$reservation['date_end']?></p>

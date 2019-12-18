@@ -97,11 +97,11 @@
     grid-column: 3;
     grid-row: 4;
     align-self: end;
-    height: 50px;
-    width: 101px;
+    height: 3em;
+    width: 6.4em;
     border: solid #2e3c49;
     border-width:  0.1em 0em 0em 0.1em;
-    background: rgba(146, 174, 221, 0.7);
+    background: rgba(12, 89, 223, 0.7);
     border-bottom-right-radius: 0.305em;
     border-top-left-radius: 0.5em;
 }

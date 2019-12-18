@@ -108,6 +108,7 @@ function draw_website_name(){
 
 function draw_search_bar(){
 ?>
+    <script src="../js/book.js" async></script>        
     <form id="search_form" action="search_page.php" method="post"> 
         <div class="search_box">
             <input class="location" name="location" type="text" placeholder="Where to?"/>
