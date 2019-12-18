@@ -2,7 +2,7 @@
 
 /*Background*/
 body {
-    background-color: #e5edee;
+    background-color: #e6e6e6;
 }
 
 #profile{
@@ -43,6 +43,20 @@ body {
 
 #user_reservation h4 {
     color: black;
+    margin-bottom: 0.3em;
+    font-size: 1.4em;
+}
+
+#user_reservation h5 {
+    font-size: 1.1em;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 0.5em;
+}
+
+#user_reservation p {
+    color: black;
+    padding-left: 0.5em;
 }
 
 /******************/
