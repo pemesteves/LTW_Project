@@ -19,8 +19,7 @@
   try{
     $info = getPropertyInfo($id_property);
   }catch(PDOException $e){
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-    die($e->getMessage());
+    catchException($e);
   }
 
   if($info['owner_username'] === $username){
@@ -59,8 +58,7 @@
     $reservations = getHouseReservationsBetweenDates($id_property, $start_date, $end_date);
   }catch(PDOException $e){
     $_SESSION['error_messages'][] = "Failed to get the house reservations";
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-    die($e->getMessage());
+    catchException($e);
   }
 
   if(count($reservations) != 0){
@@ -73,8 +71,7 @@
       addReservation($id_property, $username, $start_date, $end_date, $sleeps);
   }catch(PDOException $e){
       $_SESSION['error_messages'][] = "Failed to add a reservation";
-      header('Location: ' . $_SERVER['HTTP_REFERER']);
-      die($e->getMessage());
+      catchException($e);
   }
 
   header('Location: ../pages/user.php');

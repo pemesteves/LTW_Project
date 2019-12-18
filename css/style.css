@@ -136,4 +136,5 @@ html {
 
 .cancelReservation:hover {
     background-color: gray;
-}..
+    cursor: pointer;
+}

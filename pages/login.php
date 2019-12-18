@@ -2,6 +2,11 @@
     include_once "../templates/tpl_common.php";
     include_once "../templates/tpl_account.php";
 
+    if(isset($_SESSION['username'])){
+        header('Location: index.php');
+        die();
+    }
+
     document_main_part();
 ?>
     <link rel="stylesheet" type="text/css" href="../css/account_layout.css">

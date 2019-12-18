@@ -37,6 +37,10 @@ body > header #user_badge {
     padding: 14px 16px;
 }
 
+body > header #user_badge:hover {
+    cursor: pointer;
+}
+
 .dropdown {
     display: grid;
     grid-column: 3;
@@ -55,7 +59,6 @@ body > header #user_badge {
 
 .dropdown .dropdown_button {
     width: 190px;
-    cursor: pointer;
     font-size: 16px;  
     border: none;
     outline: none;
@@ -87,7 +90,11 @@ body > header #user_badge {
     justify-content: flex-end;
 }
 
-.dropdown #notifications:hover {
+.dropdown #notification_img:hover {
+    cursor: pointer;
+}
+
+.dropdown #notification_number:hover {
     cursor: pointer;
 }
 

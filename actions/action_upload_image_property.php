@@ -22,13 +22,20 @@
     
     $tmp_name = $_FILES["fileToUpload"]["tmp_name"];
 
-    if (!isset($_SESSION['images']))
+    if (!isset($_SESSION['images'])){
         $_SESSION['images'] = array();
+    }
 
-    $name = hash('sha256', $username) . '_' . hash('sha256', basename($_FILES["fileToUpload"]["name"]) . '_' . hash('sha256', date('Y-m-d h:i a') . '_' . count($_SESSION['images'])));
+    if(!isset($_SESSION['image_names'])){
+        $_SESSION['image_names'] = array();
+    }
+
+    $name = sha1($username) . '_' . sha1(basename($_FILES["fileToUpload"]["name"])) . '_' . sha1(date('Y-m-d h:i a')) . '_' . count($_SESSION['images']);
     move_uploaded_file($tmp_name, "$target_dir/$name");
 
     array_push($_SESSION['images'], $name);
+    array_push($_SESSION['image_names'], basename($_FILES["fileToUpload"]["name"]) );
+    error_log($_SESSION['image_name']);
 
     header('Location: ' . $_SERVER['HTTP_REFERER']);
     die();

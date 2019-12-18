@@ -53,7 +53,7 @@ function draw_header($page, $name){
                 </div>
                 <div class="dropdown_content" id="notifications_dropdown">
                     <?php 
-                    if (count($notifications) == 0) { ?>
+                    if (count($notifications) == 0 && $index == 0) { ?>
                         <p id="zero_nots">You don't have notifications</p>
                     <?php }
 
@@ -67,6 +67,8 @@ function draw_header($page, $name){
                             <p><?=$notification['description']?></p>
                         </a>
                         <?php } 
+                    }
+                    $index = 0;
                     ?>
                 </div>
 

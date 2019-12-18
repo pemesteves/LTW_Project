@@ -3,3 +3,16 @@ body {
     background: url("../images/rentify_houses.jpg") no-repeat center center fixed;
     background-size: cover;
 }
+
+.image_name {
+    list-style-type: none;
+}
+
+#uploaded_images {
+    text-align: left;
+}
+
+#uploaded_images p {
+    margin-left: 2.5em;
+    font-weight: bold;
+}
