@@ -7,7 +7,7 @@ PRAGMA foreign_keys = ON;
 INSERT INTO User
     (username, full_name, birthdate, phone, email, password_hash, image_name)
     VALUES
-    ('miguel_pinto_69',
+    ('miguel_pinto',
     'Miguel Delgado Pinto',
     '1999-10-06',
     917146432,
@@ -19,11 +19,11 @@ INSERT INTO User
 INSERT INTO User
     (username, full_name, birthdate, phone, email, password_hash, image_name)
     VALUES
-    ('pedrito_pirolito',
+    ('pemesteves',
     'Pedro Miguel Rodrigues Ferraz Esteves',
     '1999-10-10',
     912345678,
-    'pemesteves@hotmail.com',
+    'pedromiguel.1999.ada@gmail.com',
     '8cb2237d0679ca88db6464eac60da96345513964',
     'user_placeholder.jpg'
     );
@@ -31,7 +31,7 @@ INSERT INTO User
 INSERT INTO User
     (username, full_name, birthdate, phone, email, password_hash, image_name)
     VALUES
-    ('nuno_iron_man',
+    ('nmtc01',
     'Nuno Miguel Teixeira Cardoso',
     '1999-03-01',
     925409230,
@@ -43,11 +43,23 @@ INSERT INTO User
 INSERT INTO User
     (username, full_name, birthdate, phone, email, password_hash, image_name)
     VALUES
-    ('jacinto_leite_no_rego',
-    'Jacinto Leite Capelo Rego',
+    ('arestivo',
+    'André Monteiro de Oliveira Restivo',
+    '1976-01-01',
+    225081772,
+    'arestivo@fe.up.pt',
+    '8cb2237d0679ca88db6464eac60da96345513964',
+    'user_placeholder.jpg'
+    );
+
+INSERT INTO User
+    (username, full_name, birthdate, phone, email, password_hash, image_name)
+    VALUES
+    ('sou_eu',
+    'Anonimo',
     '1969-06-09',
-    916969696,
-    'jacintoleitinho@gmail.com',
+    912345678,
+    'anonimo@sem.email',
     '8cb2237d0679ca88db6464eac60da96345513964',
     'user_placeholder.jpg'
     );
@@ -98,7 +110,6 @@ INSERT INTO Commodity  /* ID 8 */
     ('Fireplace');    
 
 
-
 /*******************/
 /**   PROPERTIES  **/
 /*******************/
@@ -107,7 +118,7 @@ INSERT INTO Commodity  /* ID 8 */
 INSERT INTO Property    
     (owner_username, title, price_per_day, location, description, sleeps)
     VALUES
-    ('miguel_pinto_69',
+    ('miguel_pinto',
     'Jaw-dropping beach house',
     169,
     'Hawaii, USA',
@@ -132,7 +143,7 @@ INSERT INTO PropertyCommodity   /* Washer & Dryer */
 INSERT INTO Property    
     (owner_username, title, price_per_day, location, description, sleeps)
     VALUES
-    ('pedrito_pirolito',
+    ('pemesteves',
     'Rustic NYC Apartment',
     213,
     'New York City, USA',
@@ -160,7 +171,7 @@ INSERT INTO PropertyCommodity   /* Heater */
 INSERT INTO Property    
     (owner_username, title, price_per_day, location, description, sleeps)
     VALUES
-    ('nuno_iron_man',
+    ('nmtc01',
     'Himalayan Bungalow',
     150,
     'Kathmandu, Nepal',
@@ -184,3 +195,73 @@ INSERT INTO PropertyCommodity   /* Fireplace */
     VALUES
     (3, 8);         
 
+/* ID 4 */
+INSERT INTO Property    
+    (owner_username, title, price_per_day, location, description, sleeps)
+    VALUES
+    ('arestivo',
+    'Primrose Cottage',
+    150,
+    'Georgia, USA',
+    'The first permanent private home in Roswell, Georgia and is on the National Register of Historic Places. Built by Barrington King in 1839 for his daughter. The property is currently privately owned and since 2006, has been used for events such as weddings and other private functions. ',
+    15);
+
+INSERT INTO PropertyImage
+    (property_id, image_name)
+    VALUES
+    (4,
+    'cottage.jpg');
+
+INSERT INTO PropertyCommodity   /* Wi-Fi */
+    (property_id, commodity_id)
+    VALUES
+    (4, 1);
+
+INSERT INTO PropertyCommodity   /* Washer & Dryer */
+    (property_id, commodity_id)
+    VALUES
+    (4, 2);
+
+INSERT INTO PropertyCommodity   /* TV */
+    (property_id, commodity_id)
+    VALUES
+    (4, 3);
+
+INSERT INTO PropertyCommodity   /* Parking */
+    (property_id, commodity_id)
+    VALUES
+    (4, 4);
+
+INSERT INTO PropertyCommodity   /* Swimming Pool */
+    (property_id, commodity_id)
+    VALUES
+    (4, 6);
+INSERT INTO PropertyCommodity   /* Barbecue */
+    (property_id, commodity_id)
+    VALUES
+    (4, 7);
+INSERT INTO PropertyCommodity   /* Fireplace */
+    (property_id, commodity_id)
+    VALUES
+    (4, 8);         
+
+/** RESERVATIONS **/
+INSERT INTO Reservation
+    (id_property, tourist_username, sleeps, date_start, date_end)
+    VALUES
+    (4, 'pemesteves', 10, '2019-12-23', '2020-01-02');
+
+INSERT INTO Reservation
+    (id_property, tourist_username, sleeps, date_start, date_end)
+    VALUES
+    (3, 'arestivo', 2, '2019-12-20', '2020-12-21');
+
+INSERT INTO Reservation
+    (id_property, tourist_username, sleeps, date_start, date_end)
+    VALUES
+    (2, 'miguel_pinto', 1, '2019-12-25', '2020-12-27');
+
+INSERT INTO Reservation
+    (id_property, tourist_username, sleeps, date_start, date_end)
+    VALUES
+    (1, 'nmtc01', 2, '2019-12-29', '2020-02-01');
