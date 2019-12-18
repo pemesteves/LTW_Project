@@ -5,9 +5,10 @@
   if (!isset($_SESSION['username'])){
     die();
   } 
+  error_log("CONA");
 
   try {
-    $notifications = count(updateNotifications($_SESSION['username']));
+    updateNotifications($_SESSION['username']);
   }
   catch(PDOException $e) {
     $_SESSION['error_messages'][] = "Failed to reset the notifications";
